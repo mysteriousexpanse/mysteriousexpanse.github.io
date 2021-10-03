@@ -239,7 +239,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-10-03 16:21:34 / Modified: 16:23:39" itemprop="dateCreated datePublished" datetime="2021-10-03T16:21:34+08:00">2021-10-03</time>
+              <time title="Created: 2021-10-03 16:21:34 / Modified: 19:29:48" itemprop="dateCreated datePublished" datetime="2021-10-03T16:21:34+08:00">2021-10-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,7 +269,8 @@ if (isset($_REQUEST['idp'])) {
 } else {
     highlight_file(__FILE__);
 }
-?><br>##<br>#由于给出了提示是一句话牧马，而eval函数的作用是将括号内的内容作为php代码执行，根据if条件可以知道当收到变量idp时会忽略错误执行idp这条命令 否则会高亮文件，此时用get请求：?idp=system(“ls /“);  获取网站根目录，发现存在flag ，再使用get请求?idp=system(“cat /flag”); ，此时即可发现flag{811afc65-faf0-4595-a658-03974480a13f}，一句话牧马使用的是将攻击者想要实际执行的命令以@eval的形式运行，eval命令可将括弧中的字符串作为php代码执行，可在命令中执行传参等动作。此题也可用yi剑发现在网站根目录有flag。<br>###6ezinclude<br>###7babyphp<br>##&lt;?php<br>include(“flag.php”);<br>highlight_file(<strong>FILE</strong>);<br>if(isset($_GET[‘idp’])){<br>    $cidp = $_GET[‘idp’];<br>    if($cidp===”11775”){<br>        die(“It won’t be that simple”);<br>    }<br>    if(intval($cidp,0)===11775){<br>        echo $flag;<br>    }else{<br>        echo intval($cidp,0);<br>    }<br>}<br>##<br>#对代码进行分析，发现包含三个if条件，其中发现输出$flag需要使$cidp这个变量经过10进制转换后需要完全等于11775，而在上一步的if中则出现如果$cidp变量完全等于11775则输出一串英文字符，经过查阅可知，intval（）会获取变量的整数值（value），而且在括弧逗号后的数为0，即以10进制转换，由于函数特性仅获取整数部分，所以可以加入其他字符串如‘p’，跳过if中完全等于11775的循环。此处用get传参：?idp=11775p.<br>最终的到flag{8ae0c411-4544-49ce-87df-cd32fb547877}。<br>###9 HTTP<br>##根据网页的提示，分别需要对headers本地访问+银杏叶浏览器和引用页（Referer）进行符合题目要求的更改，利用hackbar分别添加三个headers后再执行即可得到Flag: flag{ef36e785-b175-4b59-a199-29c1426d325c}<br>#headers是使用http协议通信是客户端和服务器端的一种附加信息，其中包含了所要求访问的浏览器以及其他一些属性，可以看作两者通信时的一种服务端对客户端的访问要求，满足才能进行下一步的访问请求。</p>
+?><br>##<br>#由于给出了提示是一句话牧马，而eval函数的作用是将括号内的内容作为php代码执行，根据if条件可以知道当收到变量idp时会忽略错误执行idp这条命令 否则会高亮文件，此时用get请求：?idp=system(“ls /“);  获取网站根目录，发现存在flag ，再使用get请求?idp=system(“cat /flag”); ，此时即可发现flag{811afc65-faf0-4595-a658-03974480a13f}，一句话牧马使用的是将攻击者想要实际执行的命令以@eval的形式运行，eval命令可将括弧中的字符串作为php代码执行，可在命令中执行传参等动作。此题也可用yi剑发现在网站根目录有flag。<br>###6ezinclude<br>###7babyphp<br>##&lt;?php<br>include(“flag.php”);<br>highlight_file(<strong>FILE</strong>);<br>if(isset($_GET[‘idp’])){<br>    $cidp = $_GET[‘idp’];<br>    if($cidp===”11775”){<br>        die(“It won’t be that simple”);<br>    }<br>    if(intval($cidp,0)===11775){<br>        echo $flag;<br>    }else{<br>        echo intval($cidp,0);<br>    }<br>}<br>##<br>#对代码进行分析，发现包含三个if条件，其中发现输出$flag需要使$cidp这个变量经过10进制转换后需要完全等于11775，而在上一步的if中则出现如果$cidp变量完全等于11775则输出一串英文字符，经过查阅可知，intval（）会获取变量的整数值（value），而且在括弧逗号后的数为0，即以10进制转换，由于函数特性仅获取整数部分，所以可以加入其他字符串如‘p’，跳过if中完全等于11775的循环。此处用get传参：?idp=11775p.<br>最终的到flag{8ae0c411-4544-49ce-87df-cd32fb547877}。<br>###8 babyphp2<br>数组绕过md5检验，观察代码<br>##&lt;?php<br>include(“flag.php”);<br>error_reporting(0);<br>highlight_file(<strong>FILE</strong>);</p>
+<p>if (isset($_POST[‘idp’]) and isset($_POST[‘gk’]))<br>{<br>    if ($_POST[‘idp’] != $_POST[‘gk’])<br>    {<br>        if (md5($_POST[‘idp’]) === md5($_POST[‘gk’]))<br>            echo $flag;<br>        else<br>            echo “Wrong”;<br>    }<br>    else echo “The values of idp and gk cannot be the same”;<br>}<br>##<br>#可以发现两个变量先要满足不相等（弱）然后md5计算后要强相等，弱相等在数值转换后相等也可继续执行，强相等需要在类型、数值上完全相等，此时可用数组处理变量，而不能用0e处理，0e处理是会被认为是科学记数法从而无法满足不等条件<br>###9 HTTP<br>##根据网页的提示，分别需要对headers本地访问+银杏叶浏览器和引用页（Referer）进行符合题目要求的更改，利用hackbar分别添加三个headers后再执行即可得到Flag: flag{ef36e785-b175-4b59-a199-29c1426d325c}<br>#headers是使用http协议通信是客户端和服务器端的一种附加信息，其中包含了所要求访问的浏览器以及其他一些属性，可以看作两者通信时的一种服务端对客户端的访问要求，满足才能进行下一步的访问请求。<br>###</p>
 
       
     </div>
