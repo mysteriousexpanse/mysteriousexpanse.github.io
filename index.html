@@ -146,6 +146,75 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/PythoncodeC3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="lwqc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to lwqc's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/03/PythoncodeC3/" class="post-title-link" itemprop="url">PythoncodeC3</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-10-03 22:05:09 / Modified: 22:08:10" itemprop="dateCreated datePublished" datetime="2021-10-03T22:05:09+08:00">2021-10-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BE%E7%A8%8B%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">课程代码复现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>#!/usr/bin/env python3</p>
+<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="-- coding: utf-8 --"></a>-<em>- coding: utf-8 -</em>-</h1><p>“””<br>Created on Sun Oct  3 19:51:30 2021<br>“””<br>###chapter2<br>#常见的错误单词（不想打了）<br>###chapter3 注释和变量<br>#单行注释<br>print(‘hello world’)  #  这也是单行注释：井号前2空格，后面一个空格<br>‘’’<br>这是多行注释，三个双引号或者是单引号都行,use eng to type:’<br>‘’’<br>##变量的命名：1，组成：字母、下划线、数字。2，不能用数字开头。3，不能和关键字一样<br>import keyword<br>print(keyword.kwlist)<br>#3-3变量的使用<br>qq_number = “123”  # define a str<br>print(qq_number)<br>qq_passwd = “456”  # define another str<br>print(qq_passwd)<br>#eg buy apple in market<br>price = 8.5  # define the unit price<br>weight = 7.5  # define the weight<br>money = price<em>weight  # caculate the money<br>print(money)<br>now_money = money-5  # if someone buy apple then the cost lower 5 yuan.<br>print(now_money)<br>#3.3.2 the type of variable<br>name = ‘小明’  # define a str<br>age = 18  # define an integer<br>gender = “male”  # define a str<br>height = 1.75  # define a float<br>weight = 75.0  # define a float<br>#variable caculation<br>i = 10<br>f = 10.5<br>b = True<br>print(i</em>b+f)  # caculate<br>##use’+’ to joint str<br>first_name = ‘陈’<br>last_name = ‘福明’<br>print(first_name+last_name)  # print the name<br>print(‘%’<em>10)  # repeat a kind of str<br>#3.3.3. input() and type()<br>‘’’<br>代码输出结果<br>hello world<br>[‘False’, ‘None’, ‘True’, ‘and’, ‘as’, ‘assert’, ‘async’, ‘await’, ‘break’, ‘class’, ‘continue’, ‘def’, ‘del’, ‘elif’, ‘else’, ‘except’, ‘finally’, ‘for’, ‘from’, ‘global’, ‘if’, ‘import’, ‘in’, ‘is’, ‘lambda’, ‘nonlocal’, ‘not’, ‘or’, ‘pass’, ‘raise’, ‘return’, ‘try’, ‘while’, ‘with’, ‘yield’]<br>123<br>456<br>63.75<br>58.75<br>20.5<br>陈福明<br>%%%%%%%%%%<br>‘’‘<br>#3.3.5 print的参数<br>for x in range(0,5):<br>    print(x)<br>for x in range(0,5):<br>    print(x, end=’,’)<br>print()<br>for x in range(0,5):<br>    print(x, end=’ ‘)<br>print()<br>for x in range(0,5):<br>    print(x, end = ‘ ‘)<br>print()  # 对齐左侧实现换行功能<br>for x in range(0,5):<br>    print(x, end=’,’)<br>print()<br>#3.3.6 格式化字符<br>s = ‘hello python’<br>x = len(s)<br>print(‘The lenth of %s is %d’%(s,x))  # 一个%代表一次处理，按照’’外面的括弧内处理，格式化处理就是以某种方式处理元组中的数据<br>pi = 3.1415926535<br>print(‘pi = %5.<em>f’%(3,pi))  # 处理方式为对值 pi 进行格式化处理<br>‘’’<br>在28line中，’.’之前的数据代表最小宽度，之后的数据代表小数点后面的精度，如果有符号’</em>‘<br>那么其值需要从元组中第一个数据读出<br>‘’’<br>print(‘pi = %</em>.3f’%(10,pi))<br>print(‘%-10.3f’%pi)  #  相比上一行实行了左对齐<br>print(‘%+f’%pi)  # 类型f的默认精度为6<br>print(‘%010.3f’%pi)  # 用0来填补空白，字段宽度为10，精度为3不足补充0<br>###格式化输出练习<br>name = ‘小明’<br>print(‘我的名字是%s,请多多关照！’%name)  # no1<br>student_no = 1<br>print(‘我的学号是%06d’%student_no)  # no2<br>price = 9.00<br>weight = 5.00<br>money = 45.00<br>print(‘苹果单价%1.2f元/kg，购买了%1.2fkg，需要支付%2.2f元’%(price,weight,money))<br>‘’’<br>这里有疑问，有没有可以统一以上方式的单一格式化处理方式？啊，忘了后面有答案了，真难过累<br>‘’’<br>print(‘苹果单价%.02f元/kg，购买了%.02fkg，需要支付%.02f元’%(price,weight,money))<br>‘’’<br>执行输出结果：<br>0<br>1<br>2<br>3<br>4<br>0,1,2,3,4,<br>0 1 2 3 4<br>0 1 2 3 4<br>0,1,2,3,4,<br>The lenth of hello python is 12<br>pi = 3.142<br>pi =      3.142<br>3.142<br>+3.141593<br>000003.142<br>我的名字是小明,请多多关照！<br>我的学号是000001<br>苹果单价9.00元/kg，购买了5.00kg，需要支付45.00元<br>苹果单价9.00元/kg，购买了5.00kg，需要支付45.00元<br>‘’’</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/MISC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -429,13 +498,13 @@ if (isset($_REQUEST['idp'])) {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
