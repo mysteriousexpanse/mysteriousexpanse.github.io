@@ -20,33 +20,28 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="2021.10 招新Cryptography类题目复现NO.1 Base#R05CREVPQlVHWTNESU0yRkdVWVRHTlpXR0laVEdOWllHUTRUS01SVkdNMkVDTVJZR00zVElOSlRHWTJVR05SVkc0WlRJUVpTSUkzREVOU0VHTkJUSU9CV0lRWkRPTVJVR1EzVEtSQlRHUTNER00yREc0NFRNTVJWSE">
-<meta property="og:type" content="article">
-<meta property="og:title" content="RSA做题思路">
-<meta property="og:url" content="http://example.com/2021/09/29/RSA%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Welcome to expansehi&#39;s blog">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Welcome to expansehi&#39;s blog">
-<meta property="og:description" content="2021.10 招新Cryptography类题目复现NO.1 Base#R05CREVPQlVHWTNESU0yRkdVWVRHTlpXR0laVEdOWllHUTRUS01SVkdNMkVDTVJZR00zVElOSlRHWTJVR05SVkc0WlRJUVpTSUkzREVOU0VHTkJUSU9CV0lRWkRPTVJVR1EzVEtSQlRHUTNER00yREc0NFRNTVJWSE">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-09-29T13:33:35.000Z">
-<meta property="article:modified_time" content="2021-10-13T12:41:00.203Z">
 <meta property="article:author" content="expansehi">
-<meta property="article:tag" content="repetition">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/09/29/RSA%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF/">
+<link rel="canonical" href="http://example.com/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
-    isPost : true,
+    isHome : true,
+    isPost : false,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>RSA做题思路 | Welcome to expansehi's blog</title>
+  <title>Welcome to expansehi's blog</title>
   
 
 
@@ -145,10 +140,85 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/Web%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="expansehi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to expansehi's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/03/Web%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" class="post-title-link" itemprop="url">Web题目复现</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-10-03 16:21:34 / Modified: 19:29:48" itemprop="dateCreated datePublished" datetime="2021-10-03T16:21:34+08:00">2021-10-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">题目复现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
 
     
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Web 复现<br>#1 HTML source查看网页源代码<br>使用chrome浏览器右键页面或者使用f12都可以得到flag：flag{Check_in_success}<br>#2 Cookies查看所储存的cookie值<br>使用chrome 浏览器点击网页栏左侧叹号或者对应位置按钮可看到相关内容并得到一串字符flag%7BThis_is_a_Eas4_Find%7D 根据特征判断为百分号编码利用hackbar对其进行decode 得到flag{This_is_a_Eas4_Find}<br>Refer: <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81">https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E5%8F%B7%E7%BC%96%E7%A0%81</a><br><a target="_blank" rel="noopener" href="https://cryptowikis.com/EncodeDecode/Unicode/">https://cryptowikis.com/EncodeDecode/Unicode/</a><br>#3 location题目的复现<br>基础知识：<br>Refer:<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ranyonsue/p/5984001.html">https://www.cnblogs.com/ranyonsue/p/5984001.html</a><br>TIPS:#<br>burpsuite的注册指南：参考网址：<a target="_blank" rel="noopener" href="https://www.sqlsec.com/2019/11/macbp.html">https://www.sqlsec.com/2019/11/macbp.html</a><br>本人下载的是2021 7月最新的安装包，能用mac的情况下请不要随班用pd虚拟机去安装bp，那样需要配置的工作很多，并且普通用户的版本似乎有些关于iava的东西无法运行。<br>注册机的使用方式就是先复制注册机中代码进行下一步，bp此时会给出一串长代码，复制到注册机第二处空白，此时第三处空白会出现另一处代码，再复制到右边bp的空白处即可，其实这个过程和win的注册过程基本一致。<br>开始拦截并成功后输出结果并找到response栏目<br>最终可在response 栏目下发现：flag{66ee2652-327e-424b-94f3-dfd625b32632}<br>#此题结束<br>###Get_Post<br>url中‘#’‘？’‘&amp;’的作用：井号在url中代表对浏览器发出指令滚动可视区域至井号后面的内容。问号代表的是分割url与参数，而&amp;号则代表参数之间的分隔作用如：变量1&amp;变量2。<br>php中的变量命名规则为：$变量名  ，其中变量名区分大小写。<br>[] 在php语法中为短数组语法，意义与array()相同<br>关于$_GET ,$_POST两种传参方式的个人理解，get命令是在url中将数组赋给当前变量的命令，用于读取资料。而post是在向某个资源提交数据或者文件，数据被包含在http请求的body中。（补充body知识<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/HTTP_message_body%EF%BC%89%E3%80%82%E7%9B%B8%E6%AF%94get%E6%98%AF%E5%9C%A8%E5%8F%AF%E8%A7%81%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8B%E4%BC%A0%E8%BE%93%EF%BC%8Cpost%E7%9A%84%E8%AF%B7%E6%B1%82%E4%B8%AA%E4%BA%BA%E8%AE%A4%E4%B8%BA%E4%BB%8E%E4%B8%8D%E5%8F%AF%E8%A7%81%E7%9A%84%E6%96%B9%E9%9D%A2%E6%9B%B4%E5%8A%A0%E5%AE%89%E5%85%A8%EF%BC%8C">https://en.wikipedia.org/wiki/HTTP_message_body）。相比get是在可见的状态下传输，post的请求个人认为从不可见的方面更加安全，</a><br>##题目主体：<br>&lt;?php</p>
+<p>$Ginkgo = $_GET[‘ginkgo’];<br>$starsgo = $_POST[‘starsgo’];<br>if ($Ginkgo === “w4w4w4w4” &amp;&amp; $starsgo === ‘pwn’) {<br>    var_dump(file_get_contents(‘/flag’));<br>}<br>highlight_file(<strong>FILE</strong>);<br>##<br>#观察发现最终输出（var_dump）flag需要满足两个变量同时完全等于各自的值，利用hackbar，分别get和post传参可得到最终答案。flag{get_and_p0st}<br>###babyrce<br>##题目主体<br><?php
+if (isset($_REQUEST['idp'])) {
+    @eval($_REQUEST["idp"]);
+} else {
+    highlight_file(__FILE__);
+}
+?><br>##<br>#由于给出了提示是一句话牧马，而eval函数的作用是将括号内的内容作为php代码执行，根据if条件可以知道当收到变量idp时会忽略错误执行idp这条命令 否则会高亮文件，此时用get请求：?idp=system(“ls /“);  获取网站根目录，发现存在flag ，再使用get请求?idp=system(“cat /flag”); ，此时即可发现flag{811afc65-faf0-4595-a658-03974480a13f}，一句话牧马使用的是将攻击者想要实际执行的命令以@eval的形式运行，eval命令可将括弧中的字符串作为php代码执行，可在命令中执行传参等动作。此题也可用yi剑发现在网站根目录有flag。<br>###6ezinclude<br>###7babyphp<br>##&lt;?php<br>include(“flag.php”);<br>highlight_file(<strong>FILE</strong>);<br>if(isset($_GET[‘idp’])){<br>    $cidp = $_GET[‘idp’];<br>    if($cidp===”11775”){<br>        die(“It won’t be that simple”);<br>    }<br>    if(intval($cidp,0)===11775){<br>        echo $flag;<br>    }else{<br>        echo intval($cidp,0);<br>    }<br>}<br>##<br>#对代码进行分析，发现包含三个if条件，其中发现输出$flag需要使$cidp这个变量经过10进制转换后需要完全等于11775，而在上一步的if中则出现如果$cidp变量完全等于11775则输出一串英文字符，经过查阅可知，intval（）会获取变量的整数值（value），而且在括弧逗号后的数为0，即以10进制转换，由于函数特性仅获取整数部分，所以可以加入其他字符串如‘p’，跳过if中完全等于11775的循环。此处用get传参：?idp=11775p.<br>最终的到flag{8ae0c411-4544-49ce-87df-cd32fb547877}。<br>###8 babyphp2<br>数组绕过md5检验，观察代码<br>##&lt;?php<br>include(“flag.php”);<br>error_reporting(0);<br>highlight_file(<strong>FILE</strong>);</p>
+<p>if (isset($_POST[‘idp’]) and isset($_POST[‘gk’]))<br>{<br>    if ($_POST[‘idp’] != $_POST[‘gk’])<br>    {<br>        if (md5($_POST[‘idp’]) === md5($_POST[‘gk’]))<br>            echo $flag;<br>        else<br>            echo “Wrong”;<br>    }<br>    else echo “The values of idp and gk cannot be the same”;<br>}<br>##<br>#可以发现两个变量先要满足不相等（弱）然后md5计算后要强相等，弱相等在数值转换后相等也可继续执行，强相等需要在类型、数值上完全相等，此时可用数组处理变量，而不能用0e处理，0e处理是会被认为是科学记数法从而无法满足不等条件<br>###9 HTTP<br>##根据网页的提示，分别需要对headers本地访问+银杏叶浏览器和引用页（Referer）进行符合题目要求的更改，利用hackbar分别添加三个headers后再执行即可得到Flag: flag{ef36e785-b175-4b59-a199-29c1426d325c}<br>#headers是使用http协议通信是客户端和服务器端的一种附加信息，其中包含了所要求访问的浏览器以及其他一些属性，可以看作两者通信时的一种服务端对客户端的访问要求，满足才能进行下一步的访问请求。<br>###</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
@@ -164,9 +234,10 @@
       <meta itemprop="name" content="Welcome to expansehi's blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          RSA做题思路
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/29/RSA%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">RSA做题思路</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -205,7 +276,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <hr>
+          <hr>
 <h1 id="2021-10-招新Cryptography类题目复现"><a href="#2021-10-招新Cryptography类题目复现" class="headerlink" title="2021.10 招新Cryptography类题目复现"></a>2021.10 招新Cryptography类题目复现</h1><h2 id="NO-1-Base"><a href="#NO-1-Base" class="headerlink" title="NO.1 Base"></a>NO.1 Base</h2><p>#R05CREVPQlVHWTNESU0yRkdVWVRHTlpXR0laVEdOWllHUTRUS01SVkdNMkVDTVJZR00zVElOSlRHWTJVR05SVkc0WlRJUVpTSUkzREVOU0VHTkJUSU9CV0lRWkRPTVJVR1EzVEtSQlRHUTNER00yREc0NFRNTVJWSEEyVFFNWldHUTJET05aV0c0MkRJTVJXR000VEVOSlhHWTJES05aWUdJM0RJTVpWSVk9PT09PT0=<br>#想法：结尾以一个=结束，字符串包括0-9，a-z,A-Z，考虑到可能是Base64的编码方式，经过转换可以得到以下内容<br>#GNBDEOBUGY3DIM2FGUYTGNZWGIZTGNZYGQ4TKMRVGM2ECMRYGM3TINJTGY2UGNRVG4ZTIQZSII3DENSEGNBTIOBWIQZDOMRUGQ3TKRBTGQ3DGM2DG44TMMRVHA2TQMZWGQ2DONZWG42DIMRWGM4TENJXGY2DKNZYGI3DIMZVIY======<br>#观察可以发现=<em>6结尾，段落字符串包含A-Z,2-4可初步判断是Base32编码方式，对其进行解密<br>#3B2846643E51376233784952534A283745365C65734C2B626D3C486D2724475D34633C79625858364477674426392576457826435F<br>#12line的数据中，包含了A-F,1-7,可以发现所含字符种类的减少，判定为Base16编码<br>#;(Fd&gt;Q7b3xIRSJ(7E6\esL+bm&lt;Hm’$G]4c&lt;ybXX6DwgD&amp;9%vEx&amp;C_<br>#在14行的数据中可以发现字符种类相比之前的增多，根据BASEx编码的方式，x越大所能包含的字符越多从BASE92开始尝试解密<br>#GKCTF{c0862b7d-8947-4709-b52e-74f5a80adf0c}<br>#此题结束<br>#no2.RSA1<br>#当e = 5，n = 247时，此时私钥d = ? flag格式GKCTF{d+372364782364902345972}<br>#已知使用的是RSA算法进行加密，但是只需求解逆元d即可解出题目答案，因此需要对rsa加密的原理进行初步了解<br>前置小知识：<br>模运算：如在一个除法运算中。正整数n，整数a，用a/n，余数为r可得到 a = qn+r（0《r《n）在此过程用a mod n表示余数r，即mod表示前面的整数除以后面的整数所得的余数。<br>rsa算法简介：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95">https://zh.wikipedia.org/wiki/RSA加密演算法</a><br>在数学能力不足的情况下可初步认为实现一个rsa加密过程所需要得知的数据有p q(pq为随机的大质数) n（p</em>q） e(随机数)+python若干已知可搜索代码<br>所需要的python3库有：gmpy2，math，libnum,crypto<br>在逆向解题时可以将上述过程逆向求解<br>#rsa1<br>#当e = 5，n = 247时，此时私钥d = ?  flag格式GKCTF{d+372364782364902345972}<br>#对题目分析可知，已经给出e,n的情况下，利用d为e模n的逆元，有等式：5d=k欧拉（n）+1 ，可得知5<em>173=216</em>4+1 d=173<br>也可以用求解逆元的python代码求解<br><code>import gmpy2,math,libnum</code><br><code>n = 247</code><br><code>e = 5</code><br><code>p =13</code><br><code>q = 19  #已对n进行了分解</code><br><code>phi = (p-1)*(q-1)</code><br><code>d = libnum.modular.invmod(e, phi)</code><br><code>print(d)</code><br><code>print(d+372364782364902345972)</code><br>#此题结束</p>
 <h2 id="NO-2-rsa2"><a href="#NO-2-rsa2" class="headerlink" title="NO.2 rsa2"></a>NO.2 rsa2</h2><p><code>from Crypto.Util.number import *</code><br><code>flag = b&#39;xxxxxxxxx&#39;</code><br><code>m = bytes_to_long(flag)</code><br><code>p = getPrime(512)</code><br><code>q = getPrime(512)</code><br><code>n = p*q</code><br><code>e = 65537</code><br><code>c = pow(m,e,n)</code><br><code>print(&quot;p =&quot;,p)</code><br><code>print(&quot;q =&quot;,q)</code><br><code>print(&quot;c =&quot;,c)</code><br><code>#p = 8295060918182123086529954804457591771595859196866703668935550464411971096001209655693961477877492176270927130171265553668119697631371310340208912981287823</code><br><code>#q = 12377495661382165101505333342973584396799606742367643146931847192885491168024340382524326191977310276197079533009866235586823791767430602033938123746440283</code><br><code>#c = 43405037741992830489999242106013528486995909531366634207485923975455812270021325488457540379716092907227733486594977478749656774348298533871141205590950920682210224271387683169091224829310512918597194475627703895654121834516964442517362297801225116093107942862842085685549307740605628348328889543664429027036</code></p>
 <h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><p>观察此题可以发现其形成过程较为正常，采用正常的求解思路，求d并逆向即可需要注意的是要导入libnum库将字符串转化</p>
@@ -226,34 +297,25 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,math</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">n1 = <span class="number">94884177404102774822427817554026673720426045553229294164196365889868241209608198699825736765740994266602096819122742585513501193889324896436037215835611197604584097026126384952616166688608861592747633795387512620398959276473021649145217082140578045946571540919651239006361411412966855913642687457034906005481</span></span><br><span class="line">n2 = <span class="number">102092062624102434903363841516866371627091881788106503630597091930877220050525498406865097313998866123339505287817724583500790338080221223615935355657880374600271600595223677064220029948502765382371862642367611565399975161981531714989641057593633902412383389249539558261934903587042257061713949592876287829881</span></span><br><span class="line">c = <span class="number">10161386666467145208857785448881081828349023698013253141457707759937214875961033355661950148076700293535500076441730371075685493667049097245041947126526573496523864539273787569768972556184491634756602821320824969932806636641016492987667710427328627010446039020111688428659154424498965489762890027774092953101</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">q =GCD(n1,n2)</span><br><span class="line"><span class="built_in">print</span>(q)</span><br><span class="line">p =n1//q   <span class="comment">#取余运算，而不是除法运算，需要用//  ，而不是/</span></span><br><span class="line">n = p*q</span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = libnum.modular.invmod(e, phi)</span><br><span class="line">m = <span class="built_in">pow</span>(c,d,n)</span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line">m = libnum.n2s(<span class="built_in">pow</span>(c, d, n)) </span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
 
 
+      
     </div>
 
     
     
     
-
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/repetition/" rel="tag"># repetition</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item"></div>
-      <div class="post-nav-item">
-    <a href="/2021/10/03/Web%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" rel="next" title="Web题目复现">
-      Web题目复现 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
+        <div class="post-eof"></div>
       </footer>
-    
   </article>
   
   
   
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
@@ -305,7 +367,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2021-10-%E6%8B%9B%E6%96%B0Cryptography%E7%B1%BB%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0"><span class="nav-number">1.</span> <span class="nav-text">2021.10 招新Cryptography类题目复现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NO-1-Base"><span class="nav-number">1.1.</span> <span class="nav-text">NO.1 Base</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NO-2-rsa2"><span class="nav-number">1.2.</span> <span class="nav-text">NO.2 rsa2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90%EF%BC%9A"><span class="nav-number">1.2.1.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NO3-rsa3fix"><span class="nav-number">1.3.</span> <span class="nav-text">NO3.rsa3fix</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90%EF%BC%9A-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">分析：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NO-4-rsa4"><span class="nav-number">1.4.</span> <span class="nav-text">NO.4 rsa4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%9E%90%EF%BC%9A-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">分析：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
