@@ -146,6 +146,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/PythoncodeC3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="expansehi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to expansehi's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/03/PythoncodeC3/" class="post-title-link" itemprop="url">PythoncodeC3</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-10-03 22:05:09" itemprop="dateCreated datePublished" datetime="2021-10-03T22:05:09+08:00">2021-10-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-10-12 12:00:57" itemprop="dateModified" datetime="2021-10-12T12:00:57+08:00">2021-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AF%BE%E7%A8%8B%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">课程代码复现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>“””<br>Created on Sun Oct  3 19:51:30 2021<br>“””</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">chapter2</span><br><span class="line"><span class="comment">#常见的错误单词（不想打了）</span></span><br><span class="line"><span class="comment">###chapter3 注释和变量</span></span><br><span class="line"><span class="comment">#单行注释</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>)  <span class="comment">#  这也是单行注释：井号前2空格，后面一个空格</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">这是多行注释，三个双引号或者是单引号都行,use eng to type:&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment">##变量的命名：1，组成：字母、下划线、数字。2，不能用数字开头。3，不能和关键字一样</span></span><br><span class="line"><span class="keyword">import</span> keyword</span><br><span class="line"><span class="built_in">print</span>(keyword.kwlist)</span><br><span class="line"><span class="comment">#3-3变量的使用</span></span><br><span class="line">qq_number = <span class="string">&quot;123&quot;</span>  <span class="comment"># define a str</span></span><br><span class="line"><span class="built_in">print</span>(qq_number)</span><br><span class="line">qq_passwd = <span class="string">&quot;456&quot;</span>  <span class="comment"># define another str</span></span><br><span class="line"><span class="built_in">print</span>(qq_passwd)</span><br><span class="line"><span class="comment">#eg buy apple in market</span></span><br><span class="line">price = <span class="number">8.5</span>  <span class="comment"># define the unit price</span></span><br><span class="line">weight = <span class="number">7.5</span>  <span class="comment"># define the weight</span></span><br><span class="line">money = price*weight  <span class="comment"># caculate the money</span></span><br><span class="line"><span class="built_in">print</span>(money)</span><br><span class="line">now_money = money-<span class="number">5</span>  <span class="comment"># if someone buy apple then the cost lower 5 yuan.</span></span><br><span class="line"><span class="built_in">print</span>(now_money)</span><br><span class="line"><span class="comment">#3.3.2 the type of variable</span></span><br><span class="line">name = <span class="string">&#x27;小明&#x27;</span>  <span class="comment"># define a str</span></span><br><span class="line">age = <span class="number">18</span>  <span class="comment"># define an integer</span></span><br><span class="line">gender = <span class="string">&quot;male&quot;</span>  <span class="comment"># define a str</span></span><br><span class="line">height = <span class="number">1.75</span>  <span class="comment"># define a float</span></span><br><span class="line">weight = <span class="number">75.0</span>  <span class="comment"># define a float</span></span><br><span class="line"><span class="comment">#variable caculation</span></span><br><span class="line">i = <span class="number">10</span> </span><br><span class="line">f = <span class="number">10.5</span>  </span><br><span class="line">b = <span class="literal">True</span>  </span><br><span class="line"><span class="built_in">print</span>(i*b+f)  <span class="comment"># caculate</span></span><br><span class="line"><span class="comment">##use&#x27;+&#x27; to joint str</span></span><br><span class="line">first_name = <span class="string">&#x27;陈&#x27;</span>  </span><br><span class="line">last_name = <span class="string">&#x27;福明&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(first_name+last_name)  <span class="comment"># print the name </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%&#x27;</span>*<span class="number">10</span>)  <span class="comment"># repeat a kind of str</span></span><br><span class="line"><span class="comment">#3.3.3. input() and type()</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">代码输出结果</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">[&#x27;False&#x27;, &#x27;None&#x27;, &#x27;True&#x27;, &#x27;and&#x27;, &#x27;as&#x27;, &#x27;assert&#x27;, &#x27;async&#x27;, &#x27;await&#x27;, &#x27;break&#x27;, &#x27;class&#x27;, &#x27;continue&#x27;, &#x27;def&#x27;, &#x27;del&#x27;, &#x27;elif&#x27;, &#x27;else&#x27;, &#x27;except&#x27;, &#x27;finally&#x27;, &#x27;for&#x27;, &#x27;from&#x27;, &#x27;global&#x27;, &#x27;if&#x27;, &#x27;import&#x27;, &#x27;in&#x27;, &#x27;is&#x27;, &#x27;lambda&#x27;, &#x27;nonlocal&#x27;, &#x27;not&#x27;, &#x27;or&#x27;, &#x27;pass&#x27;, &#x27;raise&#x27;, &#x27;return&#x27;, &#x27;try&#x27;, &#x27;while&#x27;, &#x27;with&#x27;, &#x27;yield&#x27;]</span></span><br><span class="line"><span class="string">123</span></span><br><span class="line"><span class="string">456</span></span><br><span class="line"><span class="string">63.75</span></span><br><span class="line"><span class="string">58.75</span></span><br><span class="line"><span class="string">20.5</span></span><br><span class="line"><span class="string">陈福明</span></span><br><span class="line"><span class="string">%%%%%%%%%%</span></span><br><span class="line"><span class="string">‘’‘</span></span><br><span class="line"><span class="string">#3.3.5 print的参数</span></span><br><span class="line"><span class="string">for x in range(0,5):</span></span><br><span class="line"><span class="string">    print(x)</span></span><br><span class="line"><span class="string">for x in range(0,5):</span></span><br><span class="line"><span class="string">    print(x, end=&#x27;,&#x27;)</span></span><br><span class="line"><span class="string">print()</span></span><br><span class="line"><span class="string">for x in range(0,5):</span></span><br><span class="line"><span class="string">    print(x, end=&#x27; &#x27;)</span></span><br><span class="line"><span class="string">print()</span></span><br><span class="line"><span class="string">for x in range(0,5):</span></span><br><span class="line"><span class="string">    print(x, end = &#x27; &#x27;)</span></span><br><span class="line"><span class="string">print()  # 对齐左侧实现换行功能</span></span><br><span class="line"><span class="string">for x in range(0,5):</span></span><br><span class="line"><span class="string">    print(x, end=&#x27;,&#x27;)</span></span><br><span class="line"><span class="string">print()</span></span><br><span class="line"><span class="string">#3.3.6 格式化字符</span></span><br><span class="line"><span class="string">s = &#x27;hello python&#x27;</span></span><br><span class="line"><span class="string">x = len(s)</span></span><br><span class="line"><span class="string">print(&#x27;The lenth of %s is %d&#x27;%(s,x))  # 一个%代表一次处理，按照&#x27;&#x27;外面的括弧内处理，格式化处理就是以某种方式处理元组中的数据</span></span><br><span class="line"><span class="string">pi = 3.1415926535</span></span><br><span class="line"><span class="string">print(&#x27;pi = %5.*f&#x27;%(3,pi))  # 处理方式为对值 pi 进行格式化处理</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">在28line中，<span class="string">&#x27;.&#x27;</span>之前的数据代表最小宽度，之后的数据代表小数点后面的精度，如果有符号<span class="string">&#x27;*&#x27;</span></span><br><span class="line">那么其值需要从元组中第一个数据读出</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">print(&#x27;pi = %*.3f&#x27;%(10,pi))</span></span><br><span class="line"><span class="string">print(&#x27;%-10.3f&#x27;%pi)  #  相比上一行实行了左对齐</span></span><br><span class="line"><span class="string">print(&#x27;%+f&#x27;%pi)  # 类型f的默认精度为6</span></span><br><span class="line"><span class="string">print(&#x27;%010.3f&#x27;%pi)  # 用0来填补空白，字段宽度为10，精度为3不足补充0</span></span><br><span class="line"><span class="string">###格式化输出练习</span></span><br><span class="line"><span class="string">name = &#x27;小明&#x27;</span></span><br><span class="line"><span class="string">print(&#x27;我的名字是%s,请多多关照！&#x27;%name)  # no1</span></span><br><span class="line"><span class="string">student_no = 1 </span></span><br><span class="line"><span class="string">print(&#x27;我的学号是%06d&#x27;%student_no)  # no2</span></span><br><span class="line"><span class="string">price = 9.00</span></span><br><span class="line"><span class="string">weight = 5.00</span></span><br><span class="line"><span class="string">money = 45.00</span></span><br><span class="line"><span class="string">print(&#x27;苹果单价%1.2f元/kg，购买了%1.2fkg，需要支付%2.2f元&#x27;%(price,weight,money))</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">这里有疑问，有没有可以统一以上方式的单一格式化处理方式？啊，忘了后面有答案了，真难过累</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">print(&#x27;苹果单价%.02f元/kg，购买了%.02fkg，需要支付%.02f元&#x27;%(price,weight,money))</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">执行输出结果：</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,</span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> </span><br><span class="line"><span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,</span><br><span class="line">The lenth of hello python <span class="keyword">is</span> <span class="number">12</span></span><br><span class="line">pi = <span class="number">3.142</span></span><br><span class="line">pi =      <span class="number">3.142</span></span><br><span class="line"><span class="number">3.142</span>     </span><br><span class="line">+<span class="number">3.141593</span></span><br><span class="line"><span class="number">000003.142</span></span><br><span class="line">我的名字是小明,请多多关照！</span><br><span class="line">我的学号是000001</span><br><span class="line">苹果单价<span class="number">9.00</span>元/kg，购买了<span class="number">5.00</span>kg，需要支付<span class="number">45.00</span>元</span><br><span class="line">苹果单价<span class="number">9.00</span>元/kg，购买了<span class="number">5.00</span>kg，需要支付<span class="number">45.00</span>元</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/MISC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -448,7 +528,7 @@ if (isset($_REQUEST['idp'])) {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
