@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1&quot;123一二三&quot;.isnumeric()  # 查看是否是数字（包含全角数字），汉字数字     True  1&quot;123一二三&quot;.isdecimal()  # 查看是否是十进制数据     False  1&amp;#x27;123123123&amp;#x27;.isdecimal()  # 查看是否是十进制数据     True  1&amp;#x27;abc10&amp;#x27;">
+  <meta name="description" content="1&quot;123一二三&quot;.isnumeric()  # 查看是否是数字（包含全角数字），汉字数字 True 1&quot;123一二三&quot;.isdecimal()  # 查看是否是十进制数据 False 1&amp;#x27;123123123&amp;#x27;.isdecimal()  # 查看是否是十进制数据 True 1&amp;#x27;abc10&amp;#x27;.isalpha()  # 查">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chapter8字符串类型">
 <meta property="og:url" content="http://example.com/2021/10/16/Chapter8%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Welcome to expansehi&#39;s blog">
-<meta property="og:description" content="1&quot;123一二三&quot;.isnumeric()  # 查看是否是数字（包含全角数字），汉字数字     True  1&quot;123一二三&quot;.isdecimal()  # 查看是否是十进制数据     False  1&amp;#x27;123123123&amp;#x27;.isdecimal()  # 查看是否是十进制数据     True  1&amp;#x27;abc10&amp;#x27;">
+<meta property="og:description" content="1&quot;123一二三&quot;.isnumeric()  # 查看是否是数字（包含全角数字），汉字数字 True 1&quot;123一二三&quot;.isdecimal()  # 查看是否是十进制数据 False 1&amp;#x27;123123123&amp;#x27;.isdecimal()  # 查看是否是十进制数据 True 1&amp;#x27;abc10&amp;#x27;.isalpha()  # 查">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-10-16T12:19:48.000Z">
 <meta property="article:modified_time" content="2021-10-16T13:11:17.726Z">
@@ -199,73 +199,32 @@
 
       
         <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;123一二三&quot;</span>.isnumeric()  <span class="comment"># 查看是否是数字（包含全角数字），汉字数字</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<pre><code>True
-</code></pre>
+<pre><code>True</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;123一二三&quot;</span>.isdecimal()  <span class="comment"># 查看是否是十进制数据</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<pre><code>False
-</code></pre>
+<pre><code>False</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;123123123&#x27;</span>.isdecimal()  <span class="comment"># 查看是否是十进制数据</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<pre><code>True
-</code></pre>
+<pre><code>True</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc10&#x27;</span>.isalpha()  <span class="comment"># 查看字符串是否只由字母组成</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<pre><code>False
-</code></pre>
+<pre><code>False</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc10&#x27;</span>.isdigit()  <span class="comment"># 查看字符串是否只由数字组成</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<pre><code>False
-</code></pre>
+<pre><code>False</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;abc&#x27;</span>.islower()  <span class="comment"># 查看字符串是否只由小写字母组成</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-<pre><code>True
-</code></pre>
+<pre><code>True</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;i am a student&#x27;</span>.isspace())  <span class="comment"># 只包含空格会返回True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;              &#x27;</span>.isspace())</span><br></pre></td></tr></table></figure>
-
 <pre><code>False
-True
-</code></pre>
+True</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;absdiohfoaf&#x27;</span>.isalnum())  <span class="comment"># 查看字符串是否为字母或者数字组成返回T</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;249713894&#x27;</span>.isalnum())  <span class="comment"># 需要至少要有一个字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;djfa983jr9&#x27;</span>.isalnum())</span><br></pre></td></tr></table></figure>
-
 <pre><code>True
 True
-True
-</code></pre>
+True</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;I Think You Are Pretty&#x27;</span>.istitle())  <span class="comment"># 查看是否字符串为标题格式</span></span><br></pre></td></tr></table></figure>
-
-<pre><code>True
-</code></pre>
+<pre><code>True</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;epfl is my dream&#x27;</span>.islower())  <span class="comment"># 查看字符串中至少包含一个区分大小写字符，并且这些字符都是小写</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Epfl is my dream&#x27;</span>.islower())</span><br></pre></td></tr></table></figure>
-
 <pre><code>True
-False
-</code></pre>
+False</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;THERE IS NOT A UTOPIA&#x27;</span>.isupper())  <span class="comment"># 查看是否字符串均为区分大小写字符而且为大写</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;tHERE IS NOT A UTOPIA&#x27;</span>.isupper())</span><br></pre></td></tr></table></figure>
-
-<pre><code>TrueFalse
-</code></pre>
+<pre><code>TrueFalse</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;i am a student&#x27;</span>  <span class="comment"># 可以先定义变量a 为一个字符串类型</span></span><br><span class="line"><span class="built_in">print</span>(a.startswith(<span class="string">&#x27;i&#x27;</span>))  <span class="comment"># 查看字符串开头是否以小写字母i开头</span></span><br><span class="line"><span class="built_in">print</span>(a.startswith(<span class="string">&#x27;a&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(a.endswith(<span class="string">&#x27;n&#x27;</span>))  <span class="comment"># 查看是否以字母n结束</span></span><br><span class="line"><span class="built_in">print</span>(a.find(<span class="string">&#x27;y&#x27;</span>,<span class="number">0</span>,<span class="number">10</span>))  <span class="comment"># 返回的是第四个字母 未找到 返回 -1</span></span><br><span class="line"><span class="built_in">print</span>(a.find(<span class="string">&#x27;t&#x27;</span>,<span class="number">0</span>,<span class="number">10</span>))  <span class="comment"># 第八个位置</span></span><br><span class="line"><span class="built_in">print</span>(a.rfind(<span class="string">&#x27;a&#x27;</span>,<span class="number">0</span>,<span class="number">20</span>))  <span class="comment"># 从右边开始查找，第五个位置（计算机默认从0开始计数）</span></span><br><span class="line"><span class="built_in">print</span>(a.index(<span class="string">&#x27;u&#x27;</span>,<span class="number">0</span>,<span class="number">20</span>))</span><br><span class="line"><span class="comment">#print(a.index(&#x27;y&#x27;,0,20))  #用索引（index）的方法找不到会报错</span></span><br><span class="line"><span class="built_in">print</span>(a.index(<span class="string">&#x27;u&#x27;</span>,<span class="number">0</span>,<span class="number">20</span>))</span><br><span class="line"><span class="built_in">print</span>(a.replace(<span class="string">&#x27;am&#x27;</span>,<span class="string">&#x27;AM&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(a.replace(<span class="string">&#x27;i&#x27;</span>,<span class="string">&#x27;you&#x27;</span>,<span class="number">100</span>))  <span class="comment"># 参数为替换次数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;i am i am you are you are&#x27;</span>.replace(<span class="string">&#x27;am&#x27;</span>,<span class="string">&#x27;---&#x27;</span>,<span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;i am i am you are you are&#x27;</span>.replace(<span class="string">&#x27;am&#x27;</span>,<span class="string">&#x27;---&#x27;</span>,<span class="number">2</span>))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">这是查找方法和替换方法（针对字符串）</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
 <pre><code>True
 False
 False
@@ -283,55 +242,41 @@ i --- i --- you are you are
 
 
 
-&#39;\n这是查找方法\n&#39;
-</code></pre>
+&#39;\n这是查找方法\n&#39;</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;jjjjjjjj&#x27;</span>.count(<span class="string">&#x27;j&#x27;</span>))  <span class="comment"># 查看有多少个字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world&#x27;</span>.count(<span class="string">&#x27; &#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;caomuhui&#x27;</span>.startswith(<span class="string">&#x27;c&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Beautifl is better than ugly.&#x27;</span>.startswith(<span class="string">&#x27;Be&#x27;</span>,<span class="number">0</span>)) </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Beautifl is better than ugly.&#x27;</span>.startswith(<span class="string">&#x27;Be&#x27;</span>,<span class="number">1</span>)) <span class="comment"># 参数为开始计数位置（默认为0）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;wodetiana&#x27;</span>.replace(<span class="string">&#x27;wode&#x27;</span>,<span class="string">&#x27;where&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
 <pre><code>8
 1
 True
 True
 False
-wheretiana
-</code></pre>
+wheretiana</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;dahfpihrun;aeg&#x27;</span>.find(<span class="string">&#x27;;&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;dahfpihrun;aeg&#x27;</span>.find(<span class="string">&#x27;ppp&#x27;</span>))  <span class="comment"># 找不到则返回参数 -1</span></span><br></pre></td></tr></table></figure>
-
 <pre><code>10
--1
-</code></pre>
+-1</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World.i luv Python.&#x27;</span>.rfind(<span class="string">&#x27;Python&#x27;</span>))   <span class="comment"># 找不到则返回参数 -1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Hello World.i luv Python.&#x27;</span>.rfind(<span class="string">&#x27;Python0&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;abcabcabc&#x27;</span>.rindex(<span class="string">&#x27;abc&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;abcabcabc&#x27;</span>.index(<span class="string">&#x27;abc&#x27;</span>))  <span class="comment"># 对比查看计算机默认计算开始位置和r代表的从右侧开始检索</span></span><br></pre></td></tr></table></figure>
-
 <pre><code>18
 -1
-6
-</code></pre>
+6</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 大小写转换</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;wanquancai&#x27;</span>.capitalize())  <span class="comment"># 开头字母大写</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;wan quan cai&#x27;</span>.title())  <span class="comment"># 改写为title的格式</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;WANQUANCAI&#x27;</span>.lower())  <span class="comment"># 把大写字母改为小写</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;wan QUAN cai&#x27;</span>.upper())  <span class="comment"># 把小写字母改为大写</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;wan QUAN cai&#x27;</span>.swapcase())  <span class="comment"># 反转大小写</span></span><br></pre></td></tr></table></figure>
-
 <pre><code>Wanquancai
 Wan Quan Cai
 wanquancai
 WAN QUAN CAI
-WAN quan CAI
-</code></pre>
+WAN quan CAI</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文本对齐</span></span><br><span class="line">m = <span class="string">&#x27;Hello World!&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(<span class="string">&#x27;Hello World!&#x27;</span>.ljust(<span class="number">20</span>)))  <span class="comment"># 返回一个原字符串做对齐，并使用空格填充至长度20的新字符产</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(<span class="string">&#x27;Hello World!&#x27;</span>.ljust(<span class="number">7</span>)))  <span class="comment"># 如果参数超过字符串则默认用空格补齐，不超过则返回原字符串，可选择补足方式</span></span><br><span class="line"><span class="built_in">len</span>(<span class="string">&#x27;Hello World!&#x27;</span>.ljust(<span class="number">20</span>))</span><br><span class="line"><span class="built_in">print</span> (m.ljust(<span class="number">30</span>,<span class="string">&#x27;z&#x27;</span>)) <span class="comment"># use &#x27;z&#x27;to fill rest string.</span></span><br><span class="line"><span class="built_in">print</span>(m.center(<span class="number">20</span>))  <span class="comment"># return a string on center and use space to fill the whole string.</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <pre><code>20
 12
 Hello World!zzzzzzzzzzzzzzzzzz
-    Hello World!    
-</code></pre>
+    Hello World!    </code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">r&#x27;/Users/test/1.rtf&#x27;</span>.endswith(<span class="string">&#x27;.rtf&#x27;</span>)</span><br><span class="line"><span class="comment"># 去掉空白字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;     abc&#x27;</span>.strip())  <span class="comment"># 删除左侧空白（space）字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hdiahoifnreisssss&#x27;</span>.strip(<span class="string">&#x27;s&#x27;</span>))  <span class="comment"># 删除字符中包含的s</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;ddd  jhahuihierd  &#x27;</span>.lstrip(<span class="string">&#x27;d&#x27;</span>))  <span class="comment">#删除&#x27;d&#x27;左侧的字符串(从左数)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;999aaasdf&#x27;</span>.lstrip(<span class="string">&#x27;9&#x27;</span>))  <span class="comment"># 从左侧删除字符串</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;aaasdf&#x27;</span>.lstrip(<span class="string">&#x27;a&#x27;</span>))  <span class="comment"># </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;aaasdf&#x27;</span>.rstrip(<span class="string">&#x27;f&#x27;</span>))  <span class="comment"># 从右侧删除字符，如果不是最右侧字符则无法执行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;aaasdf&#x27;</span>.rstrip(<span class="string">&#x27;dsf&#x27;</span>))  <span class="comment"># 过反复运行发现好像是右侧的字符只要是挨着就能删除，无论是怎么排列或者是不是按照原来的顺序都可以被删除。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <pre><code>abc
 hdiahoifnrei
   jhahuihierd  
 aaasdf
 sdf
 aaasd
-aaa
-</code></pre>
+aaa</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拆分和连接</span></span><br><span class="line"><span class="string">&quot;&quot;</span>.join(<span class="string">&#x27;wodetianna&#x27;</span>.split(<span class="string">&#x27;det&#x27;</span>)) <span class="comment"># 勘误：书中缺少一个双引号，对字符串进行操作，split为删除的意思，</span></span><br><span class="line"><span class="string">&#x27;abcdefg&#x27;</span>.split(<span class="string">&#x27;d&#x27;</span>)  <span class="comment"># 从d处分开</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;我是一个好人，我是一个好人&#x27;</span>.split(<span class="string">&#x27;我是&#x27;</span>))  <span class="comment">#可以发现开头split和中间split的区别,输出为一个数组</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;我是一个好人，我是一个好人&#x27;</span>.split(<span class="string">&#x27;是&#x27;</span>))    <span class="comment">#中间split不会添加开头的一个&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;,&#x27;</span>.join(<span class="string">&#x27;a      b    ccc\n\n\nddd.    &#x27;</span>.split())) <span class="comment">#删除空格并用逗号作为连接字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&#x27;</span>.join(<span class="string">&#x27;abc&#x27;</span>.partition(<span class="string">&#x27;a&#x27;</span>)))  <span class="comment"># 把字符&#x27;a&#x27;加入&#x27;a&#x27; 的两侧</span></span><br><span class="line">x = <span class="string">&#x27;a  bc  d&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;,&#x27;</span>.join(x.split()))  <span class="comment"># 先对x变量删除其中的空格再进行加入逗号的操作，其中逗号作为替换n个空格作用</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;--&#x27;</span>.join(<span class="string">&#x27;我是谁呢&#x27;</span>.split(<span class="string">&#x27;是&#x27;</span>)))  <span class="comment"># 将字符--作为分隔符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;--&#x27;</span>.join(<span class="string">&#x27;我是谁呢&#x27;</span>))  <span class="comment"># join 将字符加入的位置是字符串的每个字符的中间，若有其他命令则用&#x27;.&#x27;分隔</span></span><br><span class="line">y = <span class="string">&#x27;我到底是-谁呢&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-&#x27;</span>.join(y.split(<span class="string">&#x27;到底&#x27;</span>)))  <span class="comment"># 将变量y从&quot;到底&quot;处分开并用字符&#x27;-&#x27;分隔</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <pre><code>[&#39;&#39;, &#39;一个好人，&#39;, &#39;一个好人&#39;]
 [&#39;我&#39;, &#39;一个好人，我&#39;, &#39;一个好人&#39;]
 a,b,ccc,ddd.
@@ -339,10 +284,8 @@ aaabc
 a,bc,d
 我--谁呢
 我--是--谁--呢
-我-是-谁呢
-</code></pre>
+我-是-谁呢</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 8.3 字符串的切片（截取）</span></span><br><span class="line">num_str = <span class="string">&#x27;0123456789&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(num_str[<span class="number">2</span>:<span class="number">6</span>])  <span class="comment"># 从第二个位置开始索引到第六个位置结束（计算机默认从0开始计数）</span></span><br><span class="line"><span class="built_in">print</span>(num_str[-<span class="number">5</span>:-<span class="number">1</span>])  <span class="comment">#从右边向左数第五个位置索引到倒数第一个位置</span></span><br><span class="line"><span class="built_in">print</span>(num_str[-<span class="number">1</span>])  <span class="comment"># 索引最后一个位置</span></span><br><span class="line"><span class="comment">#切片的操作区间为左闭右开，不包括最后一个位置，-1代表最后一个位置（在单独索引的时候）</span></span><br><span class="line"><span class="built_in">print</span>(num_str[<span class="number">2</span>:])  <span class="comment">#从第二个位置截取字符串到最后一个位置，即从2开始打印到最后一个位置</span></span><br><span class="line"><span class="built_in">print</span>(num_str[:<span class="number">6</span>])  <span class="comment"># 从第一个位置到第五个位置，根据索引切片的方式（左闭右开），不包括最后一个位置，所以是第五个位置</span></span><br><span class="line"><span class="built_in">print</span>(num_str[:])  <span class="comment"># 截取完整的字符串,需要记住方括号中间加冒号，用英文输入</span></span><br><span class="line"><span class="built_in">print</span>(num_str[::<span class="number">2</span>])  <span class="comment"># 从位置0开始，每隔一个字符截取字符串</span></span><br><span class="line"><span class="built_in">print</span>(num_str[<span class="number">1</span>::<span class="number">2</span>])  <span class="comment"># 从位置1开始，每隔一个字符截取一个字符串</span></span><br><span class="line"><span class="built_in">print</span>(num_str[<span class="number">5</span>::-<span class="number">1</span>])  <span class="comment"># 逆序切片 ，两个冒号后带一个-1切片的时候</span></span><br><span class="line"><span class="built_in">print</span>(num_str[<span class="number">8</span>:-<span class="number">1</span>])  <span class="comment"># 从第八个位置到倒数第二个位置进行切片</span></span><br><span class="line"><span class="built_in">print</span>(num_str[-<span class="number">2</span>:])  <span class="comment"># 截取最后两个位置的切片</span></span><br><span class="line"><span class="built_in">print</span>(num_str[::-<span class="number">1</span>])  <span class="comment"># 字符串逆序排列</span></span><br></pre></td></tr></table></figure>
-
 <pre><code>2345
 5678
 9
@@ -354,25 +297,19 @@ a,bc,d
 543210
 8
 89
-9876543210
-</code></pre>
+9876543210</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#8.4 字符串的其他用法</span></span><br><span class="line">str_1 = <span class="string">&#x27;abcd&#x27;</span></span><br><span class="line">str_2 = <span class="string">&#x27;1234&#x27;</span></span><br><span class="line">x = str_1 + str_2</span><br><span class="line"><span class="built_in">print</span>(x)</span><br><span class="line"><span class="comment">#x = x&#x27;efg&#x27;  # 无法这样连接字符串</span></span><br><span class="line">x = <span class="string">&#x27;abc&#x27;</span></span><br><span class="line">x = x*<span class="number">5</span>  <span class="comment"># 字符串的乘法运算</span></span><br><span class="line"><span class="built_in">print</span>(x)</span><br><span class="line">x = <span class="string">&quot;abc&quot;</span></span><br><span class="line">y = <span class="string">&quot;我不是abc，我是谁呢？&quot;</span></span><br><span class="line"><span class="built_in">print</span>(x&gt;=y)</span><br><span class="line"><span class="built_in">print</span>(x&lt;y)  <span class="comment"># 字符串的比较按照出现顺序的字符进行比较，相同位置字符比较得出布尔结果</span></span><br><span class="line"><span class="comment">#返回布尔值，否则循环直到得出结果</span></span><br><span class="line"><span class="comment">#字符串的in notin 运算</span></span><br><span class="line"><span class="comment">#字符串的in操作</span></span><br><span class="line">py = <span class="string">&quot;人生苦短，我用Python&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;人生&quot;</span><span class="keyword">in</span> py)  <span class="comment"># 判断字符串在不在字符串中 </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Python&quot;</span><span class="keyword">in</span> py)  <span class="comment"># 经过实验，这里的Python是我用中文加上档打出来的大写，不影响识别</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;陈福明&quot;</span><span class="keyword">in</span> py)</span><br></pre></td></tr></table></figure>
-
 <pre><code>abcd1234
 abcabcabcabcabc
 False
 True
 True
 True
-False
-</code></pre>
+False</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;陈福明&#x27;</span><span class="keyword">not</span> <span class="keyword">in</span> py)  <span class="comment"># 查看字符串是不是不在其中，若不在则输处True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;人生苦短&#x27;</span><span class="keyword">not</span> <span class="keyword">in</span> py)</span><br></pre></td></tr></table></figure>
-
 <pre><code>True
-False
-</code></pre>
+False</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字符串内置函数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(<span class="string">&#x27;hello world&#x27;</span>))  <span class="comment"># 查看字符串长度，包括空格</span></span><br><span class="line">str_1 = <span class="built_in">str</span>(<span class="number">1024</span>)  <span class="comment"># 返回一个对象的string格式，这里将int数据类型转化为string</span></span><br><span class="line"><span class="built_in">print</span>(str_1)</span><br><span class="line"><span class="built_in">dict</span> = &#123;<span class="string">&#x27;baidu&#x27;</span>:<span class="string">&#x27;baidu.com&#x27;</span>,<span class="string">&#x27;google&#x27;</span>:<span class="string">&#x27;google.com&#x27;</span>,<span class="string">&#x27;pythonlearning&#x27;</span>:<span class="string">&#x27;pythonlearning.com&#x27;</span>&#125;</span><br><span class="line"><span class="built_in">str</span>(<span class="built_in">dict</span>) <span class="comment"># 将字典类型转化为字符串类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>(<span class="built_in">dict</span>))</span><br><span class="line">b_1 = <span class="built_in">bin</span>(<span class="number">1024</span>)  <span class="comment"># 返回数据的二进制表示</span></span><br><span class="line"><span class="built_in">print</span>(b_1)</span><br><span class="line">o_1 = <span class="built_in">oct</span>(<span class="number">1024</span>)  <span class="comment"># 转换整数成为八进制字符</span></span><br><span class="line"><span class="built_in">print</span>(o_1)</span><br><span class="line">h_1 = <span class="built_in">hex</span>(<span class="number">1024</span>)  <span class="comment"># 转换整数位十六进制字符</span></span><br><span class="line"><span class="built_in">print</span>(h_1)</span><br><span class="line">ch_1 = <span class="built_in">chr</span>(<span class="number">65</span>)  <span class="comment"># range(256)内的整数参数所对应的第65个字符，为大写的A</span></span><br><span class="line"><span class="built_in">print</span>(ch_1)</span><br><span class="line">o1 = <span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)  <span class="comment">#  将A的艾萨克2数值返回，ord（）也可以返回unicode数值，如果这个数值超过了python的定义返回会报错</span></span><br><span class="line"><span class="built_in">print</span>(o1)</span><br></pre></td></tr></table></figure>
-
 <pre><code>11
 1024
 &#123;&#39;baidu&#39;: &#39;baidu.com&#39;, &#39;google&#39;: &#39;google.com&#39;, &#39;pythonlearning&#39;: &#39;pythonlearning.com&#39;&#125;
@@ -380,18 +317,14 @@ False
 0o2000
 0x400
 A
-65
-</code></pre>
+65</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#8.4.3 常用转义字符 用斜杠加字符的形式来进行一些操作</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello\nworld&#x27;</span>)  <span class="comment"># 换行</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\101&#x27;</span>,<span class="string">&#x27;\102&#x27;</span>)  <span class="comment"># 八进制转义字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\x41&#x27;</span>,<span class="string">&#x27;\x42&#x27;</span>)  <span class="comment"># 其他数字的转义字符</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;我是\u9648\u798f\u660e&#x27;</span>)  <span class="comment"># unicode</span></span><br></pre></td></tr></table></figure>
-
 <pre><code>hello
 world
 A B
 A B
-我是陈福明
-</code></pre>
+我是陈福明</code></pre>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#8.4.4原始字符串表达，字符串前加R或者小写的r,表示原始字符串，最后一个不能是符号&quot;\&quot;</span></span><br><span class="line">path = <span class="string">&#x27;C:\Windows\notepad.exe&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(path)</span><br><span class="line">path_new = <span class="string">r&#x27;C:\Windows\notepad.exe&#x27;</span>  <span class="comment"># 原始字符串</span></span><br><span class="line"><span class="built_in">print</span>(path_new)</span><br><span class="line"><span class="comment">#utf-8编码作为Python中的解释器编码格式，其他编码一律归为字符串，其作为转换的中介</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(<span class="string">&#x27;中国&#x27;</span>.encode(<span class="string">&#x27;utf-8&#x27;</span>)))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(<span class="string">&#x27;中国&#x27;</span>.encode(<span class="string">&#x27;gbk&#x27;</span>)))  <span class="comment"># gbk ——汉字内码扩展规范</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">chr</span>(<span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)+<span class="number">2</span>))  <span class="comment"># 输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="number">65</span>)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows</span><br><span class="line">otepad.exe</span><br><span class="line">C:\Windows\notepad.exe</span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line">C</span><br><span class="line"><span class="number">65</span></span><br><span class="line"><span class="number">65</span></span><br></pre></td></tr></table></figure>
 
     </div>
@@ -486,13 +419,13 @@ A B
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
