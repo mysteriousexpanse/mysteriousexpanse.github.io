@@ -177,7 +177,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-26 10:46:47" itemprop="dateModified" datetime="2021-10-26T10:46:47+08:00">2021-10-26</time>
+                <time title="Modified: 2021-10-26 10:52:33" itemprop="dateModified" datetime="2021-10-26T10:52:33+08:00">2021-10-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,10 +206,11 @@
 <h4 id="模">模</h4>
 <p>模可以看作一个环绕圆形具有数字的表盘进行间断步行的模式，如我们将日常的钟表看成一圈，那么一圈有12个数，如果从0（12）处开始顺时针走三步，可以看作<span class="math inline">\(3\mod{12}\)</span>就是3模12，这里因为走的步数不到12，所以余3，也就是<span class="math inline">\(3=0*12+3\)</span>我们也可以写作<span class="math inline">\(3\mod{12}=3\)</span>,也可以写作<span class="math inline">\(3\mod{12}\equiv 3\mod{12}\)</span>。</p>
 <h4 id="同余类">同余类</h4>
-<p>如果这里的步数超过12会出现什么结果呢？很显然，根据除法，如果是15步，会满足一个12，也就是说剩下一个3步，有12步走了一圈，那么这个“一圈”就是所谓的“模没了“。也就是说，这时候剩余的3步依旧满足上面的式子，这里我们可以写成<span class="math inline">\(15\mod{12}\equiv 3\mod{12}\)</span>,也可以写作<span class="math inline">\(3\equiv 15\pmod{12}\)</span>。引入一个概念：==同余类==，同余类就是符合模n（这里是括号里的12）余数相同的数集，满足的条件就是<span class="math inline">\(x\in A=\{r+k*n\}\)</span>,k这里就是多少圈的意思。对于乘法，可以发现当一个数乘以模数的倍数时，仍然能保持原式不变的结果，即<span class="math inline">\(A\mod{B}\)</span> <span class="math inline">\(\iff\)</span> <span class="math inline">\(A*kB\pmod{B}\)</span> ,消去的原因是乘积满足B倍数的部分被模没了，只剩下一个A模B。</p>
-<h4 id="与费马小定理消项目有关">与费马小定理消项目有关</h4>
+<p>如果这里的步数超过12会出现什么结果呢？很显然，根据除法，如果是15步，会满足一个12，也就是说剩下一个3步，有12步走了一圈，那么这个“一圈”就是所谓的“模没了“。也就是说，这时候剩余的3步依旧满足上面的式子，这里我们可以写成<span class="math inline">\(15\mod{12}\equiv 3\mod{12}\)</span>,也可以写作<span class="math inline">\(3\equiv 15\pmod{12}\)</span>。引入一个概念：同余类，同余类就是符合模n（这里是括号里的12）余数相同的数集，满足的条件就是<span class="math inline">\(x\in A=\{r+k*n\}\)</span>,r为余数，k这里就是多少圈的意思。对于乘法，可以发现当一个数乘以模数的倍数时，仍然能保持原式不变的结果，即<span class="math inline">\(A\mod{B}\)</span> <span class="math inline">\(\iff\)</span> <span class="math inline">\(A*kB\pmod{B}\)</span> ,消去的原因是乘积满足B倍数的部分被模没了，只剩下一个A模B。</p>
+<h4 id="与费马小定理消项有关">与费马小定理消项有关</h4>
 <p>这个特性还可以用来消去存在费马小定理的情况，如以下式子满足$a{primenumber},(a,p)=1,a^{p-1}p $</p>
 <p>对于式子$a^ppa*a^{p-1}pap $。同样也可以用下面的乘法计算方式去推导。也就是说只要是满足费马小定理的情况下可以直接将乘积中的 <span class="math inline">\(a^{p-1}\)</span> 替换为1。</p>
+<p>同样当形式为<span class="math inline">\(a^{k*(p-1)}\pmod p\)</span>时，也可以替换为1，这里可看作有k个1累乘，仍为1。</p>
 <h3 id="模加法和减法的推导">模加法和减法的推导</h3>
 <h4 id="加法">加法：</h4>
 <p><span class="math inline">\((A+B)\pmod n\)</span> <span class="math inline">\(\iff\)</span> <span class="math inline">\(((A\mod{n})+(B\mod{n}))\mod{n}\)</span></p>
