@@ -114,6 +114,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -177,7 +182,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-29 12:16:38" itemprop="dateModified" datetime="2021-10-29T12:16:38+08:00">2021-10-29</time>
+                <time title="Modified: 2021-10-30 21:29:49" itemprop="dateModified" datetime="2021-10-30T21:29:49+08:00">2021-10-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,17 +252,21 @@
 <h3 id="等价关系与等号两侧数据移动">等价关系与等号两侧数据移动</h3>
 <h4 id="几个等价关系">几个等价关系：</h4>
 <p><span class="math inline">\(A\equiv B\pmod C\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(A\mod{C}=B\mod{C}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(C|(A-B)\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(A=B+K*C\)</span></p>
-<h4 id="同余符号的理解">同余符号的理解：</h4>
-<p>在同余符号的两侧实际是两个式子的结果，如上面A与B模C的结果是相等的，而A本身代表的是<span class="math inline">\(A=r=B\pmod{C}\)</span> ，当发生带有"="的等式需要代入数据计算时，需要代入的是余数r，而不是平时认为的等号另一侧的式子，这里用一个很简单的例子来加深理解：</p>
-<p>如RSA中的加密过程：<span class="math inline">\(c\equiv m^e\pmod{n}\)</span> 这里的密文显然是右侧明文的数学常数次方的结果，而不是简单的等于右侧，在模运算中不能认为同余符号和等号的意义是相同的，同余和等式之间的关系可以用上面“几个等价关系“中的推导理解。</p>
-<p>简而言之，同余符号两侧是模式，而模式的计算结果是r，也就是余数，当代入一侧的数据时，就是代入r。</p>
 <h4 id="等号两侧数据移动的推导">等号两侧数据移动的推导：</h4>
 <p><span class="math inline">\(A=(B-C)\mod{n}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(B-C=k_1*n+A\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(B=k_1*n+(A+C)\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\((A+C)=B\mod{n}\)</span></p>
 <h4 id="同余">同余：</h4>
 <p>可看作具有模n余数相同的属于同一具有这种特性的数集中的数，满足<span class="math inline">\(a_n\in A=\{(a_n+k*n)\mod{n}\}\)</span>条件的<span class="math inline">\(a_n\)</span>,同余用同余符号"<span class="math inline">\(\equiv\)</span>"所连接的数（这里的数是去掉了mod计算的数，如<span class="math inline">\(3\equiv 13\pmod{10}\)</span>代表的是3和13是模10中，3和13是同余类）所属一个同余类</p>
+<h4 id="同余符号的理解">同余符号的理解：</h4>
+<p>在同余符号的两侧实际是两个式子的结果，如上面A与B模C的结果是相等的，而A本身代表的是<span class="math inline">\(A=r=B\pmod{C}\)</span> ，当发生带有"="的等式需要代入数据计算时，需要代入的是余数r，而不是平时认为的等号另一侧的式子，这里用一个很简单的例子来加深理解：</p>
+<p>如RSA中的加密过程：<span class="math inline">\(c\equiv m^e\pmod{n}\)</span> 这里的密文显然是右侧明文的数学常数次方的结果，而不是简单的等于右侧，在模运算中不能认为同余符号和等号的意义是相同的，同余和等式之间的关系可以用上面“几个等价关系“中的推导理解。</p>
+<p>再举一个例子来加深理解：</p>
+<p>Ex:已知 <span class="math inline">\(c\equiv m^e\pmod{n}\)</span><span class="math inline">\(\iff\)</span> <span class="math inline">\(c=k*n+m^e\)</span> ，首先对等式两侧取模p；</p>
+<p>得到<span class="math inline">\(c\pmod{p}\equiv (k*n+m^e)\pmod{p}\)</span>，此时可以发现左右两侧都是r（余数）；</p>
+<p>把右侧的计算结果当成<span class="math inline">\(m_1^e\)</span>，可以发现上面的式子可以变为：<span class="math inline">\(m_1^e\equiv c\pmod{p}\)</span>,这里的<span class="math inline">\(m_1^e\)</span>实际上就是代指<span class="math inline">\(c\pmod{p}\)</span>的结果。</p>
+<p>总之，同余符号两侧是模式，而模式的计算结果是r，也就是余数，当代入一侧的数据时，就是代入r。</p>
 <h2 id="no.2中国剩余定理crt">NO.2中国剩余定理(CRT)</h2>
 <p>中国剩余定理用于解同余方程组，即由两两互素的整数对某数取模所得的余数求解该数。</p>
-<h3 id="定义内容">定义内容：</h3>
+<h3 id="定义">定义：</h3>
 <p>设正整数<span class="math inline">\(m_1,m_2,m_3...m_n\)</span>两两互素，记<span class="math inline">\(M=\prod\limits_{i=0}^k\)</span>,则同余类<span class="math inline">\(\begin{cases}x\equiv b_1\mod{n}\\x\equiv b_2\mod{n}\\x\equiv b_3\mod{n}\\ ...\\x\equiv b_n\mod{n} \end{cases}\)</span></p>
 <p>在模M同余的意义下，有唯一的解：<span class="math inline">\(x=\sum\limits_{i=1}^kb_iM_iy_i\mod{M}\)</span></p>
 <p>式子中，<span class="math inline">\(M_i= \frac{M} {m_i}\)</span> , <span class="math inline">\(1 \leqslant i \leqslant r\)</span> , <span class="math inline">\(y_i=M_i^{-1}\mod{m_i}\)</span> ,<span class="math inline">\(1\leqslant i\leqslant k\)</span>.</p>
@@ -1158,7 +1167,7 @@ A B
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-29 12:10:32" itemprop="dateModified" datetime="2021-10-29T12:10:32+08:00">2021-10-29</time>
+                <time title="Modified: 2021-10-30 15:10:16" itemprop="dateModified" datetime="2021-10-30T15:10:16+08:00">2021-10-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1213,7 +1222,7 @@ A B
 <p>接下来的推导基于dp、dq泄露的推导过程，只不过不需要用费马小定理消项。</p>
 <p>在给出了上面条件的情况下求c = ？</p>
 <p>在推导前，为了方便，将cp写作c1,cq写作c2,对应n=p*q这里的位置。</p>
-<p>首先由：</p>
+<p>步骤：</p>
 <ol type="1">
 <li><span class="math inline">\(c=m^e\pmod{n}\rightarrow c=k*n+m^e\)</span> 选择含有c和n的条件是为了找到目的数据c，和p、q两个量相关的数据n（n = p*q）进行消项。</li>
 </ol>
@@ -1261,7 +1270,7 @@ A B
 <p><span class="math inline">\(d\equiv dp\pmod{(p-1)},d\equiv dq\pmod{(q-1)}\)</span></p>
 <p>再次整体代入到<span class="math inline">\(m_1,m_2\)</span>的模式中：<span class="math inline">\(m_1\equiv c^{dp\pmod{(p-1)}}\pmod{p},m_2\equiv c^{dq\pmod{(q-1)}}\pmod{q}\)</span></p>
 <p>带错了，上一行是错误的代入方式。</p>
-<p>这里代入等式：<span class="math inline">\(d=k*(p-1)+dp,d=k*(q-1)\)</span>，这里的k 并不是相同的，根据下面推导可以发现为什么这样并不影响结果。</p>
+<p>这里代入等式：<span class="math inline">\(d=k*(p-1)+dp,d=k*(q-1)\)</span>。（这里的k 并不是相同的，根据下面推导可以发现为什么这样并不影响结果。）</p>
 <p>将d代入到密文的指数位置：</p>
 <p><span class="math inline">\(m_1\equiv c^{dp+k*(p-1)}\pmod{p},m_2\equiv c^{dq+k*(q-1)}\pmod{q}\)</span></p>
 <p>此时发现，由于p 和q的本质是大质数，那么可以拆成:</p>
@@ -1439,6 +1448,7 @@ A B
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
