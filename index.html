@@ -182,7 +182,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-30 21:29:49" itemprop="dateModified" datetime="2021-10-30T21:29:49+08:00">2021-10-30</time>
+                <time title="Modified: 2021-10-31 22:38:56" itemprop="dateModified" datetime="2021-10-31T22:38:56+08:00">2021-10-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -210,7 +210,7 @@
 <h3 id="模运算的初步理解参考可汗学院模运算部分">模运算的初步理解（参考：<a target="_blank" rel="noopener" href="https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic">可汗学院（模运算部分）</a>）</h3>
 <h4 id="模">模</h4>
 <p>模可以看作一个环绕圆形具有数字的表盘进行间断步行的模式，如我们将日常的钟表看成一圈，那么一圈有12个数，如果从0（12）处开始顺时针走三步，可以看作<span class="math inline">\(3\mod{12}\)</span>就是3模12，这里因为走的步数不到12，所以余3，也就是<span class="math inline">\(3=0*12+3\)</span>我们也可以写作<span class="math inline">\(3\mod{12}=3\)</span>,也可以写作<span class="math inline">\(3\mod{12}\equiv 3\mod{12}\)</span>。</p>
-<h4 id="同余类">同余类</h4>
+<h4 id="同余类模没了">同余类&amp;“模没了“</h4>
 <p>如果这里的步数超过12会出现什么结果呢？很显然，根据除法，如果是15步，会满足一个12，也就是说剩下一个3步，有12步走了一圈，那么这个“一圈”就是所谓的“模没了“。也就是说，这时候剩余的3步依旧满足上面的式子，这里我们可以写成<span class="math inline">\(15\mod{12}\equiv 3\mod{12}\)</span>,也可以写作<span class="math inline">\(3\equiv 15\pmod{12}\)</span>。引入一个概念：同余类，同余类就是符合模n（这里是括号里的12）余数相同的数集，满足的条件就是<span class="math inline">\(x\in A=\{r+k*n\}\)</span>,r为余数，k这里就是多少圈的意思。对于乘法，可以发现当一个数乘以模数的倍数时，仍然能保持原式不变的结果，即<span class="math inline">\(A\mod{B}\)</span> <span class="math inline">\(\iff\)</span> <span class="math inline">\(A*kB\pmod{B}\)</span> ,消去的原因是乘积满足B倍数的部分被模没了，只剩下一个A模B。</p>
 <h4 id="逆元数论倒数">逆元（数论倒数）</h4>
 <p>逆元可以看作在同余符号两边进行模运算移项的时候需要把被移项的数变成逆元，或者一个数乘这个数的逆元和1模-模数同余。既是一种特殊的移项也可以看作是消项用。</p>
@@ -1167,7 +1167,7 @@ A B
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-30 15:10:16" itemprop="dateModified" datetime="2021-10-30T15:10:16+08:00">2021-10-30</time>
+                <time title="Modified: 2021-11-01 00:33:22" itemprop="dateModified" datetime="2021-11-01T00:33:22+08:00">2021-11-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1269,7 +1269,7 @@ A B
 <p>去看第三行的公式发现两者和<span class="math inline">\(c^d\)</span>有关，由dp、dq给出的数据找到：</p>
 <p><span class="math inline">\(d\equiv dp\pmod{(p-1)},d\equiv dq\pmod{(q-1)}\)</span></p>
 <p>再次整体代入到<span class="math inline">\(m_1,m_2\)</span>的模式中：<span class="math inline">\(m_1\equiv c^{dp\pmod{(p-1)}}\pmod{p},m_2\equiv c^{dq\pmod{(q-1)}}\pmod{q}\)</span></p>
-<p>带错了，上一行是错误的代入方式。</p>
+<p>⚠️带错了，上一行是错误的代入方式。⚠️</p>
 <p>这里代入等式：<span class="math inline">\(d=k*(p-1)+dp,d=k*(q-1)\)</span>。（这里的k 并不是相同的，根据下面推导可以发现为什么这样并不影响结果。）</p>
 <p>将d代入到密文的指数位置：</p>
 <p><span class="math inline">\(m_1\equiv c^{dp+k*(p-1)}\pmod{p},m_2\equiv c^{dq+k*(q-1)}\pmod{q}\)</span></p>
@@ -1283,7 +1283,28 @@ A B
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,cryptography</span><br><span class="line">n = p*q</span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># m = c^d mod n</span></span><br><span class="line">m1 = <span class="built_in">pow</span>(c,dp,p)</span><br><span class="line">m2 = <span class="built_in">pow</span>(c,dq,q)</span><br><span class="line">cd = ((m2-m1)*gmpy2.invert(p,q))%p+m1</span><br><span class="line">m = cd %n</span><br><span class="line"><span class="built_in">print</span>(libnum.n2s(<span class="built_in">int</span>(m)))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">b&#x27;noxCTF&#123;W31c0m3_70_Ch1n470wn&#125;&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 <h3 id="总结-1">总结：</h3>
 <p>要明白要求的目的未知数是什么，还要去找分解出来好求的数据，同时代入数据要靠近未知数，运用费马小定理消去乘积项，最终在缺少参数的情况下求出旗帜是什么。</p>
-<h2 id="no.5">NO.5</h2>
+<h2 id="no.5-dp_leak-python学习">NO.5 dp_leak Python学习</h2>
+<p>Buu-RSA2</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">e = <span class="number">65537</span></span><br><span class="line">n = <span class="number">248254007851526241177721526698901802985832766176221609612258877371620580060433101538328030305219918697643619814200930679612109885533801335348445023751670478437073055544724280684733298051599167660303645183146161497485358633681492129668802402065797789905550489547645118787266601929429724133167768465309665906113</span></span><br><span class="line">dp = <span class="number">905074498052346904643025132879518330691925174573054004621877253318682675055421970943552016695528560364834446303196939207056642927148093290374440210503657</span></span><br><span class="line">c = <span class="number">140423670976252696807533673586209400575664282100684119784203527124521188996403826597436883766041879067494280957410201958935737360380801845453829293997433414188838725751796261702622028587211560353362847191060306578510511380965162133472698713063592621028959167072781482562673683090590521214218071160287665180751</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="条件-1">条件：</h3>
+<p><span class="math inline">\(dp\equiv d\pmod{(p-1)}\)</span>,<span class="math inline">\(e*d\equiv1\pmod{\phi(n)}\)</span>，<span class="math inline">\(\phi(n)=(p-1)*(q-1)\)</span></p>
+<h3 id="分析-4">分析：</h3>
+<p>这道题目只给了e,n,dp,c缺少的条件是<span class="math inline">\(m\equiv c^d\pmod{n}\)</span>中的d，而<span class="math inline">\(dp\equiv d\pmod{(p-1)}\)</span>，依旧需要通过等式和模式的推导去找到p和q。</p>
+<h3 id="推导过程-2">推导过程：</h3>
+<p>由<span class="math inline">\(dp\equiv d\pmod{(p-1)}\)</span>，可以根据同余的性质，同余符号左右同乘e，得到<span class="math inline">\(dp*e\equiv d*e\pmod{(p-1)}\)</span>.</p>
+<p>此时还有<span class="math inline">\(e*d\equiv1\pmod{\phi(n)}\)</span>，可以建立两个等式：</p>
+<p>第一个：<span class="math inline">\(dp*e=k_1*(p-1)+d*e\)</span></p>
+<p>第二个：<span class="math inline">\(d*e=k_2*(p-1)(q-1)+1\)</span></p>
+<p>合并，将第二个式子中<span class="math inline">\(d*e\)</span>代入第一个式子得到：</p>
+<p><span class="math inline">\(dp*e=(p-1)*[k_1+k_2(q-1)]+1\)</span>，观察式子，可以发现dp是小于(p-1)的（<a target="_blank" rel="noopener" href="https://mysteriousexpanse.github.io/2021/10/19/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/#%E5%90%8C%E4%BD%99%E7%B1%BB">模过了</a>），这里令</p>
+<p><span class="math inline">\(x=[k_1+k_2*(q-1)]\)</span>,可以发现x的值要小于e（1在几乎可以忽略的情况下），这里可以用<span class="math inline">\(a*b=c*d,a&gt;c,d&gt;b\)</span>,这样来理解。</p>
+<p>所以这里可以得到<span class="math inline">\(x\in(1,e)\)</span>,则可以通过遍历<span class="math inline">\((1,e)\)</span>，进而求取<span class="math inline">\((p-1)\)</span>,p和其他数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> mpz</span><br><span class="line"><span class="keyword">from</span> decimal <span class="keyword">import</span> *</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">n = <span class="number">248254007851526241177721526698901802985832766176221609612258877371620580060433101538328030305219918697643619814200930679612109885533801335348445023751670478437073055544724280684733298051599167660303645183146161497485358633681492129668802402065797789905550489547645118787266601929429724133167768465309665906113</span></span><br><span class="line">dp = <span class="number">905074498052346904643025132879518330691925174573054004621877253318682675055421970943552016695528560364834446303196939207056642927148093290374440210503657</span></span><br><span class="line">c = <span class="number">140423670976252696807533673586209400575664282100684119784203527124521188996403826597436883766041879067494280957410201958935737360380801845453829293997433414188838725751796261702622028587211560353362847191060306578510511380965162133472698713063592621028959167072781482562673683090590521214218071160287665180751</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,e):</span><br><span class="line">    <span class="keyword">if</span> (dp*e-<span class="number">1</span>)%i == <span class="number">0</span>:</span><br><span class="line">        p = (dp*e-<span class="number">1</span>)//i+<span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> n%p == <span class="number">0</span>:</span><br><span class="line">            q = n//p</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;p and q :&#x27;</span>,p,q)</span><br><span class="line">            phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">            d = gmpy2.invert(e, phi)</span><br><span class="line">            m = <span class="built_in">pow</span>(c,d,n)</span><br><span class="line"><span class="built_in">print</span>(libnum.n2s(<span class="built_in">int</span>(m))) <span class="comment"># 修正</span></span><br></pre></td></tr></table></figure>
+<h3 id="总结-2">总结：</h3>
+<p>在解题时，开始是直接自己写了一行，发现网上的code正好没什么问题，然而运行后出现了一些问题。</p>
+<p>1，如在运行以下代码时出现的问题是d为"Nonetype",输出为无类型</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">def</span> getd(n,e,dp):</span><br><span class="line">    <span class="attribute">for</span> i in range(<span class="number">1</span>,e):</span><br><span class="line">        <span class="attribute">if</span> (dp*e-<span class="number">1</span>)%i == <span class="number">0</span>:</span><br><span class="line">            <span class="attribute">if</span> n%(((dp*e-<span class="number">1</span>)/i)+<span class="number">1</span>)==<span class="number">0</span>:</span><br><span class="line">                <span class="attribute">p</span>=((dp*e-<span class="number">1</span>)/i)+<span class="number">1</span></span><br><span class="line">                <span class="attribute">q</span>=n/(((dp*e-<span class="number">1</span>)/i)+<span class="number">1</span>)</span><br><span class="line">                <span class="attribute">phi</span> = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">                <span class="attribute">d</span> = gmpy<span class="number">2</span>.invert(e,phi)%phi</span><br><span class="line">                <span class="attribute">return</span> d</span><br></pre></td></tr></table></figure>
+<p>而在某些情况下还会出现”OverflowError: long int too large to convert to float in python“的报错，这里主要是line4， n%数据时。--------更新----------------</p>
 
       
     </div>
