@@ -176,7 +176,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-11-24 19:52:58 / 修改时间：20:54:41" itemprop="dateCreated datePublished" datetime="2021-11-24T19:52:58+08:00">2021-11-24</time>
+              <time title="创建时间：2021-11-24 19:52:58 / 修改时间：21:43:15" itemprop="dateCreated datePublished" datetime="2021-11-24T19:52:58+08:00">2021-11-24</time>
             </span>
 
           
@@ -191,55 +191,60 @@
 
       
           <h1 id="python中的正则表达式">Python中的正则表达式</h1>
+<h2 id="参考资料">参考资料</h2>
+<p><a target="_blank" rel="noopener" href="https://www.imooc.com/learn/550">慕课网-正则表达式</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/python3/python3-reg-expressions.html">菜鸟教程-Python3 正则表达式</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re  <span class="comment"># 用于生成正则表达式模式</span></span><br><span class="line"><span class="keyword">import</span> os  <span class="comment"># 用于读取文件和写入</span></span><br></pre></td></tr></table></figure>
 <h2 id="函数">函数</h2>
 <h3 id="re.match-起始位置查找">re.match-起始位置查找</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">re.match(pattern,string,flags=o)</span></span><br><span class="line"><span class="string">如果不是开始匹配成功则返回None</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="built_in">print</span>(re.match(<span class="string">&#x27;abc&#x27;</span>,<span class="string">&#x27;abcdjaioufgabhuiabc&#x27;</span>))</span><br><span class="line"><span class="comment">#&lt;re.Match object; span=(0, 3), match=&#x27;abc&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(re.match(<span class="string">&#x27;abc&#x27;</span>,<span class="string">&#x27;djaioufgabhuiabc&#x27;</span>))</span><br><span class="line"><span class="comment">#None</span></span><br></pre></td></tr></table></figure>
+<h3 id="re.search-返回第一个整个字符串中的匹配">re.search-返回第一个整个字符串中的匹配</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">re.search(pattern,string,flags=0)</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">str1 = <span class="string">&#x27;adgbiqueorngsafdjojierf&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(re.search(<span class="string">&#x27;SAF&#x27;</span>,str1,re.I))  <span class="comment"># 这里忽略了大小写</span></span><br><span class="line"><span class="comment">#&lt;re.Match object; span=(12, 15), match=&#x27;saf&#x27;&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="re.">re.</h3>
 <h2 id="修饰符-可选匹配模式-修正">修饰符-可选匹配模式-修正</h2>
 <table>
 <thead>
 <tr class="header">
 <th style="text-align: center;">修饰符</th>
-<th>解释</th>
+<th style="text-align: left;">解释</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">re.I</td>
-<td>忽略大小写</td>
+<td style="text-align: left;">忽略大小写</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">re.M</td>
-<td>多行匹配</td>
+<td style="text-align: left;">多行匹配</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">re.S</td>
-<td></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">re.U</td>
-<td></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">re.X</td>
-<td></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">re.L</td>
-<td></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td></td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
 <h5 id="注意事项">注意事项：</h5>
-<p>修饰符用‘|’符号分隔开，可以选择多种修饰符。</p>
+<p>1,修饰符用‘|’符号分隔开，可以选择多种修饰符。</p>
+<p>2,由于有时（如re.findall时）会将检索的数据生成数组，需要在引用时，用[x]来引用索引为x位置的数据。</p>
+<h2 id="正则表达式模式">正则表达式模式</h2>
+<h2 id="文本练习">文本练习</h2>
 
       
     </div>
