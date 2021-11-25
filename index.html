@@ -151,6 +151,104 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/25/PHP%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="expansehi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/25/PHP%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">PHP学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-11-25 19:15:48 / 修改时间：19:16:35" itemprop="dateCreated datePublished" datetime="2021-11-25T19:15:48+08:00">2021-11-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="php学习">php学习</h1>
+<h2 id="环境搭建">环境搭建</h2>
+<p>缘由：在vscode中无法运行php代码</p>
+<p>步骤：</p>
+<p>1，下载<a target="_blank" rel="noopener" href="https://www.apachefriends.org/index.html">xampp</a>，并安装在d盘。</p>
+<p>2，下载<a target="_blank" rel="noopener" href="https://xdebug.org/download#releases">Xdebug</a>，选择TS版本安装。</p>
+<p>3，添加xampp文件夹中的php文件夹路径到系统变量中。</p>
+<p>4，在cmd中输入 php -v检查php是否安装成功。</p>
+<p>5，将下载下来的Xdebug文件（dll后缀）复制到php-ext中，并拖一下powershell，复制地址。</p>
+<p>6，在php.ini文件中最后加入代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[xdebug]</span><br><span class="line">zend_extension=<span class="string">&quot;刚才复制出来的地址&quot;</span></span><br><span class="line"></span><br><span class="line">xdebug.remote_enable = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">xdebug.remote_autostart = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>7,在vscode中搜索phpdebug 安装Felix Becker为作者的版本。</p>
+<p>8，在VScode中文件-首选项-设置-setting.json中加入代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;php.validate.executablePath&quot;</span>: <span class="string">&quot;将php.exe拖进powershell复制出来的地址放在这里并将单斜杠变为双斜杠&quot;</span>  <span class="comment"># 这里是php.exe的地址，需要注意双斜杠防止转译问题</span></span><br></pre></td></tr></table></figure>
+<p>9,安装PHP IntelliSense(christian-kohler.path-intellisense)代码补全，PHP Server(brapifra.phpserver)转到浏览器。（调试用）</p>
+<p>10，目前能够输出php语句。待定更新此条目录。</p>
+<h2 id="基本规范">基本规范</h2>
+<p>语句格式：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> ......;<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>可以分几行，后面的问号小于号可以省略。</p>
+<h2 id="语句">语句</h2>
+<h3 id="echo-输出字符串">echo-输出字符串</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span><span class="string">&#x27;php123&#x27;</span><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="问题解决">问题解决</h2>
+<h3 id="vscode输出乱码">VScode输出乱码</h3>
+<p>环境：win10 ltsc</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span><span class="string">&#x27;abc&#x27;</span><span class="meta">?&gt;</span></span><br><span class="line"><span class="comment"># &#x27;php&#x27; 乱码*n</span></span><br></pre></td></tr></table></figure>
+<p>解决方式：</p>
+<p>打开 设置-时间和语言-区域-其他日期、时间和区域设置-更改日期、时间或数字格式-管理-更改系统区域设置-Beta版（打勾）即可。</p>
+<h3 id="报错1--环境变量错误">报错1 -环境变量错误</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span><span class="string">&#x27;abc&#x27;</span><span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">#&#x27;php&#x27; is not recognized as an internal or external command,</span></span><br><span class="line">operable program <span class="keyword">or</span> batch file.</span><br></pre></td></tr></table></figure>
+<p>解决：打开设置搜索“高级系统设置”</p>
+<h3 id="依旧显示没法运行">依旧显示没法运行</h3>
+<p>经过检查发现是在更改php.exe在json文件中的地址时，多加了一个c导致不能准确的识别php.exe文件。</p>
+<h3 id="本地调试问题">本地调试问题：</h3>
+<p>前置插件</p>
+<p>php server(brapifra.phpserver)</p>
+<p>debugger for chrome(msjsdiag.debugger-for-chrome)</p>
+<p>live server(ritwickdey.liveserver)</p>
+<p>没安装第二个插件之前第一个插件没法使用，但是不知道是因为卸载重装次数过多还是因为安装的插件过多，莫名其妙的就能用了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1152,74 +1250,6 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/MISC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="expansehi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/03/MISC/" class="post-title-link" itemprop="url">MISC</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-10-03 18:30:35 / 修改时间：18:31:35" itemprop="dateCreated datePublished" datetime="2021-10-03T18:30:35+08:00">2021-10-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">题目复现</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>MISC 题目复现 ###签到 略 ###EBCDIC 使用010editor打开.txt后缀的文档，并在View-Character Set-EBCDIC选项中选中即可得出GKCTF{4dbb4c48-a4e5-df83-ae0b-343fe95d9f2c} ###韩商言 下载png图片可以发现图片宽度正常，推测是高发生了变化，在010editor中打开对高度5、6数据由0b改为1b，保存最终发现GKCTF{b89db044-b047-5223-3066-412963bbc7b5} 在原来显示图的正下方。 ###</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1289,7 +1319,7 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1301,7 +1331,7 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
