@@ -28,7 +28,7 @@
 <meta property="og:description" content="php学习 环境搭建 缘由：在vscode中无法运行php代码 步骤： 1，下载xampp，并安装在d盘。 2，下载Xdebug，选择TS版本安装。 3，添加xampp文件夹中的php文件夹路径到系统变量中。 4，在cmd中输入 php -v检查php是否安装成功。 5，将下载下来的Xdebug文件（dll后缀）复制到php-ext中，并拖一下powershell，复制地址。 6">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-11-25T11:15:48.000Z">
-<meta property="article:modified_time" content="2021-11-26T05:07:32.141Z">
+<meta property="article:modified_time" content="2021-11-26T05:28:43.991Z">
 <meta property="article:author" content="expansehi">
 <meta property="article:tag" content="语言与环境">
 <meta name="twitter:card" content="summary">
@@ -187,7 +187,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-26 13:07:32" itemprop="dateModified" datetime="2021-11-26T13:07:32+08:00">2021-11-26</time>
+                <time title="修改时间：2021-11-26 13:28:43" itemprop="dateModified" datetime="2021-11-26T13:28:43+08:00">2021-11-26</time>
               </span>
 
           
@@ -236,8 +236,10 @@
 <h3 id="vscode输出乱码">VScode输出乱码</h3>
 <p>环境：win10 ltsc</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span><span class="string">&#x27;abc&#x27;</span><span class="meta">?&gt;</span></span><br><span class="line"><span class="comment"># &#x27;php&#x27; 乱码*n</span></span><br></pre></td></tr></table></figure>
-<p>解决方式：</p>
+<p>解决方式：（不能这样做）</p>
 <p>打开 设置-时间和语言-区域-其他日期、时间和区域设置-更改日期、时间或数字格式-管理-更改系统区域设置-Beta版（打勾）即可。</p>
+<p>解决方式：</p>
+<p>将php.exe添加到路径中，具体请看官方文档<a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/languages/php">帮助</a></p>
 <h3 id="报错1--环境变量错误">报错1 -环境变量错误</h3>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span><span class="string">&#x27;abc&#x27;</span><span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">#&#x27;php&#x27; is not recognized as an internal or external command,</span></span><br><span class="line">operable program <span class="keyword">or</span> batch file.</span><br></pre></td></tr></table></figure>
 <p>解决：打开设置搜索“高级系统设置”，将php文件夹的地址加入PATH中。</p>
