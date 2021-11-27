@@ -401,10 +401,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-11-24 19:52:58 / 修改时间：21:43:15" itemprop="dateCreated datePublished" datetime="2021-11-24T19:52:58+08:00">2021-11-24</time>
+              <time title="创建时间：2021-11-24 19:52:58" itemprop="dateCreated datePublished" datetime="2021-11-24T19:52:58+08:00">2021-11-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-27 22:01:37" itemprop="dateModified" datetime="2021-11-27T22:01:37+08:00">2021-11-27</time>
+              </span>
 
           
 
@@ -1023,7 +1029,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-27 21:34:29" itemprop="dateModified" datetime="2021-11-27T21:34:29+08:00">2021-11-27</time>
+                <time title="修改时间：2021-11-27 22:01:40" itemprop="dateModified" datetime="2021-11-27T22:01:40+08:00">2021-11-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1244,6 +1250,13 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
 <p>大数分解素数可以得到p与q，但是进行编码时因为python3与2的md5编码方式区别导致类型错误，在<a target="_blank" rel="noopener" href="https://c.runoob.com/compile/6/">在线python2环境</a>中运行代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line">d= <span class="number">8920758995414587152829426558580025657357328745839747693739591820283538307445</span></span><br><span class="line">a = hashlib.md5(<span class="built_in">hex</span>(d)).hexdigest()</span><br><span class="line"><span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
 <p>修正——维纳攻击</p>
+<h3 id="no.14-遍历查询">NO.14 遍历查询</h3>
+<p>BUU [HDCTF2019]bbbbbbrsa：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> base64 <span class="keyword">import</span> b64encode <span class="keyword">as</span> b32encode</span><br><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> invert,gcd,iroot</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> binascii <span class="keyword">import</span> a2b_hex,b2a_hex</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">flag = <span class="string">&quot;******************************&quot;</span></span><br><span class="line"></span><br><span class="line">nbit = <span class="number">128</span></span><br><span class="line"></span><br><span class="line">p = getPrime(nbit)</span><br><span class="line">q = getPrime(nbit)</span><br><span class="line">n = p*q</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> p</span><br><span class="line"><span class="built_in">print</span> n</span><br><span class="line"></span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">e = random.randint(<span class="number">50000</span>,<span class="number">70000</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">	<span class="keyword">if</span> gcd(e,phi) == <span class="number">1</span>:</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		e -= <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">c = <span class="built_in">pow</span>(<span class="built_in">int</span>(b2a_hex(flag),<span class="number">16</span>),e,n)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span> b32encode(<span class="built_in">str</span>(c))[::-<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2373740699529364991763589324200093466206785561836101840381622237225512234632</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>题目给出了c，文本文件中给出了n，可以发现n p q phi 易知，且e的范围已经给出，用遍历加正则尝试：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">c = <span class="number">2373740699529364991763589324200093466206785561836101840381622237225512234632</span></span><br><span class="line">p = <span class="number">177077389675257695042507998165006460849</span></span><br><span class="line">n = <span class="number">37421829509887796274897162249367329400988647145613325367337968063341372726061</span></span><br><span class="line">q = <span class="number">211330365658290458913359957704294614589</span></span><br><span class="line"><span class="keyword">import</span> gmpy2,math,libnum,re</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">50000</span>,<span class="number">70000</span>):</span><br><span class="line">    <span class="keyword">if</span> math.gcd(i, phi)==<span class="number">1</span>:</span><br><span class="line">        d = gmpy2.invert(i,phi)</span><br><span class="line">        m = <span class="built_in">int</span>(<span class="built_in">pow</span>(c,d,n))</span><br><span class="line">        msg = libnum.n2s(<span class="built_in">int</span>(m))</span><br><span class="line">        m1 = <span class="built_in">str</span>(msg)</span><br><span class="line">        <span class="keyword">if</span> m1.startswith(<span class="string">&#x27;b\&#x27;flag&#x27;</span>):</span><br><span class="line">            <span class="built_in">print</span>(m1)</span><br></pre></td></tr></table></figure>
+<p>修正</p>
+<p>这里需要对byte格式的开头进行查询，但是使用更接近穷举的findall：</p>
 
       
     </div>
