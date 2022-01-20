@@ -374,77 +374,6 @@ e*d=k*\phi(N)+1
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/06/WIN10%E5%86%85%E5%AD%98%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="expansehi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/06/WIN10%E5%86%85%E5%AD%98%E5%8E%8B%E7%BC%A9%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">WIN10内存压缩相关</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-06 19:19:14 / 修改时间：19:27:33" itemprop="dateCreated datePublished" datetime="2021-12-06T19:19:14+08:00">2021-12-06</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="问题描述">问题描述</h1>
-<p>win10企业ltsc版本，16g感觉不是运行很流畅，查看内存使用发现有内存被压缩和缓存，经过查询发现这个在win10 中的功能是为了内存较小的机子使用的，会损失一部分cpu性能，所以打算完全关掉这个功能。</p>
-<h1 id="解决步骤">解决步骤</h1>
-<p>1，右键win10屏幕左下角的“窗口”键，以管理员模式启动windowspowershell。</p>
-<p>2，输入get-mmagent查询目前状态。</p>
-<p>3，如果在MemoryCompression后面的状态是True，则输入命令：</p>
-<p>Disable-MMAgent -mc</p>
-<p>4，重启。</p>
-<h1 id="后续状态">后续状态</h1>
-<p>关闭之后任务管理器中内存“已压缩”会显示0MB，个人的体验是内存占用略有下降，大约有9-10%的内存多余出来，而且打开网页和任务处理器的速度略有加快（这里是我的主观感受，要想实际证明还需要控制变量重新实验）。</p>
-<h1 id="参考">参考</h1>
-<p>Win10被阉割的内存页合并/压缩功能 https://www.chiphell.com/thread-1960127-1-1.html (出处: Chiphell - 分享与交流用户体验)</p>
-<p>关闭win10内存压缩的方法 https://www.chiphell.com/thread-1990016-1-1.html (出处: Chiphell - 分享与交流用户体验)</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/25/PHP%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1098,83 +1027,6 @@ e*d=k*\phi(N)+1
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/13/%E7%89%B9%E5%BE%81%E5%88%86%E6%9E%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="expansehi">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/13/%E7%89%B9%E5%BE%81%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">特征分析</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-10-13 21:24:38 / 修改时间：21:46:08" itemprop="dateCreated datePublished" datetime="2021-10-13T21:24:38+08:00">2021-10-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%89%B9%E5%BE%81%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">特征分析</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Python ：^异或运算，对二进制数据进行运算</p>
-<p>链接temp：</p>
-<p>no_1:<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/ASCII">ASCII表</a></p>
-<p>XOR：相同输出0 ，不同输出1比如：1xor1 = 0, 0xor0=0,1xor0= 1,0xor1=1.</p>
-<p>不同的</p>
-<p>} 符号value__|: binary:1111101 | octal:175 | dec :125 | HEXadecimal：7D</p>
-<p>Bin(f,l,a,g，}): #0b1100110| 0b1101100 |0b1100001| 0b1100111| 0b1111101|</p>
-<p>value——f：</p>
-<p>{ 符号value__|:binary:1111011 | octal:173 |dec:123 |HEXadaecimal:7B</p>
-<p>二进制移位运算：&lt;&lt; 左移位n，扩大为原来2**n倍数，右移位为缩小相同的形式</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/13/Cryptography%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1509,7 +1361,7 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/12/WTR/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/05/RSA%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1523,7 +1375,7 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/10/12/WTR/" class="post-title-link" itemprop="url">WTR</a>
+            <a href="/2021/10/05/RSA%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">RSA学习心得</a>
         </h2>
 
         <div class="post-meta">
@@ -1533,15 +1385,24 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-10-12 11:20:54" itemprop="dateCreated datePublished" datetime="2021-10-12T11:20:54+08:00">2021-10-12</time>
+              <time title="创建时间：2021-10-05 21:13:14" itemprop="dateCreated datePublished" datetime="2021-10-05T21:13:14+08:00">2021-10-05</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-12 20:39:48" itemprop="dateModified" datetime="2021-12-12T20:39:48+08:00">2021-12-12</time>
+                <time title="修改时间：2021-10-08 11:37:28" itemprop="dateModified" datetime="2021-10-08T11:37:28+08:00">2021-10-08</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习小结</span></a>
+                </span>
+            </span>
 
           
 
@@ -1554,11 +1415,169 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>题目：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">primelist=[]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate</span>():</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">128</span>):</span><br><span class="line">        primelist.append(getPrime(<span class="number">512</span>))</span><br><span class="line">generate()</span><br><span class="line">m = bytes_to_long(<span class="built_in">open</span>(<span class="string">&quot;flag&quot;</span>,<span class="string">&quot;rb&quot;</span>).read().strip())</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">128</span>,<span class="number">2</span>):</span><br><span class="line">    n=primelist[i]*primelist[i+<span class="number">1</span>]</span><br><span class="line">    e=<span class="number">65537</span></span><br><span class="line">    c=<span class="built_in">pow</span>(m,e,n)</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(c))  <span class="comment"># 循环输出c的十六进制数值</span></span><br><span class="line">x=<span class="number">1</span></span><br><span class="line">y=<span class="number">1</span></span><br><span class="line">z=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">128</span>,<span class="number">2</span>):</span><br><span class="line">    x*=primelist[i]  <span class="comment">#x最终的输出值为所有列表所有偶数位置的数据乘积</span></span><br><span class="line">    y*=primelist[i+<span class="number">1</span>]</span><br><span class="line">    z.append(primelist[i]*primelist[i+<span class="number">1</span>]) <span class="comment">#z列表中的数据为奇偶位置乘积</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(x))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(y))</span><br><span class="line"><span class="built_in">print</span>(z)  <span class="comment"># z是一个数组，可以用[]搜索位置</span></span><br></pre></td></tr></table></figure>
-<p>可以发现输出的文件中含有一循环输出还有三次数据输出，其中包括一个数组列表的输出还有x y16进制值的输出。</p>
-<p>——— 思路：选出一组z中单个数据作为p*q，并与x，y的整数值取gcd 分别得到p与q，并按照正常思路，此处选择最后一个数据作为解题数据。在这里因为第一次选择的是第一个数据，发现e phi_n 有公约数，所以考虑倒着取一组数据进行处理。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,math</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">x = <span class="built_in">int</span>(<span class="string">&#x27;0xc9f926111244cc5bb82adb78908ee9ec64276a6224c8d8bad8d1c55cdcc0075f037346d18e152df79234365838d2557b60b38b444d157a648d2f650b42b4e61b16ea52bab364d241d9d3ee73d4abacdcff5965ee6d3ce1bc55ef0a387fb4196d65c035a67944d88558e5bcdbed75dceb12cd0dc3ab1bffe74203d33c136a09fe373719663bf7e963df982d94fbd425d6658ee25bea3d36e2353d0eab0e9ed91df51fab2281b832897f512995ff97e4df3c95473930a396029f06006d55f15015a8fbfda83e261156fb6bfff672873a6ed64578277f6e80d1f809da5c80ef88b3d9d0632f9af3b3669fe0b9f69389854ad623a8eba84c8471bdb75ee30ddcbd3b7c583c00e890227a9b24d09dbb7ea201b06ad98c1bd48f01e986931652d0ade39cfdb51f4342d26397df256bd476997e0005b2f381d2e7b374b386fe0172bc087fbd3f76ecae1ae62f78ff7f95807180db8e8ec85a09db44e0954b8fc8d88d8843e28cc70b61c1ccb606c31a40b642710d7f2f629fa1b8550161424bd9a54cd806fbaab2b8a95a4a80455b8d54fa1434ab93706b5999f21b7bcba8b567a73be65bf498de9395cdf4f55c333825d7063ebb62bf80a22a568e86bc008297edf72cb6fc37d52b1fd72bec576c4abfe821fec692f6cf15bd95634f1d816afdaf9f6afa0cc86ac120206ac321264b824a995c2e42cfa8dacd5dc3065ae49e5b1a3e0de713526899c517f56da57ddf277bf7e40aac8a1de116625d45c33ab437d281e48b5b9238c66ee543c776912ef4d7ec55f05d4ea45236a254435512786852309b4b363a1bb7ef4bd6b9cb5e716688ee2ac52327f1c013cca8ff6acc60c4b8a6fd65f3dbcb700f38343caa2a699d74ee47aaa5bf4b8326c10e92731b1c30704528c782f6f27a7f8d2827a723dc7cd3cf8137416e0717344395f1565b1ad8ade245fe47ccd7bc18dbcc1ea58ffaf5d60faca881860bda02dc1cf2ea5500c03877f56bd538a63796203fa170556434ee60422225fbeb2c4304986fcb28e6726ba4a451757c4fa94c9ed18d9ec38643c2a7a75fcd9f3ef6d4950cbd9620e162a686f234a185dcd393466b2a72ad744b1a5d35c17a826f3da00307402c9a1685d81e135ab76a6318f1b9eb860eacea249a3d51afb150b248cda1ebfdefade82a9311953cabc59faf7bb2ac29971339c5b4cf0ad433a3d834d9ea6e68cc352236a9c98d7be9a3172d243e0bdda8f006a89fe78418af0589433fd6ddadfa9d7633e7b1654a82e0dc87163fb1a83af999342fff2ce6b29bb85aa15eed86111d393e5357d42f2e9ffb61f4e600dbc8ea3d9d767fa7b12f0fd3e2fdadf93ea424f2e6628dab9acdc91d44718f32a7c9c727245f31238abcbe0eec33cb1c092230fcbbc7332483113c356c646dc2bf13aecbc3586d06f403ee0f881352e3f8a7d0c0308032efadc4e520ca32abcb6dcc8a332cc592b0372385fc4dcbba406f96a6570bedbe4c69b03df1bafc480b79e3b69bc0a4c16e957477fb85fa90e11b0bde49948f0226daa5a302986ff480c832edf8b65e70bae4f61786e5029aa954c7ccc08b6dbe883fdb186c6a927de86ea0d742cdd870cdf7e76d18d5023af548eba3b80127dc677d4904d6076afc0d255772978e1f00426396109080fea8bf9f1e84037eaf310c31b1a4c9ddcd6065b5438a3d62c3402d67344696cd642fc891b94bc1e35c71b9723a3b7133c8b691f05b8de36defce73129db4d990472cc81e87b3da55dbf37754a03904c219c9ec578420b8e738ce28d748977f2b07b7a5b940964eafd2b0984d3010250c7603a5bd408810430a1c1099dd2528547a7d0cbea579a2ba22d3f9fa5b392d1ece88247a2e12fc30e59d5869a3a2c2967b0e1ed8b7887a3fa60a81a075d0b7135f4928c6f8c104631ed9a0793cc963f901cc95de4882f2e641b1889fdfb76aa1e02b8d08aa3cc2f9a671690687ad6a7c1ab555284f42a88186f462e4294d20fb036ba4ccb9dfc27fd94a93aa166d629e4bc90ced7efe984216da2a69e62878eacb3cfd9fa8f9ec73fdc0d256e508efc97f2fad56daf5d252d2fcb6c95a234a630f984d07ac621463ae6f5d1b60303bd348ae5d0cd87b1aa6b8fe8ece096a6b79a08a45dbe0c6f913f25829af6522094943181f075814fbefc3d0286f7788d3d64823dbe1c93d6e125665548dc4ab7573eb616c34e88ec29d6292ef7b3c075f9d46a83c280b1bc14a23c7ce0f2d082c5f605d15886c4623046461da1ce7cda4f4a81620afbf095113e27d34eeec22f4051eb8a2143c51e749bc5c5cbca621836b002ebf98c8e1432f81bc98cf895c7f8fd4b6a085e1d9a5b05f571796aa175f516c32ebabec495047fd9484f4068b27a4986588224ab813b19d58a1db24bd5757aa68ac179d90c1a54473ee8d8232d8366061032bdbde1f37d4a379f4891776b8a2b0eb280c3abcb6a287b74bbb59af6c9b8e55fd23cd0588a7434227d06bc1e1f12db119662954b1144eb56f2e93e31d360bfca5285ea53c40b658862843e6fa3b927c6fe1b2be41bd35b57881861ca2945423eb23e64e08b98f4ba548505294b78aa270d11904ecbb19dd862b2465e4d89bb86d9fdadc38a6516b2df6f683234fc2450d7cad765ceb277eb0c2f5caa2e95fffa7882567d02d26f27b16a930dc37f304a0e7a62126736fe91f24c884cda6b4b16768b0660b4db69db64be8d251e27722d37082257c287b7baf40030a730b6f4215598615d594443e211b1d4cf1102f3e464b5aa9dfba5fa81251b38b47b4636c3166c2b580c73f70a0c99ffab15a08526a62380380c4b0365e82e30d83e254e1f6408c11d64c1630e9a7e324b2b0ba3a6b7dd6dc47e05670230ab90abfb719a608517a0767e24f0c8abcebb2654982d8e13d0787ac987a9031535868cb78c089d75b3278e6bac30adefb4d9e2b9016528bd91a648d7fb6f28cbf70613f1bf132ab5e8e28b222f6cd226c05c68270d86c69ce612e40ffcadffff338ed9dde141b0f3529047ea31cfb6d7cea8f806c6de2cdbc1122a8d1f89edbef905cf5fbb6f8f8548ffd29df89b230d470a945bc0f09110e67a32ecee82db47b8fff3de1bd9cec0196659c28f2343932187084ca0ba92dfa1173de3102f95c18d81198e1f5d8f717d94408614fb6bcbb3de9c294f80ae4f0ce81c47c1b98f098f3b0ee587b3049dd142d4db25d1fde7140cccd51ce1debd929b1d4f6fe60bb703a9a3d9b4cb4496549826076794a2f2859922cc7611611404c9287dd9dd600daa22f681d4e4aa18313c7af3e470126946988eeb3db57d5f8db4c893efba9b03d8db1575695023b525bc4529735dd4d0c57ed2b7bc0013a1b8cb26adfecc819185649e804231b5b182c91bd27ba8139188c098bcf4426e66e19395791aa51391afcb67d9906368dae9b479163df8ab2bee29e640d0fd549b656d3d77cce422f4bcd835a111e5caab3ebcf7a7fa588b539755c3a67e4442e2bdebf3021ede1097ddf3ca7cdc86d7f31bcee662ab006a23ca428b4bcae62747d9503fc4adfc3d025981a16158524fbf020e79b0a8c3e67f3efde5bfc9da83097b181c8f25642537cf533522ec7921c491736b75d6550b12b3bbade97753ee5ca65ba8a688e957eb52f3b8d188cb624e79febd7be3c58d50cb59ccbdf71b250e9d7c6b1594deab46ad3d36d3d19225604294f273f09dfbe6686c90cfa90e972752645ae85ade05b752b1b17875c9288c987b9f4e77356732e6cb9163b825f96ba2d551514e8d9a96179123c9ca0075c1ea819bff082da83806927d634f7adaae330d650512f892ef3a86478b2e6072943f1957699de0b7251bd8e87c67fbe6ca204046827506be9d464c637e4a59e028e72255d41f7db14ad86263f4fe3ec569dc0b0e61e80124598d22ba91b19d91cc42484f13439017d9883f8b6595eb8208e967f6ca6133d8b37a25fe5f6126028aa58c8e60c47b46b4ca99d68766fdbda88c081a9451be35dadef78d1def41309b1e871f28c02cd050bfa82945dbedd33da78fb2a2ac2453e06c298778ba517a0b8024037089e08b51cd79bd5085a9935adbeed42fe4c876c4ad1de64d5b17af46d13af87ff89907f8a699a92537be41e9ca640a1e3014403599eb7548a420f93871ba30b375af516cba4f293b39e71ed1201bb31a36db708a20f266c1b47e7b23d1e281ef63a5bf5524db5398165ed79f42f873445f29c2fabf751f6a58d6f60aa3fa9a9f25c0d33cf6ce1b2705287a1b9b9dd5d1cea3c51f31270b1df3f6c26e187f17807add58aaba934ab7ef79cf3c6b0333f866fa61db2dc21b193ebfe6d3280e7c662a235c4d761a6471f79150a0465d52d6e4060c8732b3f205387d516eebdb371458ea4d15d38dc35d4a4fda5423c14426b53c8d480ef44f11003084d8044908920a9245fc3bd191278bed4f24d20fcb4dbed4670b26d469c8cbc085d932234e6d9b46fbc26a167201636deb8e7134959ab839f1ebb0817a169a85412bd634b2865a959ebaa76a2118a7913a2389f9e0df7f8c19a65f6105ffcd34998e03088ab8d28f47f22015bf3e235156984e09e4980b4090c5c21c9d6854515a4a677c475ae9af4fdaf9528f3a2a6439a12c69b82797dc85821ffba99064be6eb72a935a75735ee243497588457676327b2433fb32264e10d36b37696a0c456a044a9f308040786815cad1f6eada8f964b12800fab25947ca02d25a6b806be5244468d92bccf0e491c1d12f67cfa0af27ee067c1a5a55ea404ff114c80a0aae84c67c65e30e8401da5c7218d4e847dbe64160dbaaf99842ef1819f422d21da6acf2b379941bd98eb22875ae6afb0f8c0f015509bc404d1dba3a0a364bd0b061ee7942bb62833e1e781171ed6a566d778c3f39d5ae16f789bfef1820fae3beb3d2269d183f10f2e743ea1a9c651e206298d2fe892d6310768ed886f83339ccae39f94457c35bfb4cc6f095fedc394a970eee8b7feadd50e42df3cf90c305a88f2df585e719fb2c2369396a0dd6245b7d13868e201e4567977d8714a3ac60c0a52a84e9e0bf54cf347e19e65ce57feef55d6edeeadae2def27308a62ea2abe27ece705cb2fd29d78219bb63d233c04afbf105612ed5aae9707cd1574947a8fa7a7839618f559df7ed8bf707867c2009dbc0abe25a88bceae016bf9300acb2a87470948cf277c4decde2b370f2ca3a6f5eddd6e1c5be9975895fd395b9bfefd39df95e5713879057d570f80375d08fca90c0f74438dbfdd96078988417e2e11fa6ea9d0fcb41a546a77f6008c02ed1cb2b74ee1d1126234e83a45ef67fd8cb33a3e15c877d67c9b80646812615e3720740036299d0be00b6c117971f797f11d93f42ee99565cf76c9e7e8fa423748ff5286b12dcd6f49bf8073962695cbd05775a02e28015376224cd861baa8a8c5d01c6870d092c351ad6155d22b3169bf9f8bfe5daf6abd95bf5576a9d6a906c0ee876c4c0b0db5dcdbc8e617a7c5569c917b7758f3862fcd63b80576174bbb7249c86fb24211cf86c46ed24096369a1f49b5cfbab14e6e91107ea657a9426783d69991ef0a241c533adcbdab65e550902aac968cd17b3e587c7cecc5cec70ffd364bb86b9604f812e619bd2fde5e2c026aa2bb8696c46d04aae56643e39a97c69f621680010940dd9af2b281cd78816238fa6b73110ed9178c0f6076187fb6e900b293b0410224e1b39f7369e064c9cf757741045412e8cfa3fc9b277ef82b59b4469618a8af2ff2bff240af3e955ce022303e7ff72a43&#x27;</span>,<span class="number">16</span>) </span><br><span class="line">y = <span class="built_in">int</span>(<span class="string">&#x27;0x132ab8b1094290a652853f7966b1b02711e6acd1ef34acf8dc5d4a8bddedff6489fb2abe66a61f234605b3b7abf3bd015e3b33708ed8f964202df5b3c630e40359ef7c5c8608f1816e6d7c0e0abbed302254d8544483da03f74805da5dac2f6f79228bc7232b71c8f32d8ad9239de588414c951d7aa58abefe24e36e7faf3d6d490ec401e8c93c4a918c96ba09726ea55be240f18582a7c98e1911587ec16a2d7c533c904c990b927d67f2ab35e71d4fc7e18b359772908a4c1c9b0c2dddbdbcb5f79542b6733a6deacc6cbd12f42a0b4e48c9af4cdbe06d672e157a63a150bf22621916b958fe0253f3aec8e7ecec94376aaac22e90e1735cf15fb72b33373e0be6d92236a33b1709fc49202c58466243c7696089409c28730534d5e173261bca5518121e0bda0b79742a695aee57995eec84c6706476cc88a1056ddfd3517d7d889e2b577e4a675c8b9341a431df82b392b8b6a1f3e67a0a771ce9628c6dbfbf2d92665b8f2d184b4e10e0b2f079a931b7d4626c78a464c5dddf4b0476af2ffedb36146bfb1ac65e97b07c87ce471afbfb4e8c803fe18994fdbf8a605ae4f7e2cefb1190ee4770f9f1d326bf80256ade04253f1978243c550265d5fd2969624dd225b24c0d2673e77027fff8cc7b7eb44941a6aaa0903f2111fc1971e0665d76472b4217f80c1a75de696bd13470220e59b9bdbfc1942ccafb0ae3103521ef141367590234c1d9c5496ed46e76a5b263ac43e342bd8d0480e818b0f5a46e81ba6706a11c7bce96848d72945d8096623154ee57c82b470b91310a588817357c607440eedab47c68e8bbff1fa36a5a741bf3f6af5ee3509e7417ef1ee2e0313f855a04265266ebd4e62d344ed5d439b0e50d4cc907bfbe45b8397423a546263a5710376f9cd5c1e1f130c762482914c064792ad2517f88885a2f5f40d720a997383a35bc305655fcbd4266ea24bc16d5c4fd9fb5307ad10703176b4b026c06aa65f3f2863d12ae7feab62bfbf3eda5c8bb9b5cc148034282bd0216d6543c6093eea64f9cd2a2081378d8f35fdf6bc1c35092bfe4379f19cbb3621b915ca8b0b60de1dbe556c4995d1f3bbf6c88cbfe83b7ce88133c45fefd9ea891c6f17c37e69b38a22c192e0c1ce80faf3b95a37106cb381c92f5836e2999c49d6a992ee399b22af778b48943be620e1b195f47171f3b18760286279a74df51198ab94ebbcf39e926bb06b36607a313fb34757641b8654210dea0aff1fc2c56dd22e268b871123c05390334d57557da28a37ecbfd7a88193a8375816eadadad2f5c1a0826fa10d6f3507f294c2738198f09fa74f65c5ca751b29170cd8d63a948c916af7a3b23b687b5b42bd6a2c01fa2c87980c461ac58197e692b5b40c2645c9bf3a1cb3099f7d19fcf2587f550a9bdd6ccbe463e03c49e9e1ef489e97d7a0df2de1e2e5d3cd7123c154754a226c81306ed4e75b4cd80156e7c71c911ddee5f30999b06bac81c93e4ad1085673b2874f8b7c8842f899a65dafde345529f420215a4d1ca91905ead4a779952fbef60f406fa27bf8b64b805ac1375826d0d70731f75ab243a493598ccedfc2e8aefeaef28359a6f8413f29e376a09b791630ba27cf8d2efbd144260d76a99874b74736eb7363b24b39dd4cc47f2caa91263920a03d3d76582a8d701142c24c2d767c3402f37f53377dfad9299d6e5259a115eb9a24559685c21c537841640a6752d6fcfeb183bca95fe298acddc53ed533b28923698d008c33ee28cbef2acada9f44a3f48ecc0c1ba558219969c00d90ae336181cc0c234119522c445dbd7c8dc68a10fa284e7bc22a43024d9b4fe36e830f5e7f7decf51c96c244cef5d4306b143f4e6e3882442cd1312276d3ede8309b6f3f4df42de9f101bdddae2a483573b18f59d7ac04485e93fb1f3fac2f558c7bbbf37a377cfb36aedbef93ab7b95aaed5a4cbc4f0e653f9a765cd54000a9b088d51e5196f557d73c462b67bbf63adf10b1b1b28317b77b8cdd0e4af4e999311c5da066590c5d5ac75563b79fa102f4d40b9fa42f2c9df6749bc5a86c517a78814af249e0a926000b408c0bd8f5bd7f2f8a49e73efba297253793c809fa6e6879b1ffd87de91b6ad6071de3168851cdcc2edcebc517167e95a46e78a7575b6be9c74a5e548fc61b33ca7d2a7243f28a0f76d88baa221c9d3db5d6a63d1aa0936eba1e077a4b60a6189f3f763ccd112e9736d515fe4050f042268fa25e7461236694f81ba0766cc91540604f4716ddf14b8122e16f98f5c154ce09d9623012eeb91d373bbecce7fc01f2d040cff6ec18a97613b7e6067f9864a28668540919363561cbc841833f1cf1f63e3ba269ac6cb1f716b3cd19f52ea7d29cbdee18b8b68621a0f9ef671806e6f208c3dc685e92f98f295169d6a009f33e028a030bc1fc650828fa0aac80cde4adb5b6727ad8f236957d94b9e619db6820cffa009e58f27794f21c1b6d0b15814d05be406dcb6c69773d817ab052b34276393967e40c2a04b5b760f78e2887a46f6b0cd4ca8ccf4a4a4425460b6f81b449468cd1fa2aaa84ed0af68910ec0630daf420775bfe3528c71aeac4796717aae1618f36b58c28bac1287fec93e7daf7bdd890168d52922380ec726d78a280994b8d02ce138a04b2e62cf21c44271e0462f2b512e035b810fb22820516c0c1c975c08c68194a97e034d4c8acbc510ba032e7679c262cb9cf600ce48fd327ef4a059f363d06f4185ee2503ceda365c89913557e9af7cd5ee9a728cf96a57545b2347d9149ebcb0ebe79afa6136d730b8b92b70778b051a952598e6c2f7dce08dbb9d2d3953fc7d366d0d9182cf976c6edfcd8257e7fd35d5a0f8a9dc4d9abc4bfdff84602f73ac47945b4e9989b0eeb89ec97eec2e9df702621c1ac874d84d072ed033f6a4d9fba0af24c86dad12409f0efdd34f1bafadf58393577a64602d175225b07f6a6fff048596757cde6f49a9b3f9c27c26b8d8fd55e674159c4091eb786a5f6ba383f2a3eef69134d71762f52797e355f80ef74a496abbc536fef9f1a93740b1700a97dc4f27b309f368f66447c29d6a6f569018b5606d6a5e6752341a98ccd7d71fb11d49d30ad5ef46f0d9547d4fc14f179c227cf7a74c6276c44200b28e11d9ad1804a09368ebcf3bb55b5a04f5e6b93490400b1c05b95897b285099cdd932a236a249fe359894f87dc4acfba57ae4e58e6e21bfa0661b9517571599e7044771d6537e6b85f77e209425d04134f334294ade5ae37facd37aa55b1bdebdc02b4198249ee338176c1365c22a7a5cbe9523f18670062d834bc0346e8b584df2a7339087e86bc850a8a44f4ac8a5737d2a1cd5f65e9539cf031bde95db83446214cc3f0de962eff395fb6d4c229e389b4b4d5e5fe9dacb7f13028f69ce2ee1e31ea450c166338a399137b12926d12df04099a6d3ba756bd7b818e59c3cf0c7eaaeb1a8834b03fb271f66470b19799b280676b6b3404acdecb622b90c6f858f9e82902bd3d382777904050fb94200c834da9167881401a920a1884da6f32e34ed5d5b37af32c2ad62b59574bf62f39c20fc68f510e896be3697be37e09cbf0ae9bf18b0c55cc1d536ff3f37b13c7c0f069c4556fd6463dbf50ac9bd19706c57683c63e6c3d8b5f04ff21ab880533646e1df044f984109d74db16218ebc5531aa53e037ce087cc374c301b298b15dac1648095974f237e9bcdc5fbe3b5c994a87d94c10f949cdd47c34681280461a3727c85f8207fcd8fd0e256e9f5c06a1893a80478248fbc911ac46e7bb453a1aeda3fd8d79cd8748c57e612a8c7f4560709af111e57e74e4fc07128cac9c2b83263b883a6dad0910be302c87ea442472bc85feb0fa7b3df88a4fdc7bb92055845fbcc4e2716bdb9c2bd6c19c61bd90855bca45e71cea04887e6461a9d9e78e7b24b0c43e3bb73a7dbb34b876d868f4c2ea7d4ee12ccc4957a1b2064c74dfba28618ad36cf75280bc6b48d662be0f3edd7fabe3b1d46cb0a1cd7bac150cf16a5455aac203730ee12e2e68283d6d322b133b6ac2a85d4a861364fe19be1c47c1a1e53a6718a0c092325eb0752008cad2ad5d878c20a96db70c6f7b7c852565e3b23f21d8a4fa6306866f4226c771014e75cdec11c4a7d836382b54e51d3b6bfc7ea6401048e7d1ac21b7dbb6e244df6ab4aa5b0972d6842149ed9efb08f215c7885ebc52ac3134204442d9a5483182e282de996f0f8cc894ee686c8d8dbfe2d6e22046903d4744089951b0478604d49dcb0123f2550a58af98f840563fb4a0d5c5130f18660f7cd78b6455743732e00a5c8f6276f5b7ff306feed67d26edaa72499e2bdaba4684e499f223a2557185fa9a9b063f20a727a0630954dddfd061df18211e40dfc49ff180382ad0af442252742b79b2634a96138c6accac68aadf6c64e2aacf3eee6ad1a05c7b07cbddedecdc58fc630175a42225521214b08b0a831b7bd652a1fad92e42f8417e688df2c8cec9481dc1932ca9011e452a6c1b2799135ec0a0d7e19b944ff0f05e56f54ecaf4d2869145eeb75f459bc4823bdd0badf224d5fd2997f112f9a9b1ba4c2738d4da34a3b569cf94df1a6d46a4e798f5293ade2bee7cd93124ea937cbb9654a99dcdcef28606410de07293dc97d6fe20808e105c00493774fe2628319af7201f0658eceb4fb395e316b45f4b2ed8c92320072734dcc80f74ded446a66aea5962063c9bf1c8d8539a6b3a9f297f37d6a40fa6f956a6d1816edb6004356e28f2b829b09ed97e3fa53dfff0d771ccb4d211b984372dd2bfd3193f0021149b23e3531e1d43e3d6b1ab88204ca08206fe3d52918adc31742e4fd34c838481afa2bd38af5793f161f1dbb1e024715ef2c387430d74a343c36d3955ae5e121f3f66ff2bbbca29c2b17cafed979f26edaf0f9b66b8239d7608dd930046e4cddae6fa36387dd0b82ffc2b9f6b4a125bbbb3dd86b680ef5578dedcc1752e1b71af9e15db036d34b6d1b121941420af4ec2f35ac6840dfd869cd6ca88bb03f24b2cd57c23856fe0da6828eefbc08e94ddf2712bba29486462a531e5d56db9f65d080532bc0bc6e5a6c59c449f41f59de0964a210456f54e0d4b84c914710d3556384c6535cb8eb19e9d654348e6027594a35cc641e34f9111f6f873a26fd72ba351a1089636b883dc1ae29946c6f79ac6463caabc9390d4e684dcb9769e44aac9ab42a692c5224c101060283d1ff6f760e145dff06ab0b43c4523001187191672125cc3549238cbb6aa01ea36993023177291f1060c620558319a3cd54616931389835c86dbdfe642395409e008f6c649a858fb14b108d735e22e55e4fe85a820190740263ffc2cf789d698e22762012e51e4efb149047be6b657280f8c73eb03c8f2553d73e4590d81ff359a4c0b85faccacd023ecaedfd78a27685b4c4d23b573661ddf672e9ea08c9bbf9b843f590ab89de54f432444e7298ea1623d9bb808d8bc2843db7cccb476b42776d2129e63366f29898500f44f4fd8720fbc8a7031511a16e59c6091532278d0bec1bf11651bf918f62d3549096cd037a045dab0a732c8d7a0df77e2db7bf4a5b004cd6a440d291801f427f2ced6676b1f12e77ce30986cf0e0d66f83cec9a941829f062415d8d1d5ded36650577eb550e625acaf45209a0e85814eb42f09462a3b3690f1211b1bf36a57e9a28ecde8203fa7f88d85c6cbc4d3be22e31a54fccee82b168ac3a2f53c0062b33057318e954bbc506e0f95520450424dd6ef0a6eca52d7029fc443f307&#x27;</span>,<span class="number">16</span>)</span><br><span class="line">z64 = <span class="number">95045974249473696646977141103594616763085965079685211937915851913568360278057396536200072176686955428074455935497369001433889237127585982589092139726913325167161125915766088378061005567260971118857385921672471957061708543161219671997576943532552340236092688459383804583875399858089997626081657371027645760693</span></span><br><span class="line">c64 = <span class="built_in">int</span>(<span class="string">&#x27;0x229058250a1dd8c3e4442ee7e084bcd8562cee48b70dd8a4528abcb019079e2e182ee8714a3b5b69c67d9e92d59255b046ca0cb60aa350203579b6bcbf8d59635ceead0b276c20dc3be7b7ab198f715ebf0e0b163a9d6ed9773df6b49215dbc3652853ec5703a63229e72fa00c2f1954a8344553066b13db4d28c283522e944f&#x27;</span>,<span class="number">16</span>)</span><br><span class="line">p64 = math.gcd(z64,x)</span><br><span class="line">q64 = math.gcd(z64,y)</span><br><span class="line">n64 = p64*q64</span><br><span class="line">phi_n64 = (p64-<span class="number">1</span>)*(q64-<span class="number">1</span>)</span><br><span class="line">d = gmpy2.invert(e,phi_n64)</span><br><span class="line">m = <span class="built_in">pow</span>(c64,d,n64)</span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line">m_new = <span class="built_in">int</span>(m)</span><br><span class="line"><span class="built_in">print</span>(m_new,<span class="built_in">type</span>(m_new))  </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">在这里发现有mpz类型的数据，为了使用n2s需要用int进行转换才能恢复为可读形式</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m_new))</span><br><span class="line"><span class="built_in">print</span>(libnum.n2s(m_new))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">最终输出结果：b&#x27;flag&#123;th1s_f288_fjiwh_uji13_fu9k_th0s_123&#125;&#x27;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+          <p>###本文为学习RSA的一些总结 Rsa 非对称加密 优点：1.避免私钥在传递给加密者时丢失。2.n足够大时分解时间过长保证了rsa加密传递信息的安全性 RSA加密流程：不妨假设想要收集信息的端为A，想要传递信息的一端为B，在想要收集信息时，A首先要生成两把钥匙，分别叫做公钥和私钥，在RSA加密解密的过程中，公钥用于加密内容，私钥用于解密内容，而由于只需要传递给B公钥，从而避免了私钥的丢失，也就是避免了对称加密传递密钥时产生的意外导致密钥泄漏，从而避免了加密信息的泄露（这是第一个非对称加密相对于对称加密的优点）。而且一对公钥与一对私钥是相匹配的，也就是仅有A手中的私钥才能解开由A所传出去的公钥所加密的内容。 RSA的加密解密过程中还需注意的是，由于RSA的加密基于当前计算机算力的有限，本质上是一种通过数学运算产生的加密解密方式，所以从明文到密文的加密和从密文到明文的解密过程中，都需要提前或者在最后将字符串或者数字进行对应的转换，举例说明就是A若想要加密一段字符“我是谁”，首先要将“我是谁”这段字符转化为整型数字编码的形式，通过RSA加密形成密文（一个整数），再通过RSA解密将密文变文加密前的明文（即上文提到的那串“整型数字”），最后将这段数字再通过一定方式（这种方式对于A与B均为公开的，即使是第三者知道也没什么关系，因为RSA加密的保密在于大质数的分解，而不是最终对字符串的编码。但是不排除有通过字符串长短攻击的第三者。）对整形数字解码，最终得到B想要传递给A的密文。 已知公钥和私钥都由A产生，那么A需要完成的事情有如下几点： 1，公钥以及私钥中n的生成：随机挑选大的质数p与q，且两者不相等，同时计算两者的乘积，令 n = p<em>q 2，再进行第二步运算phi（n）= (p-1)</em>(q-1) 3，生成公钥中的e：e需要同时满足1，1&lt;e&lt;phi(n). 2, gcd(e,phi(n))= 1，即e与phi（n）互质。 4，生成私钥d，需要满足的公式为 e<em>d = k</em>phi(n)+1 (此处k为整数，即d为私钥) 5，传递公钥，保存私钥，消除pq（不泄漏就行）。 ################################# ###一个简单的rsa加密解密实现过程 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,math</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> Crypto <span class="keyword">import</span> *</span><br><span class="line">message_test = <span class="string">b&#x27;Lrene&#x27;</span>  <span class="comment"># 设定所传递的信息，由B产生</span></span><br><span class="line">m = bytes_to_long(message_test)  <span class="comment"># 将信息转换为整数</span></span><br><span class="line">p = getPrime(<span class="number">512</span>)  <span class="comment"># 获取第一个512位长的质数p</span></span><br><span class="line">q = getPrime(<span class="number">512</span>)  <span class="comment"># 获取第二个512位长的质数q</span></span><br><span class="line">n = p*q  <span class="comment"># 计算n的取值</span></span><br><span class="line">e = <span class="number">65537</span>  <span class="comment"># 生成公钥中的e，需要满足:1&lt;e&lt;φ（n）&amp;gcd(e,phi) = 1</span></span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)  <span class="comment"># 运用欧拉函数生成φ（n）</span></span><br><span class="line">c = <span class="built_in">pow</span>(m,e,n)  <span class="comment">#!此处为加密过程：运用数学运算 c = m^e mod(n)</span></span><br><span class="line">d = gmpy2.invert(e, phi)  <span class="comment"># 生成私钥中的 d，由A进行保存，此处涉及到的是e*d=phi（n）+1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;c=&#x27;</span>,c)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;m=&#x27;</span>,m)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;d=&#x27;</span>,d)  </span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">以上为加密过程</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># 解密过程 此处的解密为A获取到密文后的过程</span></span><br><span class="line">decode_message = <span class="built_in">pow</span>(c,d,n)  <span class="comment"># 此处为解密过程，运算为：decode_message = c^d mod n</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;decode_message=&#x27;</span>,decode_message)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(<span class="built_in">pow</span>(c, d, n)))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">将这段代码运行可以发现对于配置较低的电脑运行还是有一点点卡顿，当加大p、q的长度会更卡</span></span><br><span class="line"><span class="string">根据RSA的加密过程可以发现，想要解密信息需要知道c,d,n然后运行数学公式：m = c^d mod n，而</span></span><br><span class="line"><span class="string">n即使被第三者知道，也需要获取d（私钥）才能继续解密。观察d的过程可以发现 e*d = k*phi（n）+1</span></span><br><span class="line"><span class="string">此时需要去解phi（n）,而phi（n）的形成需要p、q，最终涉及到n的分解。</span></span><br><span class="line"><span class="string">RSA安全性在我看来是由于算力的限制，如果n的位数大到一等程度就会使分解n的过程耗时极长</span></span><br><span class="line"><span class="string">从而保证安全性.</span></span><br><span class="line"><span class="string">从另一方面说如果有人能拥有即刻分解无限位数的质因数分解能力，第三方即可通过分解n从而得到p、q、phi（n）</span></span><br><span class="line"><span class="string">与d,进一步通过e解出d，从而获取完整私钥。</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure> ##欧拉函数的作用 给一个正整数n，欧拉函数的作用即是用来计算小于等于n的正整数中与n互质的数的数目，在本文中用，因为方便的原 因特用phi代指符号φ，如phi(7)=(这六个数分别为1，2，3，4，5，6)。 在本文中主要介绍两种欧拉函数的使用方法。 方法一： n是某个质数的次方的形式，如n = p^k 则phi(p^k) = p^k - P^(k-1). 方法二： n可以写成两个互质的数的乘积（并不是代表两个数都是质数，如8与9互质，但两个数都是和数合数），则 phi(n) = phi(p) * phi(q) = (p-1) *(q-1)一个质数的phi(n) = (n-1)，众所周知。 ##Reference: https://xz.aliyun.com/t/6459#toc-13 ISBN:9787302177159 https://zh.wikipedia.org/wiki/RSA%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95 https://www.youtube.com/watch?v=D_kMadCtKp8 https://www.youtube.com/watch?v=xqol4-uziE0 https://www.youtube.com/watch?v=siCLDDIIn18 https://zh.khanacademy.org/computing/computer-science/cryptography#modarithmetic #我个人建议先去学习rsa加密的过程再根据不明白的地方学习Khan Academy有关密码的的相关内容，会更容易理解 模运算的一些内容</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/MISC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="expansehi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/03/MISC/" class="post-title-link" itemprop="url">MISC</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-03 18:30:35 / 修改时间：18:31:35" itemprop="dateCreated datePublished" datetime="2021-10-03T18:30:35+08:00">2021-10-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">题目复现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>MISC 题目复现 ###签到 略 ###EBCDIC 使用010editor打开.txt后缀的文档，并在View-Character Set-EBCDIC选项中选中即可得出GKCTF{4dbb4c48-a4e5-df83-ae0b-343fe95d9f2c} ###韩商言 下载png图片可以发现图片宽度正常，推测是高发生了变化，在010editor中打开对高度5、6数据由0b改为1b，保存最终发现GKCTF{b89db044-b047-5223-3066-412963bbc7b5} 在原来显示图的正下方。 ###</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/29/RSA%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="expansehi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/29/RSA%E5%81%9A%E9%A2%98%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">RSA做题思路</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-29 21:33:35" itemprop="dateCreated datePublished" datetime="2021-09-29T21:33:35+08:00">2021-09-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-31 17:35:45" itemprop="dateModified" datetime="2021-10-31T17:35:45+08:00">2021-10-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">题目复现</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr />
+<h1 id="招新cryptography类题目复现">2021.10 招新Cryptography类题目复现</h1>
+<h2 id="no.1-base">NO.1 Base</h2>
+<p>#R05CREVPQlVHWTNESU0yRkdVWVRHTlpXR0laVEdOWllHUTRUS01SVkdNMkVDTVJZR00zVElOSlRHWTJVR05SVkc0WlRJUVpTSUkzREVOU0VHTkJUSU9CV0lRWkRPTVJVR1EzVEtSQlRHUTNER00yREc0NFRNTVJWSEEyVFFNWldHUTJET05aV0c0MkRJTVJXR000VEVOSlhHWTJES05aWUdJM0RJTVpWSVk9PT09PT0= #想法：结尾以一个=结束，字符串包括0-9，a-z,A-Z，考虑到可能是Base64的编码方式，经过转换可以得到以下内容 #GNBDEOBUGY3DIM2FGUYTGNZWGIZTGNZYGQ4TKMRVGM2ECMRYGM3TINJTGY2UGNRVG4ZTIQZSII3DENSEGNBTIOBWIQZDOMRUGQ3TKRBTGQ3DGM2DG44TMMRVHA2TQMZWGQ2DONZWG42DIMRWGM4TENJXGY2DKNZYGI3DIMZVIY====== #观察可以发现=<em>6结尾，段落字符串包含A-Z,2-4可初步判断是Base32编码方式，对其进行解密 #3B2846643E51376233784952534A283745365C65734C2B626D3C486D2724475D34633C79625858364477674426392576457826435F #12line的数据中，包含了A-F,1-7,可以发现所含字符种类的减少，判定为Base16编码 #;(Fd&gt;Q7b3xIRSJ(7E6+bm&lt;Hm'$G]4c&lt;ybXX6DwgD&amp;9%vEx&amp;C_ #在14行的数据中可以发现字符种类相比之前的增多，根据BASEx编码的方式，x越大所能包含的字符越多从BASE92开始尝试解密 #GKCTF{c0862b7d-8947-4709-b52e-74f5a80adf0c} #此题结束 #no2.RSA1 #当e = 5，n = 247时，此时私钥d = ? flag格式GKCTF{d+372364782364902345972} #已知使用的是RSA算法进行加密，但是只需求解逆元d即可解出题目答案，因此需要对rsa加密的原理进行初步了解 前置小知识： 模运算：如在一个除法运算中。正整数n，整数a，用a/n，余数为r可得到 a = qn+r（0《r《n）在此过程用a mod n表示余数r，即mod表示前面的整数除以后面的整数所得的余数。 rsa算法简介：https://zh.wikipedia.org/wiki/RSA加密演算法 在数学能力不足的情况下可初步认为实现一个rsa加密过程所需要得知的数据有p q(pq为随机的大质数) n（p</em>q） e(随机数)+python若干已知可搜索代码 所需要的python3库有：gmpy2，math，libnum,crypto 在逆向解题时可以将上述过程逆向求解 #rsa1 #当e = 5，n = 247时，此时私钥d = ? flag格式GKCTF{d+372364782364902345972} #对题目分析可知，已经给出e,n的情况下，利用d为e模n的逆元，有等式：5d=k欧拉（n）+1 ，可得知5<em>173=216</em>4+1 d=173 也可以用求解逆元的python代码求解</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,math,libnum</span><br><span class="line">n = <span class="number">247</span></span><br><span class="line">e = <span class="number">5</span></span><br><span class="line">p =<span class="number">13</span></span><br><span class="line">q = <span class="number">19</span>  <span class="comment">#已对n进行了分解</span></span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = libnum.modular.invmod(e, phi)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"><span class="built_in">print</span>(d+<span class="number">372364782364902345972</span>)</span><br></pre></td></tr></table></figure>
+<p>#此题结束</p>
+<h2 id="no.2-rsa2">NO.2 rsa2</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">flag = <span class="string">b&#x27;xxxxxxxxx&#x27;</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">p = getPrime(<span class="number">512</span>)</span><br><span class="line">q = getPrime(<span class="number">512</span>)</span><br><span class="line">n = p*q</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="built_in">pow</span>(m,e,n)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;p =&quot;</span>,p)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;q =&quot;</span>,q)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c =&quot;</span>,c)</span><br><span class="line"><span class="comment">#p = 8295060918182123086529954804457591771595859196866703668935550464411971096001209655693961477877492176270927130171265553668119697631371310340208912981287823</span></span><br><span class="line"><span class="comment">#q = 12377495661382165101505333342973584396799606742367643146931847192885491168024340382524326191977310276197079533009866235586823791767430602033938123746440283</span></span><br><span class="line"><span class="comment">#c = 43405037741992830489999242106013528486995909531366634207485923975455812270021325488457540379716092907227733486594977478749656774348298533871141205590950920682210224271387683169091224829310512918597194475627703895654121834516964442517362297801225116093107942862842085685549307740605628348328889543664429027036</span></span><br></pre></td></tr></table></figure>
+<h3 id="分析">分析：</h3>
+<p>观察此题可以发现其形成过程较为正常，采用正常的求解思路，求d并逆向即可需要注意的是要导入libnum库将字符串转化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">e = <span class="number">65537</span> </span><br><span class="line">n = p*q </span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>) </span><br><span class="line">d = libnum.modular.invmod(e, phi) </span><br><span class="line">m =<span class="built_in">pow</span>(c,d,n) </span><br><span class="line"><span class="built_in">print</span>(m) </span><br><span class="line">m = libnum.n2s(<span class="built_in">pow</span>(c, d, n)) </span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
+<h2 id="no3.rsa3fix">NO3.rsa3fix</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line">flag = <span class="string">b&#x27;xxxxxxxxxx&#x27;</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">p=getPrime(<span class="number">512</span>)</span><br><span class="line">q=gmpy2.next_prime(p)</span><br><span class="line">n=p*q</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">c = <span class="built_in">pow</span>(m,e,n)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;n =&quot;</span>,n)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c =&quot;</span>,c)</span><br><span class="line"></span><br><span class="line"><span class="comment">#n = 143363836826231338729056049283956730867732414178438702007505612141669038162506887276797074940321479684442371423665415783765707759104380850385817733108462915373974857865184257324481256350109666538457406439214083651221563347191143931954845381704207749736259782728340199374131177390661967920447476896305253252287</span></span><br><span class="line"><span class="comment">#c = 39900642533536334094959292244230926997420133795872117552067282893555342116660285809315275396738476920987307712365380080806696249406850314529601154774788154899294247318420860891369796862133303007541621246180792852057456479842745477077089966273067231292385056046286707406462204080834830615635991614829090464676</span></span><br></pre></td></tr></table></figure>
+<h3 id="分析-1">分析：</h3>
+<p>观察代码可知其中p、q为相近大小的质数 可以采用yafu进行分解并解题</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> * </span><br><span class="line"><span class="keyword">import</span> gmpy2,libnum </span><br><span class="line">n = <span class="number">143363836826231338729056049283956730867732414178438702007505612141669</span> 038162506887276797074940321479684442371423665415783765707759104380850 <span class="number">385817733108462915373974857865184257324481256350109666538457406439214</span> 083651221563347191143931954845381704207749736259782728340199374131177 <span class="number">390661967920447476896305253252287</span> </span><br><span class="line">c =<span class="number">399006425335363340949592922442309269974201337958721175520672828935553</span> <span class="number">421166602858093152753967384769209873077123653800808066962494068503145</span> <span class="number">296011547747881548992942473184208608913697968621333030075416212461807</span> <span class="number">928520574564798427454770770899662730672312923850560462867074064622040</span> <span class="number">80834830615635991614829090464676</span> </span><br><span class="line">p = <span class="number">119734638608145194805971798080695268116800917495850399890442499524083</span> <span class="number">595623289143808616788384858567090486181377566337051673354016785183094</span> <span class="number">15222816271931409</span> </span><br><span class="line">q = <span class="number">119734638608145194805971798080695268116800917495850399890442499524083</span> <span class="number">595623289143808616788384858567090486181377566337051673354016785183094</span> <span class="number">15222816271931343</span> </span><br><span class="line">e = <span class="number">65537</span> </span><br><span class="line">n = p*q </span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>) </span><br><span class="line">d = libnum.modular.invmod(e, phi) </span><br><span class="line">m =<span class="built_in">pow</span>(c,d,n) <span class="built_in">print</span>(m) </span><br><span class="line">m = libnum.n2s(<span class="built_in">pow</span>(c, d, n))</span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
+<h2 id="no.4-rsa4">NO.4 rsa4</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,math</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">flag = <span class="string">b&#x27;xxxxxxxxx&#x27;</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">p1=getPrime(<span class="number">512</span>)</span><br><span class="line">p2=getPrime(<span class="number">512</span>)</span><br><span class="line">q=getPrime(<span class="number">512</span>)</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">n1=p1*q</span><br><span class="line">n2=p2*q</span><br><span class="line">c = <span class="built_in">pow</span>(m,e,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;n1 =&quot;</span>,n1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;n2 =&quot;</span>,n2)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;c =&quot;</span>,c)</span><br><span class="line"><span class="comment">#n1 = 94884177404102774822427817554026673720426045553229294164196365889868241209608198699825736765740994266602096819122742585513501193889324896436037215835611197604584097026126384952616166688608861592747633795387512620398959276473021649145217082140578045946571540919651239006361411412966855913642687457034906005481</span></span><br><span class="line"><span class="comment">#n2 = 102092062624102434903363841516866371627091881788106503630597091930877220050525498406865097313998866123339505287817724583500790338080221223615935355657880374600271600595223677064220029948502765382371862642367611565399975161981531714989641057593633902412383389249539558261934903587042257061713949592876287829881</span></span><br><span class="line"><span class="comment">#c = 10161386666467145208857785448881081828349023698013253141457707759937214875961033355661950148076700293535500076441730371075685493667049097245041947126526573496523864539273787569768972556184491634756602821320824969932806636641016492987667710427328627010446039020111688428659154424498965489762890027774092953101</span></span><br></pre></td></tr></table></figure>
+<h3 id="分析-2">分析：</h3>
+<p>首先可以发现本题的加密采用的是n1的过程 所以求解质因数最终要用n1的形成过程去求解，而由代码可知p（x），q均为质数，所以可以知道q即为n1 n2的最大公约数，用n1对q进行取余运算即可求出另一个质因数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2,libnum,math</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">n1 = <span class="number">94884177404102774822427817554026673720426045553229294164196365889868241209608198699825736765740994266602096819122742585513501193889324896436037215835611197604584097026126384952616166688608861592747633795387512620398959276473021649145217082140578045946571540919651239006361411412966855913642687457034906005481</span></span><br><span class="line">n2 = <span class="number">102092062624102434903363841516866371627091881788106503630597091930877220050525498406865097313998866123339505287817724583500790338080221223615935355657880374600271600595223677064220029948502765382371862642367611565399975161981531714989641057593633902412383389249539558261934903587042257061713949592876287829881</span></span><br><span class="line">c = <span class="number">10161386666467145208857785448881081828349023698013253141457707759937214875961033355661950148076700293535500076441730371075685493667049097245041947126526573496523864539273787569768972556184491634756602821320824969932806636641016492987667710427328627010446039020111688428659154424498965489762890027774092953101</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">q =GCD(n1,n2)</span><br><span class="line"><span class="built_in">print</span>(q)</span><br><span class="line">p =n1//q   <span class="comment">#取余运算，而不是除法运算，需要用//  ，而不是/</span></span><br><span class="line">n = p*q</span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = libnum.modular.invmod(e, phi)</span><br><span class="line">m = <span class="built_in">pow</span>(c,d,n)</span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line">m = libnum.n2s(<span class="built_in">pow</span>(c, d, n)) </span><br><span class="line"><span class="built_in">print</span>(m)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1576,9 +1595,6 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
 
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -1643,19 +1659,19 @@ F_1+F_2=X,F_1*F_2 = Y,and,get \iff F_2^2 -Y*F_2+F_2=0
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
