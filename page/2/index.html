@@ -151,6 +151,150 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/19/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="expansehi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/19/%E5%AF%86%E7%A0%81%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/" class="post-title-link" itemprop="url">Cryptography_Learning_Record</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-19 21:51:47" itemprop="dateCreated datePublished" datetime="2021-10-19T21:51:47+08:00">2021-10-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-31 22:38:56" itemprop="dateModified" datetime="2021-10-31T22:38:56+08:00">2021-10-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Record-Study/" itemprop="url" rel="index"><span itemprop="name">Record_Study</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="cryptography_record">Cryptography_Record</h1>
+<h2 id="no.1模运算公式">NO.1模运算公式</h2>
+<h3 id="模运算的初步理解参考可汗学院模运算部分">模运算的初步理解（参考：<a target="_blank" rel="noopener" href="https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/what-is-modular-arithmetic">可汗学院（模运算部分）</a>）</h3>
+<h4 id="模">模</h4>
+<p>模可以看作一个环绕圆形具有数字的表盘进行间断步行的模式，如我们将日常的钟表看成一圈，那么一圈有12个数，如果从0（12）处开始顺时针走三步，可以看作<span class="math inline">\(3\mod{12}\)</span>就是3模12，这里因为走的步数不到12，所以余3，也就是<span class="math inline">\(3=0*12+3\)</span>我们也可以写作<span class="math inline">\(3\mod{12}=3\)</span>,也可以写作<span class="math inline">\(3\mod{12}\equiv 3\mod{12}\)</span>。</p>
+<h4 id="同余类模没了">同余类&amp;“模没了“</h4>
+<p>如果这里的步数超过12会出现什么结果呢？很显然，根据除法，如果是15步，会满足一个12，也就是说剩下一个3步，有12步走了一圈，那么这个“一圈”就是所谓的“模没了“。也就是说，这时候剩余的3步依旧满足上面的式子，这里我们可以写成<span class="math inline">\(15\mod{12}\equiv 3\mod{12}\)</span>,也可以写作<span class="math inline">\(3\equiv 15\pmod{12}\)</span>。引入一个概念：同余类，同余类就是符合模n（这里是括号里的12）余数相同的数集，满足的条件就是<span class="math inline">\(x\in A=\{r+k*n\}\)</span>,r为余数，k这里就是多少圈的意思。对于乘法，可以发现当一个数乘以模数的倍数时，仍然能保持原式不变的结果，即<span class="math inline">\(A\mod{B}\)</span> <span class="math inline">\(\iff\)</span> <span class="math inline">\(A*kB\pmod{B}\)</span> ,消去的原因是乘积满足B倍数的部分被模没了，只剩下一个A模B。</p>
+<h4 id="逆元数论倒数">逆元（数论倒数）</h4>
+<p>逆元可以看作在同余符号两边进行模运算移项的时候需要把被移项的数变成逆元，或者一个数乘这个数的逆元和1模-模数同余。既是一种特殊的移项也可以看作是消项用。</p>
+<p>数论倒数的求法是 <span class="math inline">\(a*a^{-1}\equiv 1\pmod{n},这里的a^{-1}就是数论倒数\)</span>，需要满足的条件是gcd(a,n) = 1,即a与n互素。</p>
+<p>简单举例说明之：</p>
+<p>（RSA）d为e模phi的乘法逆元的表达为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2  </span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line">d = gmpy2.invert(e,phi)  </span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure>
+<h4 id="与费马小定理消项有关">与费马小定理消项有关</h4>
+<p>这个特性还可以用来消去存在费马小定理的情况，如条件满足：</p>
+<p><span class="math inline">\(a \in \{prime \bullet number\} , (a,p)=1 , a^{p-1} \equiv 1\pmod p\)</span></p>
+<p>对于式子:</p>
+<p><span class="math inline">\(a^p \pmod p \Rightarrow a*a^{p-1} \pmod p \Rightarrow a\pmod p\)</span></p>
+<p>同样也可以用下面的乘法计算方式去推导。也就是说只要是满足费马小定理的情况下可以直接将乘积中的 <span class="math inline">\(a^{p-1}\)</span> 替换为1。</p>
+<p>同样当形式为<span class="math inline">\(a^{k*(p-1)}\pmod {p}\)</span>时，也可以替换为1，这里可看作有k个1累乘，仍为1。</p>
+<h4 id="注意总结">注意&amp;总结</h4>
+<p>1.模式需要同余符号，有时等号也可以写成什么模什么等于什么的形式，但是最好用同余符号区分普通的等式和模式。</p>
+<p>2.同余符号不能看作等号，需要明白的是同余符号两边的是模式，也就是计算结果r。</p>
+<p>3.在代数的时候要尽量找含有目的数据的公式，还有模数方便消去的公式。</p>
+<h3 id="模加法和减法的推导">模加法和减法的推导</h3>
+<h4 id="加法">加法：</h4>
+<p><span class="math inline">\((A+B)\pmod n\)</span> <span class="math inline">\(\iff\)</span> <span class="math inline">\(((A\mod{n})+(B\mod{n}))\mod{n}\)</span></p>
+<p>过程：</p>
+<p>令<span class="math inline">\(A=k_1*n+r_1\)</span>,<span class="math inline">\(B=k_2*n+r_2\)</span>,</p>
+<p>第一步：<span class="math inline">\((A+B)\pmod n\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\((n*(k_1+k_2)+(r_1+r_2))\mod{n}\)</span></p>
+<p>第二步：<span class="math inline">\(((A\mod{n})+(B\mod{n}))\mod{n}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\((r_1+r_2)\mod{n}\)</span></p>
+<p>第三步：比较后面的式子，可发现约去<span class="math inline">\((k_1+k_2)\)</span>，得到上下两个结果的式子相等。</p>
+<h4 id="减法同加法">减法同加法。</h4>
+<h4 id="乘法">乘法：</h4>
+<p><span class="math inline">\((A*B)\mod{n}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(((A\mod{n})*(B\mod{n}))\mod{n}\)</span></p>
+<p>证明：</p>
+<p>令 <span class="math inline">\(A=k_1*n+r_1\)</span>,<span class="math inline">\(B=k_2*n+r_2\)</span>,</p>
+<p>第一步：<span class="math inline">\((A*B)\mod{n}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\((k_1*k_2*n^2+k_1*n*r_2+k_2*n*r_1+r_1*r_2)\mod{n}\)</span></p>
+<p>对右侧式子进行整理得：<span class="math inline">\((n*(k_1*k_2*n+k_1*r_2+k_2*r_1)+r_1*r_2)\mod{n}\)</span></p>
+<p>第二步：<span class="math inline">\(((A\mod{n})*(B\mod{n}))\mod{n}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\((r_1*r_2)\mod{n}\)</span></p>
+<p>比较第一步中整理完的式子可发现在模n时，n*(....)可被约去，则剩余<span class="math inline">\((r_1 * r_2)\mod{n}\)</span>,得证。</p>
+<h4 id="指数运算修正快速模幂运算">指数运算：（修正：<a target="_blank" rel="noopener" href="https://zh.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/fast-modular-exponentiation">快速模幂运算</a>）</h4>
+<p><span class="math inline">\(A^B\mod{C}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(((A\mod{C})^B)\mod{C}\)</span></p>
+<p>证明：</p>
+<h3 id="等价关系与等号两侧数据移动">等价关系与等号两侧数据移动</h3>
+<h4 id="几个等价关系">几个等价关系：</h4>
+<p><span class="math inline">\(A\equiv B\pmod C\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(A\mod{C}=B\mod{C}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(C|(A-B)\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(A=B+K*C\)</span></p>
+<h4 id="等号两侧数据移动的推导">等号两侧数据移动的推导：</h4>
+<p><span class="math inline">\(A=(B-C)\mod{n}\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(B-C=k_1*n+A\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\(B=k_1*n+(A+C)\)</span><span class="math inline">\(\iff\)</span><span class="math inline">\((A+C)=B\mod{n}\)</span></p>
+<h4 id="同余">同余：</h4>
+<p>可看作具有模n余数相同的属于同一具有这种特性的数集中的数，满足<span class="math inline">\(a_n\in A=\{(a_n+k*n)\mod{n}\}\)</span>条件的<span class="math inline">\(a_n\)</span>,同余用同余符号"<span class="math inline">\(\equiv\)</span>"所连接的数（这里的数是去掉了mod计算的数，如<span class="math inline">\(3\equiv 13\pmod{10}\)</span>代表的是3和13是模10中，3和13是同余类）所属一个同余类</p>
+<h4 id="同余符号的理解">同余符号的理解：</h4>
+<p>在同余符号的两侧实际是两个式子的结果，如上面A与B模C的结果是相等的，而A本身代表的是<span class="math inline">\(A=r=B\pmod{C}\)</span> ，当发生带有"="的等式需要代入数据计算时，需要代入的是余数r，而不是平时认为的等号另一侧的式子，这里用一个很简单的例子来加深理解：</p>
+<p>如RSA中的加密过程：<span class="math inline">\(c\equiv m^e\pmod{n}\)</span> 这里的密文显然是右侧明文的数学常数次方的结果，而不是简单的等于右侧，在模运算中不能认为同余符号和等号的意义是相同的，同余和等式之间的关系可以用上面“几个等价关系“中的推导理解。</p>
+<p>再举一个例子来加深理解：</p>
+<p>Ex:已知 <span class="math inline">\(c\equiv m^e\pmod{n}\)</span><span class="math inline">\(\iff\)</span> <span class="math inline">\(c=k*n+m^e\)</span> ，首先对等式两侧取模p；</p>
+<p>得到<span class="math inline">\(c\pmod{p}\equiv (k*n+m^e)\pmod{p}\)</span>，此时可以发现左右两侧都是r（余数）；</p>
+<p>把右侧的计算结果当成<span class="math inline">\(m_1^e\)</span>，可以发现上面的式子可以变为：<span class="math inline">\(m_1^e\equiv c\pmod{p}\)</span>,这里的<span class="math inline">\(m_1^e\)</span>实际上就是代指<span class="math inline">\(c\pmod{p}\)</span>的结果。</p>
+<p>总之，同余符号两侧是模式，而模式的计算结果是r，也就是余数，当代入一侧的数据时，就是代入r。</p>
+<h2 id="no.2中国剩余定理crt">NO.2中国剩余定理(CRT)</h2>
+<p>中国剩余定理用于解同余方程组，即由两两互素的整数对某数取模所得的余数求解该数。</p>
+<h3 id="定义">定义：</h3>
+<p>设正整数<span class="math inline">\(m_1,m_2,m_3...m_n\)</span>两两互素，记<span class="math inline">\(M=\prod\limits_{i=0}^k\)</span>,则同余类<span class="math inline">\(\begin{cases}x\equiv b_1\mod{n}\\x\equiv b_2\mod{n}\\x\equiv b_3\mod{n}\\ ...\\x\equiv b_n\mod{n} \end{cases}\)</span></p>
+<p>在模M同余的意义下，有唯一的解：<span class="math inline">\(x=\sum\limits_{i=1}^kb_iM_iy_i\mod{M}\)</span></p>
+<p>式子中，<span class="math inline">\(M_i= \frac{M} {m_i}\)</span> , <span class="math inline">\(1 \leqslant i \leqslant r\)</span> , <span class="math inline">\(y_i=M_i^{-1}\mod{m_i}\)</span> ,<span class="math inline">\(1\leqslant i\leqslant k\)</span>.</p>
+<p>个人步骤理解： 我再想想再更新这里 （认真修正）</p>
+<h3 id="crt的其他特性修正isbn9787302177159">CRT的其他特性：(修正：isbn：<em>9787302177159</em>)</h3>
+<p>P235</p>
+<h2 id="no.3费马小定理">NO.3费马小定理</h2>
+<p>a是一个整数，p是一个质数，<span class="math inline">\(a^p-a\)</span>是a的倍数，可以表示为 <span class="math inline">\(a^p\equiv a\mod{p}\)</span></p>
+<p>如果a不是p的倍数，则<span class="math inline">\(a^{p-1}\equiv1\mod{p}\)</span></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/13/%E7%89%B9%E5%BE%81%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1019,7 +1163,7 @@ if (isset($_REQUEST['idp'])) {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1058,7 +1202,7 @@ if (isset($_REQUEST['idp'])) {
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

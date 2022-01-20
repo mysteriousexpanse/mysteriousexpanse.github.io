@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="MISC 题目复现 ###签到 略 ###EBCDIC 使用010editor打开.txt后缀的文档，并在View-Character Set-EBCDIC选项中选中即可得出GKCTF{4dbb4c48-a4e5-df83-ae0b-343fe95d9f2c} ###韩商言 下载png图片可以发现图片宽度正常，推测是高发生了变化，在010editor中打开对高度5、6数据由0b改为1b，保存最终发">
+  <meta name="description" content="RSA Attack Summary 模数(modulo number) N过小 直接对模数N进行分解，可用factordb |p-q|过小 在大素数差距过大或者过小的时候可以选择使用yafu分解或者根据推导使用脚本 推导过程： Let : \[ a&#x3D;\frac{p+q}{2} , b&#x3D;\frac{p-q}{2} \] then: \[ N&#x3D;p*q&#x3D;a^2-b^2&#x3D;\fr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MISC">
-<meta property="og:url" content="http://example.com/2021/10/03/MISC/index.html">
+<meta property="og:title" content="Summary">
+<meta property="og:url" content="http://example.com/2022/01/20/RSA%20Attack%20Summary/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="MISC 题目复现 ###签到 略 ###EBCDIC 使用010editor打开.txt后缀的文档，并在View-Character Set-EBCDIC选项中选中即可得出GKCTF{4dbb4c48-a4e5-df83-ae0b-343fe95d9f2c} ###韩商言 下载png图片可以发现图片宽度正常，推测是高发生了变化，在010editor中打开对高度5、6数据由0b改为1b，保存最终发">
+<meta property="og:description" content="RSA Attack Summary 模数(modulo number) N过小 直接对模数N进行分解，可用factordb |p-q|过小 在大素数差距过大或者过小的时候可以选择使用yafu分解或者根据推导使用脚本 推导过程： Let : \[ a&#x3D;\frac{p+q}{2} , b&#x3D;\frac{p-q}{2} \] then: \[ N&#x3D;p*q&#x3D;a^2-b^2&#x3D;\fr">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-10-03T10:30:35.000Z">
-<meta property="article:modified_time" content="2021-10-03T10:31:35.320Z">
+<meta property="article:published_time" content="2022-01-20T10:04:39.000Z">
+<meta property="article:modified_time" content="2022-01-20T10:11:51.815Z">
 <meta property="article:author" content="expansehi">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/10/03/MISC/">
+<link rel="canonical" href="http://example.com/2022/01/20/RSA%20Attack%20Summary/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>MISC | Blog</title>
+  <title>Summary | Blog</title>
   
 
 
@@ -156,7 +156,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/03/MISC/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/20/RSA%20Attack%20Summary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -169,7 +169,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MISC
+          Summary
         </h1>
 
         <div class="post-meta">
@@ -180,16 +180,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-10-03 18:30:35 / 修改时间：18:31:35" itemprop="dateCreated datePublished" datetime="2021-10-03T18:30:35+08:00">2021-10-03</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" itemprop="url" rel="index"><span itemprop="name">题目复现</span></a>
-                </span>
+              <time title="创建时间：2022-01-20 18:04:39 / 修改时间：18:11:51" itemprop="dateCreated datePublished" datetime="2022-01-20T18:04:39+08:00">2022-01-20</time>
             </span>
 
           
@@ -203,7 +194,61 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>MISC 题目复现 ###签到 略 ###EBCDIC 使用010editor打开.txt后缀的文档，并在View-Character Set-EBCDIC选项中选中即可得出GKCTF{4dbb4c48-a4e5-df83-ae0b-343fe95d9f2c} ###韩商言 下载png图片可以发现图片宽度正常，推测是高发生了变化，在010editor中打开对高度5、6数据由0b改为1b，保存最终发现GKCTF{b89db044-b047-5223-3066-412963bbc7b5} 在原来显示图的正下方。 ###</p>
+        <h1 id="rsa-attack-summary">RSA Attack Summary</h1>
+<h2 id="模数modulo-number">模数(modulo number)</h2>
+<h3 id="n过小">N过小</h3>
+<p>直接对模数N进行分解，可用<a target="_blank" rel="noopener" href="http://factordb.com/">factordb</a></p>
+<h3 id="p-q过小">|p-q|过小</h3>
+<p>在大素数差距过大或者过小的时候可以选择使用yafu分解或者根据推导使用脚本</p>
+<p>推导过程：</p>
+<p>Let :</p>
+<p><span class="math display">\[
+a=\frac{p+q}{2} , b=\frac{p-q}{2}
+\]</span></p>
+<p>then:</p>
+<p><span class="math display">\[
+N=p*q=a^2-b^2=\frac{p^2-q^2}{4}
+\]</span></p>
+<p>since |p-q| is little :</p>
+<p><span class="math display">\[
+p\approx q
+\]</span></p>
+<p>$$</p>
+<p>a<sup>2=()</sup>2= =N</p>
+<p>$$</p>
+<p>that means:</p>
+<p><span class="math display">\[
+a^2\approx N
+\]</span></p>
+<p>then ,let :</p>
+<p><span class="math display">\[
+a=\sqrt{N},b^2=a^2-N
+\]</span></p>
+<p>check a^2-N satisfies a perfect square number ,if it is , then:</p>
+<p><span class="math display">\[
+p,q=a+b,a-b
+\]</span></p>
+<h3 id="p-1smooth光滑">p-1(smooth)光滑</h3>
+<p>光滑数，smooth number :可以约数分解为小素数乘积的正整数</p>
+<p>use Fermat's little theory</p>
+<p><span class="math display">\[
+if\ p\ is \ a\ prime\ number
+\]</span></p>
+<p>$$ gcd(a,p)=1</p>
+<p>$$</p>
+<p><span class="math display">\[
+a^{p-1}\equiv1\pmod{p}
+\]</span></p>
+<p><span class="math display">\[
+p-1|b\quad and\quad gcd(a^b-1,n)&gt;1
+\]</span></p>
+<p>then :</p>
+<p><span class="math display">\[
+gcd(a^b-1,n)=p
+\]</span></p>
+<p>use a = 2 ,use exhaustive method till p is right.</p>
+<h3 id="模不互素">模不互素</h3>
+<p>当多个公钥存在最大公约数时，可以通过求其最大公约数得到p或q中的一个，此时可以得到q或p，最终得到phi与N</p>
 
     </div>
 
@@ -219,13 +264,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/10/03/Web%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B0/" rel="prev" title="Web题目复现">
-      <i class="fa fa-chevron-left"></i> Web题目复现
+    <a href="/2021/12/13/image-test/" rel="prev" title="image_test">
+      <i class="fa fa-chevron-left"></i> image_test
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/10/05/RSA%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/" rel="next" title="RSA学习心得">
-      RSA学习心得 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -284,6 +326,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#rsa-attack-summary"><span class="nav-number">1.</span> <span class="nav-text">RSA Attack Summary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%95%B0modulo-number"><span class="nav-number">1.1.</span> <span class="nav-text">模数(modulo number)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#n%E8%BF%87%E5%B0%8F"><span class="nav-number">1.1.1.</span> <span class="nav-text">N过小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#p-q%E8%BF%87%E5%B0%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">|p-q|过小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#p-1smooth%E5%85%89%E6%BB%91"><span class="nav-number">1.1.3.</span> <span class="nav-text">p-1(smooth)光滑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E4%B8%8D%E4%BA%92%E7%B4%A0"><span class="nav-number">1.1.4.</span> <span class="nav-text">模不互素</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
